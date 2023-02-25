@@ -1,6 +1,6 @@
 :root {
     --serif-font: 'Cormorant Garamond', 'Crimson Pro';
-    --sans-serif-font: 'Open Sans';
+    --sans-serif-font: 'Open Sans', 'Roboto';
 
     --font-size-xxlarge: 96rem;
     --font-size-xlarge: 64rem;
@@ -15,6 +15,7 @@
     --font-weight-medium: 500;
     --font-weight-semi-bold: 600;
     --font-weight-bold: 700;
+    --font-weight-black: 900;
 
     --clr-hover: rgba(46, 255, 0, 0.9);
     --clr-background: #eeeeee;
@@ -122,6 +123,10 @@ a:active {
 
 .bold {
     font-weight: var(--font-weight-bold);
+}
+
+.black {
+    font-weight: var(--font-size-black);
 }
 
 .logo {
