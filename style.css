@@ -30,7 +30,9 @@
     --clr-project2-two: #0479be;
     --clr-project2-three: #fbd272;
 
-    --transition: 0.3s linear;
+    --transition: 0.3s all linear;
+    --transition-reveal: 2s ease;
+    --transition-reveal-delay: 2s 2s ease;
     --border-weight: 0.02rem;
     --footer-padding: 2.8vw;
     --nav-height: 6.5vw;
@@ -235,11 +237,9 @@ li {
 }
 
 .introduction {
-
     grid-column: 2/10;
     padding-top: 10vh;
-    margin-bottom: 15vh;
-
+    margin-bottom: 0vh;
 }
 
 .hallmark {
@@ -247,7 +247,7 @@ li {
     /* transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); */
     /* position: sticky;
     bottom: 0; */
-    height: 10vw;
+    height: 15vw;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -257,7 +257,7 @@ li {
     width: 75%;
     position: relative;
     left: 50%;
-    top: 25%;
+    top: 50%;
 }
 
 .profile-container {
@@ -315,15 +315,37 @@ li {
     grid-template-columns: 3fr 1fr 3fr;
     overflow: hidden;
 
-    box-shadow: 0.8vw 0.8vw 0px 0 var(--clr-black);
+    /* box-shadow: 0.8vw 0.8vw 0px 0 var(--clr-black); */
     transition: var(--transition);
-
     text-decoration: none;
 }
 
 .project-card:last-of-type {
     margin-bottom: 144rem;
 }
+
+.project-card:hover .project-cover {
+    transform: scale(1.1);
+    filter: saturate(1);
+    transition: var(--transition);
+}
+
+
+/* #project-1:hover {
+    transform: translate(-0.3vw, -0.3vw);
+    box-shadow: 1.4vw 1.4vw 0px 0 var(--clr-project1-two);
+    transition: var(--transition);
+}
+
+#project-2:hover {
+    transform: translate(-0.3vw, -0.3vw);
+    box-shadow: 1.4vw 1.4vw 0px 0 var(--clr-project2-two);
+}
+
+#project-3:hover {
+    transform: translate(-0.3vw, -0.3vw);
+    box-shadow: 1.4vw 1.4vw 0px 0 var(--clr-project2-three);
+} */
 
 .project-title {
     grid-area: a;
@@ -342,15 +364,21 @@ li {
     justify-content: flex-start;
     padding-left: 5%;
     padding-right: 5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    flex-wrap: wrap;
+    gap: 0;
 }
 
 .tag {
+    grid-column: 2/3;
     border: solid var(--border-weight);
     border-radius: 100px;
     height: max-content;
     width: max-content;
     padding: 1%;
     margin-right: 1%;
+    margin-top: 0;
 }
 
 .project-description {
@@ -387,30 +415,10 @@ li {
 .project-cover {
     height: 100%;
     object-fit: cover;
-    transition: var(--transition);
     filter: saturate(0);
+    transition: var(--transition);
 }
 
-.project-card:hover .project-cover {
-    transform: scale(1.1);
-    filter: saturate(1);
-}
-
-
-#project-1:hover {
-    transform: translate(-0.3vw, -0.3vw);
-    box-shadow: 1.4vw 1.4vw 0px 0 var(--clr-project1-two);
-}
-
-#project-2:hover {
-    transform: translate(-0.3vw, -0.3vw);
-    box-shadow: 1.4vw 1.4vw 0px 0 var(--clr-project2-two);
-}
-
-#project-3:hover {
-    transform: translate(-0.3vw, -0.3vw);
-    box-shadow: 1.4vw 1.4vw 0px 0 var(--clr-project2-three);
-}
 
 .footer {
     grid-column: 1/-1;
@@ -420,6 +428,12 @@ li {
     border-top: solid var(--border-weight);
     padding-top: var(--footer-padding);
     font-size: calc(var(--nav-height) - 2*var(--footer-padding));
+}
+
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .top-link {
@@ -436,6 +450,32 @@ li {
     border-radius: 50%;
     color: var(--clr-black);
     animation: bounce 2s ease-in-out infinite;
+    opacity: 0;
+    transform: translateY(150px);
+    transition: 1s ease;
+    transition-property: translateY, opacity;
+    /* visibility: hidden;
+  z-index: -100; */
+}
+
+.top-link.active {
+    position: fixed;
+    bottom: 2vw;
+    right: 1.5vw;
+    background: var(--clr-background);
+    width: 5vw;
+    height: 5vw;
+    border: solid 1px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--clr-black);
+    animation: bounce 2s ease-in-out infinite;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: 1s ease;
+    transition-property: translateY, opacity;
     /* visibility: hidden;
   z-index: -100; */
 }
@@ -450,20 +490,22 @@ li {
     transform: rotate(-90deg);
 }
 
-@media screen and (max-width:1240px) {
-    .project-container {
-        grid-column: 2/10;
+@keyframes stripe-color {
+    0% {
+        background-color: var(--clr-hover);
     }
 
-    .work {
-        grid-column: 2/5;
+    50% {
+        background-color: yellow;
     }
 
-    .project-card {
-        width: 100%;
-        height: 30vw;
+    100% {
+        background-color: var(--clr-hover);
     }
+
 }
+
+
 
 .warning {
     transform: scale(0);
@@ -472,6 +514,83 @@ li {
     width: 100vw;
     background-color: var(--clr-background);
     padding: 10vw;
+}
+
+.loader-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-background);
+    z-index: 999;
+}
+
+.preload-finish {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+
+.reveal_y {
+    position: relative;
+    transform: translateY(-150px);
+    opacity: 0;
+    transition: var(--transition-reveal);
+    transition-property: transform, opacity;
+}
+
+.reveal_y.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+.reveal_y_delay {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: var(--transition-reveal);
+    transition-property: transform, opacity;
+}
+
+.reveal_y_delay.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.reveal_x {
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: var(--transition-reveal);
+    transition-property: transform, opacity;
+}
+
+.reveal_x.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.reveal_x_delay {
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: var(--transition-reveal-delay);
+    transition-property: transform, opacity;
+}
+
+.reveal_x_delay.active {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 @media screen and (max-width:880px) {
@@ -495,17 +614,17 @@ li {
     }
 }
 
-@keyframes stripe-color {
-    0% {
-        background-color: var(--clr-hover);
+@media screen and (max-width:1240px) {
+    .project-container {
+        grid-column: 2/10;
     }
 
-    50% {
-        background-color: yellow;
+    .work {
+        grid-column: 2/5;
     }
 
-    100% {
-        background-color: var(--clr-hover);
+    .project-card {
+        width: 100%;
+        height: 30vw;
     }
-
 }
