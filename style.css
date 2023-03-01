@@ -30,9 +30,11 @@
     --clr-project2-two: #0479be;
     --clr-project2-three: #fbd272;
 
+    --card-radius: 3vh;
+
     --transition: 0.3s all linear;
-    --transition-reveal: 2s ease;
-    --transition-reveal-delay: 2s 2s ease;
+    --transition-reveal: 1s ease;
+    --transition-reveal-delay: 1s 1s ease;
     --border-weight: 0.02rem;
     --footer-padding: 2.8vw;
     --nav-height: 6.5vw;
@@ -194,18 +196,31 @@ body {
     font-size: 25rem;
 }
 
-.links a {
+.links .scroll-link {
     font-family: var(--sans-serif-font);
     font-weight: var(--font-weight-bold);
     text-transform: capitalize;
     transition: var(--transition);
     text-decoration: none;
     color: black;
-
+    position: relative;
 }
 
-.links a:hover {
+.scroll-link::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: calc(0.1*var(--font-size-xlarge));
+    left: -2rem;
+    bottom: 5rem;
+    z-index: -1;
     background-color: var(--clr-hover);
+    transition: width 0.5s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.nav-index:hover .scroll-link::before {
+    width: calc(100% + 4px);
 }
 
 
@@ -281,19 +296,102 @@ li {
     z-index: -1;
 }
 
-.profile-container:hover>.stripe {
-    animation: stripe-color 3s linear infinite;
+.introduction:hover .stripe {
+    animation: stripe-color 2s linear infinite;
+}
+
+.highlight {
+    position: relative;
+}
+
+.highlight::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: calc(0.1*var(--font-size-xlarge));
+    left: -2rem;
+    bottom: 3rem;
+    z-index: -1;
+    background-color: var(--clr-hover);
+    transition: width 0.5s;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+article:hover .highlight::before {
+    width: calc(100% + 4px);
 }
 
 .profile-1 {
     width: 100%;
 }
 
-.work {
-    grid-column: 3/5;
+.subtitle {
+    grid-column: 3/9;
     margin-top: 96rem;
     margin-bottom: 96rem;
 }
+
+.accordion {
+    grid-column: 3/9;
+    margin: 24rem;
+}
+
+.accordion>input[type="checkbox"] {
+    position: absolute;
+    left: 100vw;
+}
+
+.accordion .content {
+    overflow-y: hidden;
+    height: 0;
+    transition: var(--transition);
+}
+
+.accordion>input[type="checkbox"]:checked~.content {
+    height: auto;
+    overflow: visible;
+    transition: var(--transition);
+}
+
+.accordion label {
+    display: block;
+}
+
+.accordion {
+    margin-bottom: 1rem;
+}
+
+.accordion>input[type="checkbox"]:checked~.content {
+    padding-top: 24rem;
+}
+
+
+.accordion label:hover,
+.accordion label:focus {
+    cursor: crosshair;
+}
+
+.accordion:hover .highlight::before {
+    width: calc(100% + 4px);
+}
+
+.accordion .handle label:before {
+    font-family: 'fontawesome';
+    content: "\f067";
+    font-size: var(--font-size-xsmall);
+    font-weight: 200;
+    display: inline-block;
+    margin-right: 10rem;
+    transform: translateY(-10rem);
+}
+
+.accordion>input[type="checkbox"]:checked~.handle label:before {
+    content: "\f068";
+}
+
+
+
+
 
 .project-container {
     grid-column: 3/9;
@@ -304,7 +402,7 @@ li {
     height: 25vw;
     background-color: var(--clr-white);
     border: solid var(--border-weight);
-    border-radius: 3vh;
+    border-radius: var(--card-radius);
     margin-bottom: 96rem;
     display: grid;
     grid-template-areas:
@@ -373,7 +471,7 @@ li {
 .tag {
     grid-column: 2/3;
     border: solid var(--border-weight);
-    border-radius: 100px;
+    border-radius: 1000px;
     height: max-content;
     width: max-content;
     padding: 1%;
@@ -436,6 +534,11 @@ li {
     left: 0;
 }
 
+.arrow-up {
+    width: 60%;
+    transform: rotate(-90deg);
+}
+
 .top-link {
     position: fixed;
     bottom: 2vw;
@@ -447,13 +550,14 @@ li {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    border-radius: 50%;
+
     color: var(--clr-black);
     animation: bounce 2s ease-in-out infinite;
-    opacity: 0;
+    opacity: 0.5;
     transform: translateY(150px);
-    transition: 1s ease;
-    transition-property: translateY, opacity;
+
+    transition: var(--transition-reveal);
+
     /* visibility: hidden;
   z-index: -100; */
 }
@@ -469,13 +573,12 @@ li {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    border-radius: 50%;
+
     color: var(--clr-black);
     animation: bounce 2s ease-in-out infinite;
     opacity: 1;
     transform: translateY(0px);
-    transition: 1s ease;
-    transition-property: translateY, opacity;
+    transition: var(--transition-reveal);
     /* visibility: hidden;
   z-index: -100; */
 }
@@ -483,11 +586,6 @@ li {
 .show-link {
     visibility: visible;
     z-index: 100;
-}
-
-.arrow-up {
-    width: 60%;
-    transform: rotate(-90deg);
 }
 
 @keyframes stripe-color {
@@ -615,12 +713,14 @@ li {
 }
 
 @media screen and (max-width:1240px) {
-    .project-container {
+
+    .project-container,
+    .accordion {
         grid-column: 2/10;
     }
 
-    .work {
-        grid-column: 2/5;
+    .subtitle {
+        grid-column: 2/9;
     }
 
     .project-card {
