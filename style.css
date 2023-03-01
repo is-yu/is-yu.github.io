@@ -33,7 +33,7 @@
     --card-radius: 3vh;
 
     --transition: 0.3s all linear;
-    --transition-reveal: 1s ease;
+    --transition-reveal: 0.5s ease;
     --transition-reveal-delay: 1s 1s ease;
     --border-weight: 0.02rem;
     --footer-padding: 2.8vw;
@@ -338,7 +338,7 @@ article:hover .highlight::before {
 
 .accordion>input[type="checkbox"] {
     position: absolute;
-    left: 100vw;
+    left: -100vw;
 }
 
 .accordion .content {
@@ -702,7 +702,6 @@ article:hover .highlight::before {
 
     img[class='warn'] {
         width: 50vw;
-        margin: 10vh;
     }
 
     *,
