@@ -17,12 +17,13 @@ function reveal_y() {
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 0 * windowHeight;
+        var elementVisible = 0.1 * windowHeight;
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
-        } else {
-            reveals[i].classList.remove("active");
         }
+        // else {
+        //     reveals[i].classList.remove("active");
+        // }
     }
 }
 
@@ -36,12 +37,13 @@ function reveal_x() {
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 0 * windowHeight;
+        var elementVisible = 0.2 * windowHeight;
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
-        } else {
-            reveals[i].classList.remove("active");
         }
+        // else {
+        //     reveals[i].classList.remove("active");
+        // }
     }
 }
 
@@ -58,9 +60,10 @@ function reveal_y_delay() {
         var elementVisible = 0 * windowHeight;
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
-        } else {
-            reveals[i].classList.remove("active");
         }
+        // else {
+        //     reveals[i].classList.remove("active");
+        // }
     }
 }
 
@@ -77,9 +80,10 @@ function reveal_x_delay() {
         var elementVisible = 0 * windowHeight;
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
-        } else {
-            reveals[i].classList.remove("active");
         }
+        // else {
+        //     reveals[i].classList.remove("active");
+        // }
     }
 }
 
@@ -111,7 +115,7 @@ window.addEventListener('scroll', function () {
     for (var i = 0; i < top.length; i++) {
         var value = window.scrollY;
         var windowHeight = window.innerHeight;
-        if (value > 0.1 * windowHeight) {
+        if (value > 0.4 * windowHeight) {
             top[i].classList.add("active")
         } else {
             top[i].classList.remove("active");

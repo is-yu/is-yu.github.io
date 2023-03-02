@@ -1,6 +1,6 @@
 :root {
     --serif-font: 'Cormorant Garamond', 'Crimson Pro';
-    --sans-serif-font: 'Open Sans', 'Roboto';
+    --sans-serif-font: 'DM Sans', 'Roboto';
 
     --font-size-xxlarge: 96rem;
     --font-size-xlarge: 64rem;
@@ -33,8 +33,8 @@
     --card-radius: 3vh;
 
     --transition: 0.3s all linear;
-    --transition-reveal: 0.5s ease;
-    --transition-reveal-delay: 1s 1s ease;
+    --transition-reveal: 0.8s ease-in-out;
+    --transition-reveal-delay: 0.5s 0.8s ease-in-out;
     --border-weight: 0.02rem;
     --footer-padding: 2.8vw;
     --nav-height: 6.5vw;
@@ -73,12 +73,12 @@ a:active {
 
 .serif {
     font-family: var(--serif-font), serif;
-    line-height: normal;
+    line-height: 1.5;
 }
 
 .sans-serif {
     font-family: var(--sans-serif-font), sans serif;
-    line-height: normal;
+    line-height: 1.5;
 }
 
 .xxl {
@@ -252,8 +252,8 @@ li {
 }
 
 .introduction {
-    grid-column: 2/10;
-    padding-top: 10vh;
+    grid-column: 1/11;
+    padding: 4vw;
     margin-bottom: 0vh;
 }
 
@@ -272,7 +272,20 @@ li {
     width: 75%;
     position: relative;
     left: 50%;
-    top: 50%;
+    top: 42%;
+}
+
+.arrow-wrapper {
+    position: absolute;
+    justify-self: center;
+
+    width: 6vw;
+    height: 6vw;
+    background: var(--clr-white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .profile-container {
@@ -330,6 +343,8 @@ article:hover .highlight::before {
     margin-top: 96rem;
     margin-bottom: 96rem;
 }
+
+
 
 .accordion {
     grid-column: 3/9;
@@ -449,10 +464,20 @@ article:hover .highlight::before {
     grid-area: a;
     border-bottom: solid var(--border-weight);
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
     padding-left: 5%;
 }
+
+.project-index {
+    margin-left: 1%;
+    margin-bottom: 3%;
+    color: var(--clr-black);
+    opacity: 0.3;
+}
+
 
 .tags {
     grid-area: b;
@@ -474,7 +499,8 @@ article:hover .highlight::before {
     border-radius: 1000px;
     height: max-content;
     width: max-content;
-    padding: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
     margin-right: 1%;
     margin-top: 0;
 }
@@ -487,7 +513,11 @@ article:hover .highlight::before {
     justify-content: center;
     padding-left: 7%;
     padding-right: 7%;
-    line-height: 1.5;
+
+}
+
+.project-description .serif {
+    line-height: normal !important;
 }
 
 .enter {
@@ -517,6 +547,9 @@ article:hover .highlight::before {
     transition: var(--transition);
 }
 
+#contact {
+    z-index: 1000;
+}
 
 .footer {
     grid-column: 1/-1;
@@ -526,6 +559,7 @@ article:hover .highlight::before {
     border-top: solid var(--border-weight);
     padding-top: var(--footer-padding);
     font-size: calc(var(--nav-height) - 2*var(--footer-padding));
+
 }
 
 #top {
@@ -604,16 +638,6 @@ article:hover .highlight::before {
 }
 
 
-
-.warning {
-    transform: scale(0);
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--clr-background);
-    padding: 10vw;
-}
-
 .loader-wrapper {
     width: 100vw;
     height: 100vh;
@@ -640,7 +664,7 @@ article:hover .highlight::before {
 
 .reveal_y {
     position: relative;
-    transform: translateY(-150px);
+    transform: translateY(-5vh);
     opacity: 0;
     transition: var(--transition-reveal);
     transition-property: transform, opacity;
@@ -654,7 +678,7 @@ article:hover .highlight::before {
 
 .reveal_y_delay {
     position: relative;
-    transform: translateY(150px);
+    transform: translateY(5vh);
     opacity: 0;
     transition: var(--transition-reveal);
     transition-property: transform, opacity;
@@ -667,7 +691,7 @@ article:hover .highlight::before {
 
 .reveal_x {
     position: relative;
-    transform: translateX(-150px);
+    transform: translateX(-5vw);
     opacity: 0;
     transition: var(--transition-reveal);
     transition-property: transform, opacity;
@@ -680,7 +704,7 @@ article:hover .highlight::before {
 
 .reveal_x_delay {
     position: relative;
-    transform: translateX(-150px);
+    transform: translateX(-5vw);
     opacity: 0;
     transition: var(--transition-reveal-delay);
     transition-property: transform, opacity;
@@ -691,17 +715,40 @@ article:hover .highlight::before {
     opacity: 1;
 }
 
-@media screen and (max-width:880px) {
+.warning {
+    transform: scale(0);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--clr-background);
+    font-size: 72rem;
+    line-height: normal;
+    padding: 5vw;
+}
+
+@media screen and (max-width:660px) {
     .warning {
         transform: scale(1);
-        font-size: 124rem;
         z-index: 999;
         text-align: center;
+    }
 
+    .warn {
+        margin: 2vw;
     }
 
     img[class='warn'] {
         width: 50vw;
+        margin-top: 10vh;
+    }
+
+    .resume {
+        display: inline-block;
+        text-decoration: none;
+        width: 80vw;
+        border: solid 1px;
+        padding: 2vw;
+        box-shadow: 3px 3px var(--clr-black);
     }
 
     *,
