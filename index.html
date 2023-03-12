@@ -29,9 +29,12 @@
 
 
     <!-- loading page -->
-    <!-- <div class="loader-wrapper">
+    <div class="loader-wrapper">
         <img src="./asset/warn.gif" alt="loading..." class="loader">
-    </div> -->
+        <p class="loading">The website is brewing ☕.</p>
+
+    </div>
+
 
     <div id="top">
     </div>
@@ -39,16 +42,20 @@
     <header class="home" id="home">
         <nav class="nav">
             <div class="nav-center">
-                <div class="nav-header reveal_y">
-                    <a href="index.html"><img src="./asset/logo2.png" alt="logo" class="logo"></a>
-                </div>
+                <a href="index.html">
+                    <div class="nav-header reveal_y">
+                        <img src="./asset/logo1.png" alt="logo" class="logo">
+                    </div>
+                </a>
                 <div class="links-container">
                     <ul class="links reveal_y">
                         <li class="nav-index">
-                            <a href="is-yu.github.io/about/" class="scroll-link">ABOUT</a>
+                            <a href="#work" class="scroll-link">WORK</a>
                         </li>
-                        <li class="nav-index">
-                            <a href="is-yu.github.io/work/" class="scroll-link">WORK</a>
+                        <li class="nav-index tooltip">
+                            <a href="https://yucreate.notion.site/Gallery-5fff4bcae3f44819bac9512ee847939a"
+                                class="scroll-link" target="_blank">GALLERY<span class="tooltiptext">🚧 Under
+                                    Construction</span></a>
                         </li>
                         <li class="nav-index">
                             <a href="#contact" class="scroll-link">CONTACT</a>
@@ -58,14 +65,14 @@
                                 href="https://drive.google.com/file/d/1MzbWQZz6AcX_OwbPw_Q7h3eZn_I6FO0G/view?usp=share_link"
                                 class="scroll-link">RESUME</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="section">
 
+
+    <div class="section">
         <div class="hero">
             <!-- <div class="img-container">
                 <img src="./asset/profile1.png" alt="profile" loading="lazy" class="profile">
@@ -73,8 +80,10 @@
             </div> -->
             <div class="introduction">
                 <article class="serif xxl thin reveal_x_delay" style="line-height: normal;">Hi, I’m Yu (Yvette)
-                    <a href="www.google.com" class="profile-container" target="_blank"><img
-                            src="./asset/profile-home.png" alt="profile" loading="lazy" class="profile-1">
+                    <a href="https://yucreate.notion.site/Yu-Yvette-Huang-9768badfa9a946f19c8fc94253006d7b"
+                        class="profile-container tooltip" target="_blank"><img src="./asset/profile-home.png"
+                            alt="profile" loading="lazy" class="profile-1">
+                        <span class="tooltiptext s">👧🏻 About Me</span>
                         <div class="stripe"></div>
                     </a>
                     , a vision-driven designer with craftsmanship spirit. I craft <span class="highlight">end-to-end
@@ -85,13 +94,19 @@
             </div>
         </div>
 
-        <a href="www.google.com" class="hallmark reveal_x" target="_blank">
+
+
+        <a href="https://yucreate.notion.site/10-Things-I-learned-through-building-my-portfolio-website-2e86380575ff4611b3c09f8c19308c6f"
+            class="hallmark reveal_x" target="_blank">
             <img src="./asset/hallmark1.png" alt="hand-coded website" class="circle-thing" id="hallmark">
 
-            <div class="arrow-wrapper"><img src="./asset/arrow.svg" alt="ENTER" class="arrow-right"></div>
-        </a>
+            <div class="arrow-wrapper tooltip"><img src="./asset/arrow.svg" alt="ENTER" class="arrow-right"><span
+                    class="tooltiptext s">💻The story behind the site</span></div>
 
+        </a>
     </div>
+
+    <!------------ before dive into  ------------->
 
     <section class="section">
         <p class="subtitle serif xxl bold reveal_x">BEFORE DIVE INTO MY WORKS ...</p>
@@ -99,8 +114,8 @@
         <section class="accordion reveal_x">
             <input type="checkbox" name="collapse" id="handle1">
             <p class="serif l handle">
-                <label for="handle1"><span class="highlight">What skills are required to craft E2E
-                        experience?</span></label>
+                <label for="handle1"><span class="highlight">What skills are required to craft <i>E2E
+                            experience</i>?</span></label>
             </p>
             <div class="content project-container">
                 <p class="serif m"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
@@ -121,7 +136,7 @@
         <section class="accordion reveal_x">
             <input type="checkbox" name="collapse" id="handle2">
             <p class="serif l handle">
-                <label for="handle2"><span class="highlight">What is <i>'from big-picture to pixels'</i>?</span></label>
+                <label for="handle2"><span class="highlight">What is <i>from big-picture to pixels</i>?</span></label>
             </p>
             <div class="content project-container">
                 <p class="serif m"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
@@ -162,25 +177,27 @@
     </section>
 
 
-    <section id="selected-work" class="section">
-        <p class="subtitle serif xxl bold reveal_x">SELECTED WORK</p>
+    <!------------ works  ------------->
 
+    <section id="work" class="section">
+        <p class="subtitle serif xxl bold reveal_x">SELECTED WORKS</p>
         <div class="project-container">
 
             <!-- project 1 -->
             <a href="./raceclocker.html" target="_blank">
-                <div class="project-card reveal_y" id="project-1">
+                <div class="project-card reveal_y_delay" id="raceclocker">
                     <div class="project-title">
-                        <div class="project-index sans-serif s bold">PROJECT 1</div>
-                        <p class="project1-title serif xl semi-bold">RACECLOCKER</p>
+                        <div class="project-index sans-serif s bold">PROJECT 1 · 2021</div>
+                        <p class="raceclocker-title serif xl semi-bold">RACECLOCKER</p>
                     </div>
                     <ul class="tags">
-                        <li class="tag serif s semi-bold">UX/UI Designed</li>
-                        <li class="tag serif s semi-bold">User Test</li>
+                        <li class="tag serif s semi-bold">UX/UI Design</li>
+                        <li class="tag serif s semi-bold">Usage Inspection</li>
                         <li class="tag serif s semi-bold">Lo- to Hi-fi Prototype</li>
+                        <li class="tag serif s semi-bold">Product Analysis</li>
                     </ul>
                     <div class="project-description">
-                        <p class="project1-des serif m bold">Optimizing the user expeirence of an online
+                        <p class="raceclocker-des serif m bold">Optimize the user expeirence of an online
                             timing
                             tool
                             for sports races.</p>
@@ -190,7 +207,7 @@
                     </div>
 
                     <div class="cover-container">
-                        <img src="./asset/project1-cover2.jpg" alt="project" class="project-cover">
+                        <img src="./asset/raceclocker-cover.jpg" alt="project" class="project-cover">
                     </div>
 
                 </div>
@@ -198,28 +215,28 @@
 
             <!-- project 2 -->
             <a href="www.google.com" target="_blank">
-                <div class="project-card reveal_y" id="project-2">
+                <div class="project-card reveal_y_delay" id="magiclamp">
                     <div class="project-title">
-                        <p class="project1-title serif xl semi-bold">RACECLOCKER</p>
+                        <div class="project-index sans-serif s bold">PROJECT 2 · 2022</div>
+                        <p class="magiclamp-title serif xl semi-bold">DESIGN OPENNESS
+                        </p>
                     </div>
                     <ul class="tags">
-                        <li class="tag serif s semi-bold">UX/UI Design</li>
-                        <li class="tag serif s semi-bold">User Test</li>
-                        <li class="tag serif s semi-bold">Lo- to Hi-fi Prototype</li>
-                        <li class="tag serif s semi-bold">Lo- to Hi-fi Prototype</li>
+                        <li class="tag serif s semi-bold">User Rsearch</li>
+                        <li class="tag serif s semi-bold">Research-through-design</li>
+                        <li class="tag serif s semi-bold">Future Vision</li>
+                        <li class="tag serif s semi-bold">Conceptual Framework</li>
                     </ul>
                     <div class="project-description">
-                        <p class="project1-des serif m bold">Optimizing the user expeirence of an online
-                            timing
-                            tool
-                            for sports races.</p>
+                        <p class="magiclamp-des serif m bold">Explore the intelligent technology for
+                            older people through speculation.</p>
                     </div>
                     <div class="enter">
                         <img src="./asset/arrow.svg" alt="ENTER" class="arrow-right">
                     </div>
 
                     <div class="cover-container">
-                        <img src="./asset/project2-cover.jpg" alt="project" class="project-cover">
+                        <img src="./asset/grad-cover.jpg" alt="project" class="project-cover">
                     </div>
 
                 </div>
@@ -228,27 +245,27 @@
 
             <!-- project 3 -->
             <a href="www.google.com" target="_blank">
-                <div class="project-card reveal_y" id="project-3">
+                <div class="project-card reveal_y_delay" id="sita">
                     <div class="project-title">
-                        <p class="project1-title serif xl semi-bold">RACECLOCKER</p>
+                        <div class="project-index sans-serif s bold">PROJECT 3 · 2021</div>
+                        <p class="sita-title serif xl semi-bold">BAGGAGE-FREE +</p>
                     </div>
                     <ul class="tags">
-                        <li class="tag serif s semi-bold">UX/UI Design</li>
-                        <li class="tag serif s semi-bold">User Test</li>
-                        <li class="tag serif s semi-bold">Lo- to Hi-fi Prototype</li>
+                        <li class="tag serif s semi-bold">Strategy Design</li>
+                        <li class="tag serif s semi-bold">Supply Chain Innovation</li>
+                        <li class="tag serif s semi-bold">Visual Communication</li>
                     </ul>
                     <div class="project-description">
-                        <p class="project1-des serif m bold">Optimizing the user expeirence of an online
-                            timing
-                            tool
-                            for sports races.</p>
+                        <p class="sita-des serif m bold">Strategize an integrated baggage-free service to
+                            launch in a new market.
+                        </p>
                     </div>
                     <div class="enter">
                         <img src="./asset/arrow.svg" alt="ENTER" class="arrow-right">
                     </div>
 
                     <div class="cover-container">
-                        <img src="./asset/project3-cover.png" alt="project" class="project-cover">
+                        <img src="./asset/sita-cover.jpg" alt="project" class="project-cover">
                     </div>
 
                 </div>
@@ -259,6 +276,12 @@
 
 
     <footer id="contact" class="section">
+        <div class="contacts">
+            <a href="https://www.linkedin.com/in/yu-huang-a1ba45115/" class="contact" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:yuhuang87@outlook.com" class="contact"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+
         <p class="sans-serif footer">
             Designed and coded with coffee and love ❤ by Yu Huang · <span id="date"></span>
         </p>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yu Huang</title>
+    <title>Raceclocker</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,60 +15,999 @@
 </head>
 
 <body>
+
+    <!------------------- warning --------------------->
+
     <div class="warning">
         <img src="./asset/warn.gif" alt="coffee" class="warn">
-        <p class="serif warn">Please visit this website on a larger screen for better experience. Thank you!</p>
+        <p class="serif warn">Thank you for dropping by on your phone! <br> To ensure a better viewing experience, you
+            might need a
+            larger
+            screen (a.k.a. your desktop) to look at my protfolio. </p>
+        <a href="https://drive.google.com/file/d/1MzbWQZz6AcX_OwbPw_Q7h3eZn_I6FO0G/view?usp=share_link" target="_blank"
+            class="serif warn resume">Maybe check my CV first!</a>
+        <p class="serif warn">If you really cannot wait to see it, please flip your phone to landscape for a peek.</p>
     </div>
+
+
+    <!-- loading page -->
+    <div class="loader-wrapper">
+        <img src="./asset/warn.gif" alt="loading..." class="loader">
+        <p class="loading">The website is brewing ☕.</p>
+
+    </div>
+
+
+    <!------------------- navbar --------------------->
+
     <header class="home" id="home">
         <nav class="nav">
             <div class="nav-center">
-                <div class="nav-header">
-                    <img src="./asset/logo2.png" alt="logo" class="logo">
-                    <!-- <button>
-                        <i class="fa-solid fa-bars"></i>
-                    </button> -->
+                <div class="nav-header reveal_y">
+                    <a href="index.html"><img src="./asset/logo1.png" alt="logo" class="logo"></a>
                 </div>
                 <div class="links-container">
-                    <ul class="links">
-                        <li>
-                            <a href="is-yu.github.io/about/" class="scroll-link">ABOUT</a>
+                    <ul class="links reveal_y">
+                        <li class="nav-index">
+                            <a href="/index.html#work" class="scroll-link">WORK</a>
                         </li>
-                        <li>
-                            <a href="is-yu.github.io/work/" class="scroll-link">WORK</a>
+                        <li class="nav-index tooltip">
+                            <a href="/gallery.html" class="scroll-link">GALLERY<span class="tooltiptext">🚧 Under
+                                    Construction</span></a>
                         </li>
-                        <li>
+                        <li class="nav-index">
                             <a href="#contact" class="scroll-link">CONTACT</a>
                         </li>
-                        <li>
+                        <li class="nav-index">
                             <a target="_blank"
-                                href="https://drive.google.com/file/d/1MzbWQZz6AcX_OwbPw_Q7h3eZn_I6FO0G/view?usp=share_link">RESUME</a>
+                                href="https://drive.google.com/file/d/1MzbWQZz6AcX_OwbPw_Q7h3eZn_I6FO0G/view?usp=share_link"
+                                class="scroll-link">RESUME</a>
                         </li>
-
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!------------------- project type ---------------------->
+
     <div class="section">
         <div class="hero">
-            <div class="introduction">
-                <article class="serif xxl regular">HEY, I’m Yu.
-                    <a href="www.google.com" class="profile-container" target="_blank"><img
-                            src="./asset/profile-home.png" alt="profile" loading="lazy" class="profile-1">
-                        <div class="stripe"></div>
-                    </a>
-                    A vision-driven
-                    designer with
-                    craftsmanship spirit. I aspire to
-                    utilize design thinking to pave the way for a better future.
-                </article>
+            <div class="project-type">
+                <div class="hero-img">
+                    <img src="./asset/raceclocker/raceclocker-cover.png" alt="project" class="project-img">
+                </div>
+                <div class="scope">
+                    <div class="grid-title ">SCOPE</div>
+                    <img src="./asset/raceclocker/raceclocker-scope.png" alt="ENTER" class="project-scope">
+                </div>
+
+                <div class="skills">
+                    <div class="grid-title ">SKILLS</div>
+                    <ul class="skill">
+                        <li class="serif s semi-bold">UX/UI Design</li>
+                        <li class="serif s semi-bold">Usage Inspection</li>
+                        <li class="serif s semi-bold">Prototype</li>
+                    </ul>
+                </div>
+
+                <div class="tools">
+                    <div class="grid-title ">TOOLS</div>
+                    <ul class="tool">
+                        <li class="serif s semi-bold">InVision</li>
+                        <li class="serif s semi-bold">Figma</li>
+                        <li class="serif s semi-bold">Protopie</li>
+                        <li class="serif s semi-bold">Protopie</li>
+                    </ul>
+                </div>
+
+                <div class="duration">
+                    <div class="grid-title ">DURATION</div>
+                    <p class="project1-title serif m semi-bold">2021.3 - 2021. 6
+                    </p>
+                </div>
+
+                <div class="team">
+                    <div class="grid-title ">TEAM</div>
+                    <ul class="teammate">
+                        <li class="serif s semi-bold">Anna Smulders</li>
+                        <li class="serif s semi-bold">Maureen Sanchez de Bouvé</li>
+                        <li class="serif s semi-bold">Saki Tang</li>
+                        <li class="serif s semi-bold">Shuyue Jin</li>
+                    </ul>
+                </div>
+
+                <div class="context">
+                    <div class="grid-title">CONTEXT</div>
+                    <p class="context-des serif s semi-bold"><a href="https://www.raceclocker.com/"
+                            target="_blank"><u>RaceClocker</u></a> is a do-it-yourself tool for
+                        manual timing of sports races. Its goal is to provide coaches, race
+                        managers, and time keepers with
+                        accurate and high-quality race timing
+                        service.
+                    </p>
+                </div>
+                <a href="#design" class="deliverable">
+                    <div class="grid-title">FINAL DESIGN</div>
+                    <img src="./asset/arrow-l.png" alt="ENTER" class="arrow-right">
+                </a>
+
             </div>
         </div>
+    </div>
 
-        <a href="www.google.com" class="hallmark" target="_blank">
-            <img src="./asset/hallmark1.png" alt="hand-coded website" class="circle-thing" id="hallmark">
+    <!------------------- side bar ---------------------->
+
+    <div class="sidebar">
+        <ul class="contents">
+            <li><a href="#overview"><span class="highlight">Overview</span></a></li>
+            <li><a href="#discover"><span class="highlight">Discover</span></a></li>
+            <li><a href="#define"><span class="highlight">Define</span></a></li>
+            <li><a href="#iterate"><span class="highlight">Iterate</span></a></li>
+            <li><a href="#design"><span class="highlight">Design</span></a></li>
+            <li><a href="#validate"><span class="highlight">Validte</span></a>
+            </li>
+            <li><a href="#reflect"><span class="highlight">Reflect</span></a></li>
+        </ul>
+    </div>
+
+    <!------------------- section-accordion --------------->
+
+    <!------------------- overview --------------->
+    <div class="section-accordion" id="overview">
+        <input type="checkbox" name="raceclocker" id="overview-title" checked>
+        <div class="accordion-arrow"></div>
+        <p class="ht1 reveal_x"><label for="overview-title">overview</label></p>
+
+        <div class="content content-container">
+            <p class="index-title">challenge</p>
+            <p class="ht2">UX Optimization </p>
+            <p class="text reveal_y">We were given the task to improve the user experience of RaceClocker. As our
+                client, Cees
+                van Dok (the founder of RaceClocker) <span class="s-highlight highlight-raceclocker">mainly saw this
+                    project as a source of inspiration for future
+                    iterations, the technical constraints were lifted and bold concepts were encouraged.</span> </p>
+            <p class="text reveal_y">Of course, if I were optimizing the real product,
+                I would also consider the
+                negative
+                influence brought by the changes on the product (e.g. confusion caused by drastic changes in the new
+                design) and take technical feasibility into account. I would also refer back to the company’s
+                roadmap,
+                to think about whether the new design is necessary for both its users and the business. Now
+                that the aim
+                is for envisioning the product in the most ideal state, we, therefore, left off those concerns and went
+                for the best at full force.</p>
+
+            <div class="divider-part"></div>
+
+            <!-------- roles---------->
+
+            <p class="ht2">My roles</p>
+            <div class="flex-column reveal_y">
+                <div class="column-child-4 border">
+                    <p class="para-title">Product analysis and usage evaluation</p>
+                    <p class="caption">I conducted product analysis and usage evaluation to generate insights about the
+                        current product design.</p>
+                </div>
+                <div class="column-child-4 border">
+                    <p class="para-title">Product analysis and usage evaluation</p>
+                    <p class="caption">I conducted product analysis and usage evaluation to generate insights
+                        about the
+                        current product design.</p>
+                </div>
+                <div class="column-child-4 border">
+                    <p class="para-title">Design execution and validation</p>
+                    <p class="caption">I executed the user journeys, wireframes, prototypes, and design specs. I
+                        coordinated the user tests for validation.</p>
+                </div>
+                <div class="column-child-4 border">
+                    <p class="para-title">Leadership and communication</p>
+                    <p class="caption"> I led the group working drumbeats and facilitated the meetings with the client
+                        and mentors. </p>
+                </div>
+            </div>
+
+            <div class="divider-part"></div>
+
+            <p class="index-title">discovery</p>
+            <p class="ht2">problem statements </p>
+            <p class="text">By integrating the findings from first-hand experience, online reviews, interviews, and
+                methodical usage inspection, we summarized the following 5 problem statements: </p>
+            <ol class="para-title captalized flex-column reveal_y" type="max-width: 660px;">
+                <li class="column-child-4">The RaceClocker app’s current hierarchy of pages causes confusion among
+                    users.
+                </li>
+                <li class="column-child-4">Users can easily get lost in the many pages due to a complicated use flow.
+                </li>
+                <li class="column-child-4">The user receives no clear feedback after clicking a button or icon.</li>
+                <li class="column-child-4">Some buttons’ or icons’ meanings cause misunderstanding or confusion.</li>
+                <li class="column-child-4">While using the product, eye-hand coordination is hard and operation within
+                    the
+                    timer
+                    is difficult to manage.</li>
+            </ol>
+
+            <div class="divider-part"></div>
+
+            <p class="index-title">vision</p>
+            <p class="ht2">bridge the gap between digital timing and physical tracking </p>
+            <p class="quote reveal_y">"We want to
+                make frequent
+                users feel in control when using RaceClocker. Time
+                recording during a race should be intuitive, efficient and fast. Besides that,
+                users should feel confident when using and navigating through the functions
+                RaceClocker offers." </p>
+
+            <div class="divider-part"></div>
+
+            <p class="index-title">solution</p>
+            <div class="ht2">introducing RaceClocker 2.0</div>
+
+            <!--------------------- features ------------------->
+
+            <div class="two-column-full">
+                <div class="column-child-2 reveal_x">
+                    <p class="ht3-dec">Flatten the hierarchy by collecting the non-often-used features in the menu
+                    </p>
+                    <p class="text-dec">We aim to keep the hierarchy of
+                        timer dashboard simple and flat by
+                        1) reducing the unnecessary digital
+                        buttons and collecting not-often-used
+                        features in the menu; 2) making the
+                        main interactions happen on the same
+                        interface and avoiding unnecessary
+                        jumping. </p>
+                </div>
+                <div class="img-wrapper-landscape reveal_x_delay"><img src="/asset/raceclocker/design1-menu.gif"
+                        alt="onboarding" class="side-img"></div>
+            </div>
+
+            <div class="two-column-full-reverse">
+                <div class="img-wrapper-portrait reveal_x"><img src="/asset/raceclocker/design2-onboarding.gif"
+                        alt="onboarding" class="side-img"></div>
+                <div class="column-child-2 reveal_x_delay">
+                    <p class="ht3-dec">Smoothen the use flow by replacing choice-making with automatic recommendations
+                    </p>
+                    <p class="text-dec">We intend to smoothen the use
+                        flow by limiting users’ choices. For
+                        example, we recommend timekeepers
+                        to choose the timing mode that most
+                        suits the race beforehand, which helps
+                        to offload the pressure of choosing
+                        the best timing mode and also avoid
+                        distractions when keeping track of the
+                        time during the race. </p>
+                </div>
+            </div>
+
+            <div class="two-column-full">
+                <div class="column-child-2 reveal_x">
+                    <p class="ht3-dec">Boost the feeling of control by providing multi-sensory feedback
+                    </p>
+                    <p class="text-dec">We use various types of output as the
+                        feedback, including the visual feedback
+                        (the color changing) and the haptic
+                        feedback (the vibration of the phone).
+                        We carefully designed our color code
+                        to make it intuitive. We also decide the
+                        form of feedback according to the level
+                        of importance and the context. For
+                        example, during the phase of timing,
+                        we provide visual and haptic feedback
+                        as a double confirmation of certain
+                        actions. After timing all participants,
+                        a pop-out window will show the
+                        timekeepers they have already finish
+                        their job. </p>
+                </div>
+                <div class="img-wrapper-landscape reveal_x_delay"><img src="/asset/raceclocker/design3-color.gif"
+                        alt="color" class="side-img">
+                </div>
+            </div>
+
+            <div class="two-column-full-reverse ">
+                <div class="img-wrapper-landscape reveal_x"><img src="/asset/raceclocker/design4-guideline.png"
+                        alt="onboarding" class="side-img"></div>
+                <div class="column-child-2 reveal_x_delay">
+                    <p class="ht3-dec">Improve visual clarity and consistency by standardizing the design guideline
+                    </p>
+                    <p class="text-dec">We standardized our design according
+                        to a set of UI design guideline, which
+                        includes the size of eachibutton, the
+                        color code, the font and font size, and
+                        the state changing code. We set up the
+                        guideline to make sure each element
+                        on the interface is clearly presented,
+                        logically laid out at the appropriate
+                        location and also meets the aesthetic
+                        need. </p>
+                </div>
+            </div>
+
+            <div class="two-column-full">
+                <div class="column-child-2 reveal_x">
+                    <p class="ht3-dec">Enhance eye-hand coordination, and operation by using the hard key of phones
+                    </p>
+                    <p class="text-dec">We got inspired by <span class="simple-highlight-1"> the use of the
+                            stopwatch</span> during timekeeping - a
+                        traditional but efficient way of
+                        timekeeping without the problem
+                        of operation - and decided to use
+                        the hard keys of the mobile phone
+                        to replicate the familiar feeling of
+                        timekeeping with a stopwatch thereby
+                        solving the problem of hand-eye
+                        discoordination.</p>
+                </div>
+                <div class="img-wrapper-landscape reveal_x_delay"><img src="/asset/raceclocker/design5-hard key.gif"
+                        alt="onboarding" class="side-img"></div>
+            </div>
+
+            <!-----------------feature------------------->
+
+            <!-------- jumper ---------->
+            <a href="#design" class="ht3 reveal_x jumper">
+                <span class="highlight color-changing">Jump to final design</span>
+                <div class="jump-arrow-wrapper"><img src="/asset/arrow.svg" alt="jump">
+                </div>
+            </a>
+
+            <!-------- jumper ---------->
+
+            <div class="divider-part"></div>
+
+            <p class="index-title">approach</p>
+            <p class="ht2">How we got there</p>
+
+            <div class="one-column">
+
+                <p class="ht3 reveal_x">A proper scoping is based on a thorough understanding </p>
+
+                <a href="https://docs.google.com/spreadsheets/d/1Y2sMvpIh5J4p3ofmd9_r71IuJ1pUfd8Ic0hmkxMbyfU/edit?usp=sharing"
+                    target="_blank">
+                    <div class="img-wrapper-landscape" style="border: none !important; border-radius:0 !important;">
+                        <img src="/asset/raceclocker/project management.png" alt="framework" class="one-column-img">
+
+                        <p class="caption-dec"><i>Project Planning Working Sheet</i></p>
+                    </div>
+                </a>
+
+                <p class="text">As a group of five, we hope to improve individual engagement by making the role and
+                    tasks of each one clear. We created 4 roles in total:
+                </p>
+
+                <ol class="para-title captalized flex-column reveal_y" type="max-width: 660px;">
+                    <li class="column-child-4">The team lead may keep everyone on task and makes sure everyone is
+                        involved during the week
+                        and at team meetings. And planning.
+                    </li>
+                    <li class="column-child-4">The chair of the meeting keeps an eye on everyone’s contribution during
+                        coach meetings and notes when team members do not regularly attend coach meetings.</li>
+                    <li class="column-child-4">An editor prepares the weekly team uploads, often by collecting and
+                        assembling parts that are handed in by other team members.</li>
+                    <li class="column-child-4">WAn editor prepares the weekly team uploads, often by collecting and
+                        assembling parts that are handed in by other team members.</li>
+                </ol>
+            </div>
+
+
+            <div class="two-column">
+                <div class="column-child-2-narrow reveal_x">
+                    <p class="ht3">A proper scoping is based on a thorough understanding </p>
+                    <p class="text">Since the design brief is quite broad and vague, one of the many challenges is how
+                        to
+                        properly define the design scope. The foundation of scoping is a thorough understanding of the
+                        product.
+                        We used the following framework to retrieve different cross-sections of the product.</p>
+                </div>
+
+                <div class="img-wrapper-landscape reveal_x_delay"
+                    style="border: none !important; border-radius:0 !important; width: 400px !important;">
+                    <img src="/asset/raceclocker/product-analysis-framework.png" alt="framework" class="side-img">
+                    <p class="caption-dec"><i>Product analysis framework</i></p>
+                </div>
+            </div>
+
+            <p class="ht3 reveal_x">Design directions emerge from formative evaluation</p>
+            <p class="text reveal_x">In order to ideate solutions to improve the usability of RaceClocker, we used
+                various
+                methods including first-hand experience, online reviews, interview, methodical user involvement usage
+                inspection, etc. to conduct the formative evaluation to know how to make the usability improvements.
+            </p>
+
+        </div>
+    </div>
+
+
+    <!--------------------- discover ------------------------>
+
+    <div class="section-accordion" id="discover">
+        <input type="checkbox" name="raceclocker" id="discover-title">
+        <div class="accordion-arrow"></div>
+        <p class="ht1 reveal_x"><label for="discover-title">discover</label></p>
+        <div class="content content-container">
+
+
+            <!---------------Understanding-------------------->
+            <p class="index-title">discover</p>
+            <p class="ht2">Understanding RaceClocker: What are we dealing with? </p>
+            <p class="text">To better understand the what-is (not what is good/bad), we conducted several research
+                activities in parallel to understand RaceClocker from outside-in to inside-out. The main takeaways are
+                summarized below. Expand the part for more details.</p>
+
+            <!---------- part-accordion background--------------->
+            <div class="one-column">
+                <section class="part-accordion reveal_x">
+                    <input type="checkbox" name="collapse" id="company-background">
+                    <p class="ht3 handle">
+                        <label for="company-background"><span class="highlight">company background</span></label>
+                    </p>
+                    <div class="content part-container">
+                        <p class="text-dec"> <span class="s-highlight highlight-raceclocker"> RaceClocker is a one man
+                                business </span>and
+                            was started and developed 8 years
+                            ago, initially as a hobby. The owner
+                            and builder spends about three weeks
+                            a year improving this online timing
+                            platform. RaceClocker has no other
+                            products or applications.</p>
+                        <p class="text-dec"><span class="s-highlight highlight-raceclocker"></span>It is usually used in
+                            various scale races
+                            for small clubs or events</span>. And it
+                            also
+                            provides highly efficient timing process
+                            <span class="s-highlight highlight-raceclocker">for many sports on water or snow or at
+                                remote locations.</span>
+                        </p>
+                        <p class="text-dec">RaceClocker has 3000 active users and has been used for more than 10.000
+                            events. <span class="s-highlight highlight-raceclocker">These users and events are
+                                located all around the world. </span>Compared to other online timing
+                            platforms, with a whole team behind
+                            it, RaceClocker’s position in the market
+                            is quite leading.</p>
+
+                        <div class="img-wrapper-landscape" style="border: none !important; border-radius:0 !important;">
+                            <img src="/asset/raceclocker/world.jpg" alt="framework" class="one-column-img">
+
+                            <p class="caption-dec"><i>The users of RaceClocker displayed on a world map</i></p>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+            <!---------- part-accordion competitor--------------->
+            <div class="one-column">
+                <section class="part-accordion reveal_x">
+                    <input type="checkbox" name="collapse" id="competitor-handle">
+                    <p class="ht3 handle">
+                        <label for="competitor-handle"><span class="highlight" id="competitor-cap">Competitive
+                                Analysis</span></label>
+                    </p>
+                    <div class="content part-container">
+                        <p class="text-dec">In order to get an overview of
+                            RaceClocker’s competitors, we created
+                            an account on the three most similar
+                            timing platforms and simulated a
+                            race. The three main competitors
+                            are Webscorer, RaceSplitter and
+                            RaceGorilla.</p>
+                        <p class="text-dec">An overview of this
+                            competitor analysis is shown with
+                            some general data. <span class="s-highlight highlight-raceclocker">Comparing this
+                                data has led to many insights that
+                                are not necessarily valuable within
+                                the scope of our project. </span>However,
+                            it was very interesting to try out the
+                            interfaces of the different applications.
+                        </p>
+                        <p class="text-dec">At first
+                            sight, they all looked more complicated
+                            and kind of out-dated in comparison to
+                            RaceClocker’s application. Researching
+                            the reviews and interactions of the
+                            apps, <span class="s-highlight highlight-raceclocker">we concluded that RaceClocker is
+                                actually doing well in this niche market.
+                                It has a user-friendly interface, looks
+                                professional</span> and the communication
+                            with the developer is fast and clear.
+                            <span class="s-highlight highlight-raceclocker">However, the learning curve is still not
+                                optimal and the user does not feel
+                                confident about timing a race.</span>
+                        </p>
+
+                        <img src="/asset/raceclocker/competitor.jpg" alt="framework" class="one-column-img">
+
+                        <p class="caption-dec"><i>Competitive analysis overview</i></p>
+
+                    </div>
+                </section>
+            </div>
+
+            <!---------- part-accordion ecosystem--------------->
+            <div class="one-column">
+                <section class="part-accordion reveal_x">
+                    <input type="checkbox" name="collapse" id="ecosystem-handle" checked>
+                    <p class="ht3 handle">
+                        <label for="ecosystem-handle" id="ecosystem-cap"><span
+                                class="highlight">Ecosystem</span></label>
+                    </p>
+
+                    <div class="content part-container">
+                        <p class="text"> We identified five user groups (Figure below) in the ecosystem of RaceClocker.
+                            We
+                            divided these groups into direct and
+                            indirect users. </br>
+                            <span class="s-highlight highlight-raceclocker">Direct users</span> of RaceClocker are race
+                            managers and timekeepers. Race
+                            managers create races and collect
+                            and enter all necessary details such
+                            as date, time, location and participant
+                            lists. Timekeepers register the exact
+                            time participants pass their start,
+                            finish or split point during the race.<br>
+                            <span class="s-highlight highlight-raceclocker">Indirect users</span> are the sporters - the
+                            participants who join the race - and the
+                            audience viewing the race, in real life or
+                            remotely. RaceClocker offers real time
+                            result sharing, enabling participants
+                            and audience to see performances
+                            directly. Furthermore, sport coaches
+                            can also use RaceClocker as a tool to
+                            compare performances within training
+                            sessions.
+                        </p>
+                        <div class="img-wrapper-landscape" style="border:none; border-radius:0;">
+                            <img src="/asset/raceclocker/target.png" alt="framework" class="one-column-img">
+                            <p class="caption-dec"><i>User Groups of RaceClocker</i></p>
+                        </div>
+                        <p class="text">RaceClocker can be used on laptop, tablet
+                            and smartphone. Figure below shows an overview of the primary user interfaces
+                            within each device. Symbiotic products, such as internet connection or BIB/
+                            BOW numbers to recognize participants, are also relevant within the use of
+                            RaceClocker besides the primary products. Finally, the environment where
+                            RaceClocker is used, depends on the sports type and club’s preference. <span
+                                class="s-highlight highlight-raceclocker">Before
+                                the race, RaceClocker is used by the race manager in the office, to create a race
+                                and import race information and details. During the race, RaceClocker is used by
+                                timekeepers to track participants, in both indoor and outdoor spaces and by race
+                                manager to keep an overvie of the race and share results.</span></p>
+                        <div class="img-wrapper-landscape" style="border:none; border-radius:0;">
+                            <img src="/asset/raceclocker/ecosystem.png" alt="framework" class="one-column-img">
+                            <p class="caption-dec"><i>Ecosystem of RaceClocker</i></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!---------- part-accordion buildup--------------->
+            <div class="one-column">
+                <section class="part-accordion reveal_x">
+                    <input type="checkbox" name="collapse" id="buildup-handle">
+                    <p class="ht3 handle">
+                        <label for="buildup-handle" id="buildup-cap"><span class="highlight">Buildup</span></label>
+                    </p>
+                    <div class="content part-container">
+                        <div class="img-wrapper-landscape" style="border: none !important; border-radius:0 !important;">
+                            <img src="/asset/raceclocker/buildup.png" alt="framework" class="side-img">
+                            <p class="caption-dec"><i>Digital buildup of RaveClocker</i></p>
+                        </div>
+                        <p class="text"><strong>Core product</strong><br>
+                            RaceClocker is a Software as a Service (SaaS) - also known as cloud-based
+                            software. Instead of installing and maintaining software, users access it via the
+                            internet. Besides, it uses a cloud service to store and transfer time tracked data.</p>
+                        <p class="text"> <strong>Extended products</strong><br>
+                            A 7 minutes instruction video on the RaceClocker homepage explains all the
+                            functions available.</p>
+                        <p class="text"><strong>Symbiotic products</strong><br>
+                            An internet connection is necessary when using this product. It enables
+                            the transfer of real-time data. Since RaceClocker is a web-browser based
+                            product, it can be used on multiple devices with an internet connection, such
+                            as smartphone, tablet and laptop. A CSV based file of the participants list will
+                            be helpful when the race manager wants to upload the participants list into
+                            RaceClocker. Beside, a subscription is needed if users want to have more access
+                            to functions and organize a race with more than 10 participants. Sometimes,
+                            an external display is used for showing the countdown start time for sporters
+                            and sharing the live results with the audience. Since RaceClocker doesn’t include
+                            chips, bib or bow number labels are a way to recognise participants.
+                            A bib number is also known as competition number, it is printed on a label which
+                            can be attached to the participants’ clothes or gear.</p>
+                    </div>
+                </section>
+            </div>
+
+            <!---------- part-accordion context--------------->
+            <div class="one-column">
+                <section class="part-accordion reveal_x">
+                    <input type="checkbox" name="collapse" id="context-handle" checked>
+                    <p class="ht3 handle">
+                        <label for="context-handle" id="context-cap"><span class="highlight">Context of
+                                Use</span></label>
+                    </p>
+                    <div class="content part-container">
+                        <p class="text">Luckily we had the chance to
+                            experience a real race and cooperate
+                            with race organizers while observing
+                            a rowing race process.
+                            Two rowing races from DDS, a
+                            rowing association in Delft, were
+                            observed. One of us experienced the
+                            process of being a timekeeper and
+                            using RaceClocker in a real scenario.
+                            There were three starting laps of 10
+                            participants, varying from single to
+                            four-men boats.
+                            <span class="s-highlight highlight-raceclocker">Based on our race experience, a
+                                journey map was made, to analyse the
+                                process and identify the pain points.</span>
+                        </p>
+                        <div class="img-wrapper-landscape" style="border:none; border-radius:0;">
+                            <img src="/asset/raceclocker/onsite.png" alt="framework" class="one-column-img">
+                            <p class="caption-dec"><i>Observation on site</i></p>
+                        </div>
+
+                        <p class="text"> Based on the experience and the
+                            journey map, there are several insights
+                            that we found. </p>
+
+
+                        <ol class="para-title flex-column">
+                            <li class="column-child-2"> The race manager explained
+                                that timekeepers prefer to use a
+                                smartphone when recording time.</li>
+                            <li class="column-child-2">
+                                Furthermore the smartphone will be
+                                held ‘landscape’ as this enlarges the
+                                buttons, making exact timing easier.</li>
+                            </li>
+                            <li class="column-child-2">Preferably two timekeepers are
+                                present at one split point, one
+                                timekeeper will shout out loud the
+                                exact moment the boat passes
+                                the split point, enabling the other
+                                timekeeper to look at the phone and
+                                press the button right away.</li>
+                            </li>
+                            <li class="column-child-2">We were
+                                advised to zoom into one button as
+                                much as possible, making clicking
+                                easier and preventing ourselves from
+                                making mistakes. </li>
+                            <li class="column-child-2">As this race was a small-scale event,
+                                all timekeepers knew participants
+                                personally, in this case the use of BOW
+                                numbers was not necessary. </li>
+                            <li class="column-child-2">Using
+                                the phone for timing is preferred,
+                                however it is somewhat limiting as
+                                communication with race managers
+                                or other timekeepers is not possible.</li>
+                            <li class="column-child-2">Besides the missing ability to
+                                communicate, timekeepers also get
+                                easily distracted as personal phone
+                                notifications such as messages or
+                                calls will interfere with the use of
+                                RaceClocker.</li>
+                            <li class="column-child-2"> When tracking times a
+                                form of feedback whether time has
+                                been tracked is limited.</li>
+                        </ol>
+                        <div class="two-column">
+                            <p class="text column-child-2-narrow">We noticed that within the process of
+                                time-keeping, there are 3 dimensions
+                                that timekeepers need to pay attention
+                                to. At the specific moment of timing,
+                                a timekeeper has to pay attention to
+                                the boat coming (physical), focus on
+                                the phone (digital) to make sure one
+                                presses the right button and keep
+                                paying attention to press at the exact
+                                moment the boat passes the timing
+                                point.</p>
+
+                            <div class="img-wrapper-landscape"
+                                style="border:none !important; border-radius:0 !important; max-width: 400px;">
+                                <img src="/asset/raceclocker/visualisation interaction.png" alt="framework"
+                                    class="side-img">
+                                <p class="caption-dec"><i>Visualization of interaction required while timing</i></p>
+                            </div>
+                        </div>
+                        <p class="quote">Therefore it is important
+                            to have
+                            control as a timekeeper over these
+                            three dimensions in both the physical
+                            and digital world intuitively. It is
+                            necessary to input information in the
+                            system with confident.
+                        </p>
+                    </div>
+                </section>
+
+                <!-------------- lightbox ----------------->
+                <!-- thumbnail image wrapped in a link -->
+                <a class="img-wrapper-landscape" style="border: none !important; border-radius:0 !important;"
+                    href="#context">
+                    <img src="/asset/raceclocker/Journey map.jpg" alt="framework" class="one-column-img">
+                    <p class="caption-dec" id="context-c"><i>User journey map</i></p>
+                </a>
+
+                <!-- lightbox container hidden with CSS -->
+                <a href="#context-c" class="lightbox" id="context">
+                    <img src="/asset/raceclocker/Journey map.jpg" alt="framework" class="side-img horizontal">
+                </a>
+                <!-------------- lightbox ----------------->
+            </div>
+
+            <!---------- part-accordion function--------------->
+            <div class="one-column">
+                <section class="part-accordion reveal_x">
+                    <input type="checkbox" name="collapse" id="function-handle">
+                    <p class="ht3 handle">
+                        <label for="function-handle" id="function-cap"><span class="highlight">Functions</span></label>
+                    </p>
+                    <div class="content part-container">
+                        <p class="text">In order to start researching the current
+                            user experience of RaceClocker it is
+                            important to know what actually the
+                            purpose of RaceClocker is and what
+                            specific functions it offers to its users.<br>
+                            As mentioned in previous chapters,
+                            RaceClocker is a manual timing tool
+                            which can be used for several types of
+                            sports races. RaceClocker is offered in
+                            the form of a website and can be used
+                            on several devices, such as laptops,
+                            tablets and smartphones. The main
+                            purpose of RaceClocker is to allow
+                            small scale race events for fast and
+                            easy manual timing.</p>
+                        <p class="text"> <span class="s-highlight highlight-raceclocker">Within the use of RaceClocker
+                                we acknowledge two main phases. </span><br><span
+                                class="s-highlight highlight-raceclocker">The first phase
+                                includes the race preparation, in which a race manager enters all of the race
+                                details relevant within the race by creating the race on a laptop.</span> Such as, the
+                            location, date and time, sport type, but also a participant list and details. After
+                            that, links to the timers will be shared with time keepers, to enable them to keep
+                            track of time during the race. <br><span class="s-highlight highlight-raceclocker">The
+                                second phase is the actual race, here we know
+                                direct users and indirect users.</span> The race manager is, in most cases, present at
+                            the
+                            start of the race. Using a laptop, the race manager is able to keep an overview of
+                            the race. The timer dashboard gives the race manager the ability to see to which
+                            participants a time has been assigned. Timekeepers are the ones in the field, who
+                            assign times to the racers possible in different timing settings. Finally the race
+                            manager is able to share an overview of live results, if needed on a large screen,
+                            in order to make sure that racers and audience can view results live and directly
+                            during and after the race.</p>
+
+                        <div class="img-wrapper-landscape"
+                            style="border: none; border-radius: 0; max-width:780px !important;"><img
+                                src="/asset/raceclocker/Functions overview.png" alt="framework" class="one-column-img">
+                            <p class="caption-dec"><i>Functions of RaceClocker</i></p>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+            <!---------- part-accordion UI--------------->
+            <div class="one-column">
+                <section class="part-accordion reveal_x">
+                    <input type="checkbox" name="collapse" id="UI-handle">
+                    <p class="ht3 handle">
+                        <label for="UI-handle" id="UI-cap"><span class="highlight">User Interfaces</span></label>
+                    </p>
+                    <div class="content part-container">
+                        <p class="text">In order to get a better understanding of
+                            RaceClocker’s functions and elements,
+                            the web interface of RaceClocker
+                            is analysed. Within the website we
+                            identified two main pages, first of all
+                            Race details -enabling a race manager
+                            to create a race - and secondly the Timer
+                            dashboard - here one can find links and
+                            buttons directing the user to the actual
+                            timers needed during a race.</p>
+
+                    </div>
+                </section>
+                <!-------------- lightbox ----------------->
+                <!-- thumbnail image wrapped in a link -->
+                <a class="img-wrapper-landscape" style="border: none !important; border-radius:0 !important;"
+                    href="#UI">
+                    <img src="/asset/raceclocker/UI.jpg" alt="framework" class="one-column-img">
+                    <p class="caption-dec"><i>UI Analysis of RaceClocker</i></p>
+                </a>
+
+                <!-- lightbox container hidden with CSS -->
+                <a href="#UI-cap" class="lightbox" id="UI">
+                    <img src="/asset/raceclocker/UI.jpg" alt="framework" class="side-img vertical">
+                </a>
+                <!-------------- lightbox ----------------->
+            </div>
+
+
+
+
+            <!---------------Evaluating------------------->
+            <p class="index-title">discover</p>
+            <p class="ht2">Evaluating RaceClocker: What can be improved? </p>
+            <p class="text">To better understand the what-is (not what is good/bad), we conducted several research
+                activities in parallel to understand RaceClocker from outside-in to inside-out. The main takeaways are
+                summarized below. Expand the part for more details.</p>
+
+            <!---------- part-accordion background--------------->
+            <div class="one-column">
+                <section class="part-accordion reveal_x">
+                    <input type="checkbox" name="collapse" id="company-background">
+                    <p class="ht3 handle">
+                        <label for="company-background"><span class="highlight">company background</span></label>
+                    </p>
+                    <div class="content part-container">
+                        <p class="text-dec"> <span class="s-highlight highlight-raceclocker"> RaceClocker is a one man
+                                business </span>and
+                            was started and developed 8 years
+                            ago, initially as a hobby. The owner
+                            and builder spends about three weeks
+                            a year improving this online timing
+                            platform. RaceClocker has no other
+                            products or applications.</p>
+                        <p class="text-dec"><span class="s-highlight highlight-raceclocker"></span>It is usually used in
+                            various scale races
+                            for small clubs or events</span>. And it
+                            also
+                            provides highly efficient timing process
+                            <span class="s-highlight highlight-raceclocker">for many sports on water or snow or at
+                                remote locations.</span>
+                        </p>
+                        <p class="text-dec">RaceClocker has 3000 active users and has been used for more than 10.000
+                            events. <span class="s-highlight highlight-raceclocker">These users and events are
+                                located all around the world. </span>Compared to other online timing
+                            platforms, with a whole team behind
+                            it, RaceClocker’s position in the market
+                            is quite leading.</p>
+
+                        <div class="img-wrapper-landscape" style="border: none !important; border-radius:0 !important;">
+                            <img src="/asset/raceclocker/world.jpg" alt="framework" class="one-column-img">
+
+                            <p class="caption-dec"><i>The users of RaceClocker displayed on a world map</i></p>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!--------------------- define ------------------------>
+
+    <div class="section-accordion" id="define">
+        <input type="checkbox" name="raceclocker" id="define-title">
+        <div class="accordion-arrow"></div>
+        <p class="ht1 reveal_x"><label for="define-title">define</label></p>
+        <div class="content content-container">
+
+            <p class="index-title">challenge</p>
+            <p class="ht2">History: </p>
+            <p class="text"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
+                carbonated Trappist
+                ale,
+                showing a fruity-spicy Trappist yeast character, a spicy-floral hop profile, and a soft,
+                supportive
+                grainy-sweet malt palate.</p>
+        </div>
+    </div>
+
+    <!--------------------- iterate ------------------------>
+
+    <div class="section-accordion" id="iterate">
+        <input type="checkbox" name="raceclocker" id="iterate-title">
+        <div class="accordion-arrow"></div>
+        <p class="ht1 reveal_x"><label for="iterate-title">iterate</label></p>
+        <div class="content content-container">
+
+            <p class="index-title">challenge</p>
+            <p class="ht2">History: </p>
+            <p class="text"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
+                carbonated Trappist
+                ale,
+                showing a fruity-spicy Trappist yeast character, a spicy-floral hop profile, and a soft,
+                supportive
+                grainy-sweet malt palate.</p>
+        </div>
+    </div>
+
+    <!--------------------- design ------------------------>
+
+    <div class="section-accordion" id="design">
+        <input type="checkbox" name="raceclocker" id="design-title">
+        <div class="accordion-arrow"></div>
+        <p class="ht1 reveal_x"><label for="design-title">design</label></p>
+        <div class="content content-container">
+
+            <p class="index-title">challenge</p>
+            <p class="ht2">History: </p>
+            <p class="text"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
+                carbonated Trappist
+                ale,
+                showing a fruity-spicy Trappist yeast character, a spicy-floral hop profile, and a soft,
+                supportive
+                grainy-sweet malt palate.</p>
+        </div>
+    </div>
+
+
+    <!--------------------- validate ----------------------->
+
+    <div class="section-accordion" id="validate">
+        <input type="checkbox" name="raceclocker" id="validate-title">
+        <div class="accordion-arrow"></div>
+        <p class="ht1 reveal_x"><label for="validate-title">validate</label></p>
+        <div class="content content-container">
+
+            <p class="index-title">challenge</p>
+            <p class="ht2">History: </p>
+            <p class="text"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
+                carbonated Trappist
+                ale,
+                showing a fruity-spicy Trappist yeast character, a spicy-floral hop profile, and a soft,
+                supportive
+                grainy-sweet malt palate.</p>
+        </div>
+    </div>
+
+    <!--------------------- reflect ----------------------->
+
+    <div class="section-accordion" id="reflect">
+        <input type="checkbox" name="raceclocker" id="reflect-title">
+        <div class="accordion-arrow"></div>
+        <p class="ht1 reveal_x"><label for="reflect-title">reflect</label></p>
+        <div class="content content-container">
+
+            <p class="index-title">challenge</p>
+            <p class="ht2">History: </p>
+            <p class="text"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
+                carbonated Trappist
+                ale,
+                showing a fruity-spicy Trappist yeast character, a spicy-floral hop profile, and a soft,
+                supportive
+                grainy-sweet malt palate.</p>
+        </div>
+    </div>
+
+    <div class="section" id="next">
+        <a href="/magiclamp.html" class="ht1 reveal_x">
+            NEXT PROJECT
         </a>
     </div>
+
+
+
+
+
+    <!------------------- footer ---------------------->
+
+    <footer id="contact" class="section">
+        <div class="contacts">
+            <a href="https://www.linkedin.com/in/yu-huang-a1ba45115/" class="contact" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:yuhuang87@outlook.com" class="contact"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+
+        <p class="sans-serif footer">
+            Designed and coded with coffee and love ❤ by Yu Huang · <span id="date"></span>
+        </p>
+    </footer>
+
+    <!------------------- top ---------------------->
+
+    <a href="#top" class="top-link ">
+        <img src="./asset/arrow.svg" alt="arrow" class="arrow-up">
+    </a>
+
     <script src="portfolio.js"></script>
 </body>
 
