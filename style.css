@@ -3,7 +3,7 @@
     --sans-serif-font: 'DM Sans', 'Roboto';
 
     --font-size-xxlarge: 96rem;
-    --font-size-xlarge: 60rem;
+    --font-size-xlarge: 64rem;
     --font-size-large: 48rem;
     --font-size-medium: 24rem;
     --font-size-small: 21rem;
@@ -394,15 +394,19 @@ body {
     position: absolute;
     justify-self: center;
 
-    width: 6vw;
-    height: 6vw;
+    width: 8vw;
+    height: 8vw;
     background-color: var(--clr-transparent);
 
-    border: dashed 1px #11111123;
+    border: solid var(--border-weight) var(--clr-black);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hallmark .arrow-wrapper {
+    border: solid 5rem;
 }
 
 .profile-container {
@@ -1075,10 +1079,16 @@ img[class='warn'] {
     flex-direction: column;
 }
 
+.deliverable:hover img {
+    transform: translateX(12rem);
+    transition: var(--transition);
+}
+
 .deliverable img {
     width: 60%;
     display: inline-block;
     margin: auto;
+    transition: var(--transition);
 }
 
 
@@ -1119,7 +1129,7 @@ img[class='warn'] {
 }
 
 .ht1 {
-    grid-column: 3/-3;
+    grid-column: 3/-1;
     font-family: var(--serif-font);
     font-size: var(--font-size-h1);
     font-weight: var(--font-weight-thin);
@@ -1200,7 +1210,7 @@ img[class='warn'] {
 }
 
 .text {
-    grid-column: 3/9;
+    grid-column: 3/-3;
     font-family: var(--serif-font);
     font-size: var(--font-size-text);
     font-weight: var(--font-weight-medium);
@@ -1221,7 +1231,7 @@ img[class='warn'] {
 }
 
 .caption {
-    grid-column: 3/9;
+    grid-column: 3/-3;
     font-family: var(--serif-font);
     font-size: var(--font-size-caption);
     font-weight: var(--font-weight-medium);
@@ -1244,7 +1254,7 @@ img[class='warn'] {
 }
 
 .index-title {
-    grid-column: 3/9;
+    grid-column: 3/-3;
     font-family: var(--sans-serif-font);
     font-size: var(--font-size-caption);
     font-weight: var(--font-weight-medium);
@@ -1262,7 +1272,7 @@ img[class='warn'] {
 }
 
 .para-title {
-    grid-column: 3/9;
+    grid-column: 3/-3;
     font-family: var(--sans-serif-font);
     font-size: var(--font-size-caption);
     font-weight: var(--font-weight-medium);
@@ -1346,6 +1356,7 @@ img[class='warn'] {
     display: flex;
     justify-content: center;
     align-items: start;
+    transition: var(--transition);
 }
 
 .jump-arrow-wrapper img {
@@ -1399,6 +1410,10 @@ img[class='warn'] {
 .section-accordion label:hover,
 .section-accordion label:focus {
     cursor: crosshair;
+}
+
+.section-accordion:hover .accordion-arrow {
+    background-color: var(--clr-black);
 }
 
 .section-accordion>input[type="checkbox"]:checked~.accordion-arrow {
@@ -1485,6 +1500,10 @@ img[class='warn'] {
     width: calc(100% + 4px);
 }
 
+.jumper:hover .jump-arrow-wrapper {
+    transform: translateX(6rem);
+    transition: var(--transition);
+}
 
 .border {
     border: solid var(--border-weight);
@@ -1592,6 +1611,8 @@ ol li {
 
 .one-column {
     grid-column: 3/9;
+    display: flex;
+    flex-direction: column;
     margin-bottom: var(--margin-para);
 }
 
