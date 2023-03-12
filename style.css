@@ -976,8 +976,8 @@ img[class='warn'] {
     margin-bottom: 0rem;
     display: grid;
     grid-template-areas:
-        'a a a b b'
-        'a a a c d'
+        'a a a b c'
+        'a a a b d'
         'e f g g h';
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: repeat(5, 1fr);
@@ -988,8 +988,7 @@ img[class='warn'] {
 }
 
 .grid-title {
-    color: var(--clr-black);
-    opacity: 0.3;
+    color: var(--clr-grey);
     margin-bottom: 2%;
     font-family: var(--sans-serif-font);
     font-size: var(--font-size-xsmall);
@@ -1018,6 +1017,7 @@ img[class='warn'] {
 
 .scope {
     grid-area: b;
+    border-right: solid var(--border-weight);
     border-bottom: solid var(--border-weight);
     padding: var(--padding-grid);
     display: flex;
@@ -1025,14 +1025,13 @@ img[class='warn'] {
 }
 
 .scope img {
-    width: 90%;
+    width: 100%;
     display: inline-block;
     margin: auto;
 }
 
 .skills {
     grid-area: c;
-    border-right: solid var(--border-weight);
     border-bottom: solid var(--border-weight);
     padding: var(--padding-grid);
 }
@@ -1071,6 +1070,7 @@ img[class='warn'] {
     grid-area: h;
     border-bottom: solid var(--border-weight) var(--clr-black);
     padding: var(--padding-grid);
+    background-color: var(--clr-black);
     display: flex;
     flex-direction: column;
 }
