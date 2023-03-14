@@ -22,20 +22,20 @@
     --clr-grey: #8d8d8d;
     /* --clr-background: #eeeeee;
     --clr-background-transparent: #eeeeeee6; */
-    --clr-background: #e5e0d6;
+    /* --clr-background: #e5e0d6;
     --clr-background-transparent: #e6e0d6e6;
     --clr-white: #e6e1d7;
     --clr-black: #06060e;
-    --clr-transparent: #e6e1d700;
+    --clr-transparent: #e6e1d700; */
 
 
     /* dark mode */
 
-    /* --clr-background: #06060e;
+    --clr-background: #06060e;
     --clr-background-transparent: #06060ee6;
     --clr-white: #06060e;
     --clr-black: #e6e1d7;
-    --clr-transparent: #e6e1d7; */
+    --clr-transparent: #e6e1d7;
 
     --clr-raceclocker-one: #e25500;
     --clr-raceclocker-two: #f0a58f;
@@ -392,13 +392,13 @@ body {
     /* border-radius: 100rem; */
     box-shadow: 1rem 1rem 0px 0 var(--clr-black);
 
-    margin-top: 3vh;
+    margin-top: 2vh;
     margin-right: 3vw;
 }
 
 
 .hero-button:hover {
-    border: solid var(--border-weight);
+    background-color: var(--clr-hover);
 
     transform: translate(-5rem, -5rem);
     box-shadow: 5rem 5rem 0px 0 var(--clr-black);
@@ -410,8 +410,6 @@ body {
     /* transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); */
     /* position: sticky;
     bottom: 0; */
-    position: relative;
-    top: 1vh;
     height: 15vw;
     display: grid;
     justify-content: center;
@@ -422,7 +420,7 @@ body {
     width: 75%;
     position: relative;
     left: 50%;
-    top: 41%;
+    top: 42%;
 }
 
 .arrow-wrapper {
@@ -869,7 +867,7 @@ article:hover .highlight::before {
     align-items: center;
     background-color: var(--clr-background);
 
-    font-size: 36rem;
+    font-size: 72rem;
     line-height: normal;
 
     z-index: 999;

@@ -176,7 +176,7 @@ function simple_highlight() {
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 0 * windowHeight;
+        var elementVisible = 0.1 * windowHeight;
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
         }
