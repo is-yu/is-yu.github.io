@@ -406,7 +406,7 @@ body {
 }
 
 .hallmark .arrow-wrapper {
-    border: solid 5rem;
+    border: solid 5rem var(--clr-hover);
 }
 
 .profile-container {
@@ -1312,8 +1312,10 @@ iframe {
 #discover,
 #define,
 #iterate,
+#ideate,
 #design,
 #validate,
+#ramification,
 #reflect {
     border-bottom: solid var(--border-weight);
 }
