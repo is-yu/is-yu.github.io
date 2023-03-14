@@ -1557,11 +1557,17 @@ iframe {
 
 .border-right {
     border-right: solid var(--border-weight);
+    padding-right: 1.5%;
 }
 
 .border-left {
     border-left: solid var(--border-weight);
     padding-left: 1.5%;
+}
+
+.border-top {
+    border-top: solid var(--border-weight);
+    padding-top: 1.5%;
 }
 
 div[class~='columnn-child border-right'] {

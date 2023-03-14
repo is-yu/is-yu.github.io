@@ -6,7 +6,7 @@ date.innerHTML = new Date().getFullYear();
 //rotate on scroll
 var elem = document.getElementById('hallmark');
 window.addEventListener('scroll', function () {
-    var value = window.scrollY * 0.25;
+    var value = window.scrollY * 0.3;
     elem.style.transform = `translatex(-50%) translatey(-50%) rotate(${value}deg)`;
 });
 
@@ -17,7 +17,7 @@ function reveal_y() {
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 0.1 * windowHeight;
+        var elementVisible = 0.2 * windowHeight;
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
         }
@@ -37,7 +37,7 @@ function reveal_x() {
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 0.3 * windowHeight;
+        var elementVisible = 0.2 * windowHeight;
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
         }
@@ -59,7 +59,7 @@ function reveal_y_delay() {
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 0.3 * windowHeight;
+        var elementVisible = 0.2 * windowHeight;
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
         }
@@ -79,7 +79,7 @@ function reveal_x_delay() {
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 0.3 * windowHeight;
+        var elementVisible = 0.2 * windowHeight;
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
         }
