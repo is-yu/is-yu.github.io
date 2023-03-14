@@ -53,11 +53,11 @@
     --card-radius: 3vh;
     --padding-grid: 1.5vw;
 
-    --font-size-h1: 72px;
-    --font-size-h2: 48px;
-    --font-size-h3: 27px;
-    --font-size-text: 24px;
-    --font-size-caption: 18px;
+    --font-size-h1: 72rem;
+    --font-size-h2: 48rem;
+    --font-size-h3: 27rem;
+    --font-size-text: 24rem;
+    --font-size-caption: 18rem;
 
     --margin-section: 96rem;
     --margin-part: 72rem;
@@ -835,7 +835,7 @@ article:hover .highlight::before {
     align-items: center;
     background-color: var(--clr-background);
 
-    font-size: 24rem;
+    font-size: 48rem;
     line-height: normal;
 
     z-index: 999;
@@ -993,7 +993,7 @@ img[class='warn'] {
 
 .grid-title {
     color: var(--clr-grey);
-    margin-bottom: 2%;
+    margin-bottom: 1%;
     font-family: var(--sans-serif-font);
     font-size: var(--font-size-xsmall);
     font-weight: var(--font-weight-bold);
@@ -1128,6 +1128,14 @@ img[class='warn'] {
     width: calc(100% + 4px);
 }
 
+iframe {
+    grid-column: 2/10;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--margin-part);
+    max-width: 100%;
+}
+
 .ht1 {
     grid-column: 3/-1;
     font-family: var(--serif-font);
@@ -1238,8 +1246,8 @@ img[class='warn'] {
     margin-top: var(--margin-caption);
     margin-bottom: var(--margin-caption);
     line-height: normal;
-    text-align: center;
-    text-transform: capitalize;
+    text-align: start;
+    text-transform: initial;
 }
 
 .caption-dec {
@@ -1250,7 +1258,7 @@ img[class='warn'] {
     margin-bottom: var(--margin-caption);
     line-height: normal;
     text-align: center;
-    text-transform: capitalize;
+    text-transform: initial;
 }
 
 .index-title {
@@ -1277,7 +1285,8 @@ img[class='warn'] {
     font-size: var(--font-size-caption);
     font-weight: var(--font-weight-medium);
     color: var(--clr-black);
-    margin-bottom: var(--margin-para);
+    margin-bottom: var(--margin-caption);
+    margin-top: var(--margin-caption);
     line-height: normal;
 }
 
@@ -1507,6 +1516,7 @@ img[class='warn'] {
 
 .border {
     border: solid var(--border-weight);
+    padding: 1.5%;
 }
 
 .border-right {
@@ -1515,6 +1525,7 @@ img[class='warn'] {
 
 .border-left {
     border-left: solid var(--border-weight);
+    padding-left: 1.5%;
 }
 
 div[class~='columnn-child border-right'] {
@@ -1547,7 +1558,6 @@ ol li {
 .column-child-4 {
     flex: 1 1 200px;
 
-    padding: 3%;
     display: flex;
     flex-direction: column;
     justify-self: stretch;
@@ -1555,7 +1565,6 @@ ol li {
 
 .column-child-2 {
     flex: 1 1 400px;
-
     display: flex;
     flex-direction: column;
     justify-self: stretch;
@@ -1614,6 +1623,8 @@ ol li {
     display: flex;
     flex-direction: column;
     margin-bottom: var(--margin-para);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .img-wrapper-portrait {

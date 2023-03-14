@@ -41,9 +41,9 @@ function reveal_x() {
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
         }
-        // else {
-        //     reveals[i].classList.remove("active");
-        // }
+        else {
+            reveals[i].classList.remove("active");
+        }
     }
 }
 
@@ -63,9 +63,9 @@ function reveal_y_delay() {
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
         }
-        // else {
-        //     reveals[i].classList.remove("active");
-        // }
+        else {
+            reveals[i].classList.remove("active");
+        }
     }
 }
 
@@ -83,9 +83,9 @@ function reveal_x_delay() {
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
         }
-        // else {
-        //     reveals[i].classList.remove("active");
-        // }
+        else {
+            reveals[i].classList.remove("active");
+        }
     }
 }
 
