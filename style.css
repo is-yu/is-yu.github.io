@@ -22,9 +22,9 @@
     --clr-grey: #8d8d8d;
     /* --clr-background: #eeeeee;
     --clr-background-transparent: #eeeeeee6; */
-    --clr-background: #e5e0d6;
-    --clr-background-transparent: #e6e0d6e6;
-    --clr-white: #e6e1d7;
+    --clr-background: rgb(231, 227, 216);
+    --clr-background-transparent: rgba(231, 227, 216, 0.902);
+    --clr-white: #e7e3d8;
     --clr-black: #06060e;
     --clr-transparent: #e6e1d700;
 
@@ -34,8 +34,8 @@
     /* --clr-background: #06060e;
     --clr-background-transparent: #06060ee6;
     --clr-white: #06060e;
-    --clr-black: #e6e1d7;
-    --clr-transparent: #e6e1d7; */
+    --clr-black: #e7e3d8;
+    --clr-transparent: #e7e3d8; */
 
     --clr-raceclocker-one: #e25500;
     --clr-raceclocker-two: #f0a58f;
@@ -102,6 +102,13 @@ a:active {
     cursor: crosshair;
     color: black;
     text-decoration: none;
+}
+
+hr {
+    grid-column: 2/10;
+    border: none;
+    border-top: solid var(--border-weight);
+    margin-bottom: var(--margin-section);
 }
 
 /** LIGHTBOX MARKUP **/

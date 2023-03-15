@@ -867,7 +867,7 @@ article:hover .highlight::before {
     align-items: center;
     background-color: var(--clr-background);
 
-    font-size: 72rem;
+    font-size: 36rem;
     line-height: normal;
 
     z-index: 999;
