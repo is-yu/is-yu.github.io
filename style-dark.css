@@ -130,7 +130,7 @@ hr {
     padding: 1em;
 
     /* Translucent background */
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--clr-background);
 }
 
 /* Unhide the lightbox when it's the target */
@@ -1288,8 +1288,9 @@ iframe {
     margin-top: var(--margin-caption);
     margin-bottom: var(--margin-caption);
     line-height: normal;
-    text-align: start;
+
     text-transform: initial;
+    text-align: justify;
 }
 
 .caption-dec {
@@ -1299,8 +1300,9 @@ iframe {
     margin-top: var(--margin-caption);
     margin-bottom: var(--margin-caption);
     line-height: normal;
-    text-align: center;
+
     text-transform: initial;
+    text-align: center;
 }
 
 .index-title {
@@ -1614,8 +1616,16 @@ ol li {
     justify-self: stretch;
 }
 
-.column-child-2 {
+.column-child-3 {
     flex: 1 1 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-self: stretch;
+}
+
+.column-child-2 {
+    flex: 1 1 420px;
     display: flex;
     flex-direction: column;
     justify-self: stretch;
