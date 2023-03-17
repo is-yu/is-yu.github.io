@@ -1615,8 +1615,16 @@ ol li {
     justify-self: stretch;
 }
 
-.column-child-2 {
+.column-child-3 {
     flex: 1 1 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-self: stretch;
+}
+
+.column-child-2 {
+    flex: 1 1 420px;
     display: flex;
     flex-direction: column;
     justify-self: stretch;
@@ -1689,8 +1697,8 @@ ol li {
     align-self: center;
     justify-self: stretch;
 
-    margin-right: 150px;
-    margin-left: 150px;
+    margin-right: 150rem;
+    margin-left: 150rem;
     margin-bottom: var(--margin-part);
 }
 
