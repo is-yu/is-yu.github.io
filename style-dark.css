@@ -57,7 +57,7 @@
     --font-size-h1: 72rem;
     --font-size-h2: 48rem;
     --font-size-h3: 36rem;
-    --font-size-text: 21rem;
+    --font-size-text: 18rem;
     --font-size-caption: 21rem;
 
     --margin-section: 96rem;
@@ -179,8 +179,8 @@ hr {
 
     /* Position the tooltip text - see examples below! */
     position: absolute;
-    bottom: 100%;
-    right: 100%;
+    top: 100%;
+    right: 50%;
     z-index: 1;
 
     transition: var(--transition);
@@ -391,7 +391,7 @@ body {
 .hero-button {
     text-align: center;
     text-decoration: none;
-    font-size: var(--font-size-xsmall);
+    font-size: var(--font-size-xxsmall);
     font-family: var(--sans-serif-font);
     font-weight: var(--font-weight-bold);
     width: 10vw;

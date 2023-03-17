@@ -815,14 +815,214 @@
         <p class="ht1 reveal_x"><label for="design-title">design</label></p>
         <div class="content content-container">
 
-            <p class="index-title">challenge</p>
-            <p class="ht2">History: </p>
-            <p class="text"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
-                carbonated Trappist
-                ale,
-                showing a fruity-spicy Trappist yeast character, a spicy-floral hop profile, and a soft,
-                supportive
-                grainy-sweet malt palate.</p>
+            <p class="text"><span class="s-highlight highlight-sita">The key focus of the solution is to bridge the
+                    silos between the cruise line systems and airline systems.</span> Further to facilitate end-to-end
+                baggage delivery, SITA must integrate with the system of delivery service providers. Even though a
+                single solution is proposed, different stakeholders would want to view different aspects of the
+                solution. To serve this purpose, multiple viewpoints of the solution are created.</p>
+
+            <p class="ht2">System Integration</p>
+            <p class="text">The collaboration among the supply chain partners must be supported by an interfirm system.
+
+                High-level interfirm system integration will facilitate the process of baggage transfer and increase the
+                efficiency and effectiveness of the supply chain activities. It's also essential for tracking and
+                tracing the luggage and connecting the luggage with the right passenger.</p>
+
+            <!-------------- lightbox ----------------->
+            <!-- thumbnail image wrapped in a link -->
+            <a class="one-column" href="#integration">
+                <img src="/asset/sita/4-connected systems.png" alt="framework" class="one-column-img reveal_y_delay">
+                <p class="caption-dec"><i>System Integration</i></p>
+            </a>
+
+            <!-- lightbox container hidden with CSS -->
+            <a href="#process-c" class="lightbox" id="process">
+                <img src="/asset/sita/3-Current process.png" alt="framework" class="side-img vertical">
+            </a>
+            <!-------------- lightbox ----------------->
+
+            <p class="text">The system viewpoint shows a core internal system called the baggage delivery application,
+                which includes a local departure control system (L-DCS), a local maritime departure control system
+                (M-DCS), and the application. <span class="s-highlight highlight-sita">One of the critical features of
+                    the baggage delivery application is its modularity,</span> under which external applications such as
+                cruise websites, third-party travel websites (like Expedia), and airline websites, and others can
+                interact with it. <span class="s-highlight highlight-sita">A local M-DCS is proposed. It can mirror the
+                    existing DCS solution for airlines at SITA.</span> The information from multiple cruise line M-DCS
+                is aggregated into local M-DCS, which contains data about the passengers, baggage, departure, and
+                arrivals at the cruise ports.</p>
+            <div class="two-column">
+                <div class="column-child-2 text">
+                    The communication and coordination application uses the cruise line PNR number to retrieve
+                    information about Passenger, Baggage, Terminal, Cruise ship, and Cruise ship arrival (PBTAC) from
+                    the local M-DCS system to facilitate baggage pickup.
+                </div>
+                <div class="column-child-2 text">
+                    The communication and coordination application uses the airline PNR number to retrieve the
+                    Passenger, Airport Terminal, Airline, and Departure time (PTAD) from local DCS at the airports.
+                    These details facilitate dropping the baggage at the right airport terminal at the right time.
+                </div>
+            </div>
+
+            <p class="text">Using the details from the Local M-DCS and Local DCS system, <span
+                    class="s-highlight highlight-sita">a unified passenger identity is created which represents a single
+                    source of truth.</span></p>
+
+            <div class="one-column">
+                <div class="img-wrapper-landscape reveal_y_delay">
+                    <img src="./asset/sita/4-unified passenger identity.png" alt="unified" class="one-column-img">
+                    <p class="caption-dec"><i>Unified passenger identity</i></p>
+                </div>
+            </div>
+
+            <div id="BPMN-c"></div>
+            <div id="new-process-c"></div>
+            <div id="data-flow-c"></div>
+            <p class="text">Following this, a shipment is created by making an API request to the endpoint of the
+                delivery service provider. This request schedules timely baggage pickup by the delivery provider on the
+                passenger's arrival. Rolling requests for the tracking endpoint of the delivery service provider send
+                the status and real-time location of the shipment. When the baggage is successfully delivered, the
+                delivery system signals the application with a complete shipment request.</p>
+
+
+            <div class="flex-column">
+                <div class="column-child-2">
+                    <!-------------- lightbox ----------------->
+                    <!-- thumbnail image wrapped in a link -->
+                    <a class="img-wrapper-landscape"
+                        style="border: none !important; border-radius:0 !important; max-width:100% ;" href="#BPMN">
+                        <img src="/asset/sita/4-viewpoint-BPMN.jpg" alt="framework"
+                            class="one-column-img reveal_y_delay">
+                        <p class="caption-dec"><i>Business Process Viewpoint</i></p>
+                    </a>
+
+                    <!-- lightbox container hidden with CSS -->
+                    <a href="#BPMN-c" class="lightbox" id="BPMN">
+                        <img src="/asset/sita/4-viewpoint-BPMN.jpg" alt="framework" class="side-img horizontal">
+                    </a>
+                    <!-------------- lightbox ----------------->
+                </div>
+                <div class="column-child-2">
+                    <!-------------- lightbox ----------------->
+                    <!-- thumbnail image wrapped in a link -->
+                    <a class="img-wrapper-landscape"
+                        style="border: none !important; border-radius:0 !important; max-width:100% ;"
+                        href="#new-process">
+                        <img src="/asset/sita/4-process viewpoint.png" alt="framework"
+                            class="one-column-img reveal_y_delay">
+                        <p class="caption-dec"><i>Passenger and Baggage Process Viewpoint</i></p>
+                    </a>
+
+                    <!-- lightbox container hidden with CSS -->
+                    <a href="#new-process-c" class="lightbox" id="new-process">
+                        <img src="/asset/sita/4-process viewpoint.png" alt="framework" class="side-img horizontal">
+                    </a>
+                    <!-------------- lightbox ----------------->
+                </div>
+                <div class="column-child-2">
+                    <!-------------- lightbox ----------------->
+                    <!-- thumbnail image wrapped in a link -->
+                    <a class="img-wrapper-landscape"
+                        style="border: none !important; border-radius:0 !important; max-width:100% ;" href="#data-flow">
+                        <img src="/asset/sita/4-viewpoint-data flow-modified.jpg" alt="framework"
+                            class="one-column-img reveal_y_delay">
+                        <p class="caption-dec"><i>Data Flow Viewpoint</i></p>
+                    </a>
+
+                    <!-- lightbox container hidden with CSS -->
+                    <a href="#data-flow-c" class="lightbox" id="data-flow">
+                        <img src="/asset/sita/4-viewpoint-data flow-modified.jpg" alt="framework"
+                            class="side-img vertical">
+                    </a>
+                    <!-------------- lightbox ----------------->
+                </div>
+            </div>
+
+            <p class="ht2">Additional Services: Using Data as a Strategic Asset</p>
+            <p class="text" id="asset-c">The system integration solution puts SITA in a unique position to leverage data
+                as a strategic asset.
+                <span class="s-highlight highlight-sita"> The local M-DCS and airport Local DCS data can be aggregated
+                    into an integrated data platform. This data platform creates a unified identity for the passenger.
+                    It also enables additional services by using an analytic engine that draws insights from
+                    cross-functional information.</span> We suggested several simple yet actionable B2B insights that
+                SITA can offer its supply chain partners.
+            </p>
+            <!-------------- lightbox ----------------->
+            <!-- thumbnail image wrapped in a link -->
+            <a class="img-wrapper-landscape one-column"
+                style="border: none !important; border-radius:0 !important; max-width:100% ;" href="#asset">
+                <img src="/asset/sita/4-additional service.png" alt="framework" class="one-column-img reveal_y_delay">
+                <p class="caption-dec"><i>Data as a strategic asset</i></p>
+            </a>
+
+            <!-- lightbox container hidden with CSS -->
+            <a href="#asset-c" class="lightbox" id="asset">
+                <img src="/asset/sita/4-additional service.png" alt="framework" class="side-img vertical">
+            </a>
+            <!-------------- lightbox ----------------->
+            <div class="flex-column">
+                <div class="column-chid-3 text">Insights about long waiting times due to the flight delay can help
+                    cruise lines provide impacted target customers services like extended on-cruise stay.</div>
+                <div class="column-chid-3 text">Insights about long waiting times due to cruise ship delays can help
+                    airlines provide impacted target customers lounge services.</div>
+                <div class="column-chid-3 text">Airports and cruise ports can better estimate the influx of passengers
+                    and baggage.</div>
+                <div class="column-chid-3 text">Municipalities and governments can benefit from insights by making
+                    accurate ads for city tours between cruise and air travel. </div>
+                <div class="column-chid-3 text">With increasing historical data and information about past events,
+                    machine-learning techniques can be used to predict delays and the corresponding cause-effect
+                    relationships between cruise lines and airlines. </div>
+            </div>
+
+            <p class="ht2">Technology Adaptation</p>
+            <p class="text" id="tech-adaptation-c">We identified the missing products in SITA's portfolio: the
+                integrated system
+                we proposed and a Local Maritime Departure System (M-DCS). Furthermore, <a
+                    href="./asset/sita/Appendix 9 - SITA current system.pdf">based on thorough research on <u>SITA's
+                        current systems</u></a>, we also singled out the digital (software) and physical (hardware)
+                products of SITA that can be directly used or quickly adapted to realize the new process. Besides, we
+                also picked out the products that can potentially be adapted to optimize the process.
+            </p>
+            <!-------------- lightbox ----------------->
+            <!-- thumbnail image wrapped in a link -->
+            <a class="img-wrapper-landscape one-column"
+                style="border: none !important; border-radius:0 !important; max-width:100% ;" href="#tech-adaptation">
+                <img src="/asset/sita/1-Technology Adaptation.png" alt="framework"
+                    class="one-column-img reveal_y_delay">
+                <p class="caption-dec"><i>Technology Adaptation</i></p>
+            </a>
+
+            <!-- lightbox container hidden with CSS -->
+            <a href="#tech-adaptation-c" class="lightbox" id="tech-adaptation">
+                <img src="/asset/sita/1-Technology Adaptation.png" alt="framework" class="side-img horizontal">
+            </a>
+            <!-------------- lightbox ----------------->
+
+            <!-------- jumper ---------->
+            <a href="./asset/sita/Appendix 10 - technology adaptation.pdf" class="ht3 reveal_x jumper">
+                <span class="highlight">Elaboration on technology adaptation solution</span>
+                <div class="jump-arrow-wrapper"><img src="/asset/arrow-white.svg" alt="jump">
+                </div>
+            </a>
+            <!-------- jumper ---------->
+
+            <p class="ht2">Business Model</p>
+            <p class="text" id="business-model-c">How SITA can gain revenue out of our solution can be easily understood
+                through a Business Model Canvas. It is based on the value proposition which can be seen here.
+            </p>
+            <!-------------- lightbox ----------------->
+            <!-- thumbnail image wrapped in a link -->
+            <a class="img-wrapper-landscape one-column"
+                style="border: none !important; border-radius:0 !important; max-width:100% ;" href="#business-model">
+                <img src="/asset/sita/1-business canvas.png" alt="framework" class="one-column-img reveal_y_delay">
+                <p class="caption-dec"><i>Business model canvas</i></p>
+            </a>
+
+            <!-- lightbox container hidden with CSS -->
+            <a href="#business-model-c" class="lightbox" id="business-model">
+                <img src="/asset/sita/1-business canvas.png" alt="framework" class="side-img horizontal">
+            </a>
+            <!-------------- lightbox ----------------->
+
         </div>
     </div>
 
@@ -836,15 +1036,170 @@
 
             <p class="ht2">Change Requirements</p>
             <p class="ht3">Partnership</p>
-            <p class="text"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
-                carbonated Trappist
-                ale,
-                showing a fruity-spicy Trappist yeast character, a spicy-floral hop profile, and a soft,
-                supportive
-                grainy-sweet malt palate.</p>
+            <p class="text"><span class="s-highlight highlight-sita">A completely new partnership must be formed with
+                    delivery providers in strategic collaboration.</span> The business environment of both parties -
+                SITA and delivery providers – are complex. Therefore, the relationship must be clearly defined (De
+                Backer & Rinaudo, 2019). Core reasons for joint-venture success need to be taken into account.</p>
+            <div class="flex-column reveal_y_delay">
+                <div class="column-child-4 text border-left">
+                    Effective internal communication and trust
+                </div>
+                <div class="column-child-4 text border-left">
+                    Clearly defined incentives and KPIs
+                </div>
+                <div class="column-child-4 text border-left">
+                    Defined roles and responsibilities
+                </div>
+            </div>
 
-            <p class="index-title">change requirement</p>
-            <p class="ht2">Partnership</p>
+            <p class="text">To build this clear foundation, <span class="s-highlight highlight-sita">SITA needs to
+                    develop a platform where the concerned delivery company gets the needed data including but not
+                    limited to delivery moments, places, and quantities. Furthermore, there should be confirmation when
+                    the order is settled since passengers might have the possibility to change or cancel their order. On
+                    top of that, delivery companies need to generate profit through the partnership.</span> Within the
+                current scope of the project, the delivery distances are the same for all luggage, namely, the distance
+                from the cruise port to the airport. In this case, a fixed price per volume can be considered. However,
+                a price per volume per km should be considered if the service extends to more destinations.</p>
+            <p class="text">Suggestions for delivery providers are worldwide players with experience in international
+                deliveries and well-developed infrastructure such as DHL, FedEx, and DB Schenker. SITA should create a
+                platform that communicates information and makes monetary transfers between the delivery company,
+                passengers, cruise lines, and airlines automatically.</p>
+            <p class="text"><span class="s-highlight highlight-sita">Cruise lines are customers of SITA, but they are
+                    also partners.</span> The existing partnership with cruise lines needs to be expanded and further
+                defined. In addition, cruises have increased collaborations with the airline industry, which means
+                collaborating with SITA could be a logical transition. <span class="s-highlight highlight-sita">The
+                    first partnerships can be used to co-develop the IT software solutions and perform beta runs of the
+                    technology. The goal should be to create a transparent ecosystem that facilitates trust and data
+                    share.</span></p>
+
+
+            <p class="ht3">Structure</p>
+            <p class="text">Some structural changes within SITA need to be made to facilitate the new service and its
+                development, also known as transformational change. A clear definition of the changes needs to be
+                structured (Alsher, 2018).<br>
+
+                <span class="s-highlight highlight-sita">First, the expertise, which currently includes knowledge about
+                    borders, airlines, and airports, can be extended to cruise and luggage-free travel.</span> This
+                implies that new departments in charge of the M-DCS and a system integration team need to be
+                established. The department in charge of the integration can be divided into sub-departments as it grows
+                categorized by the different software solutions. <span class="s-highlight highlight-sita">Second, the
+                    already existing L-DCS department should be expanded. Furthermore, a department in charge of the
+                    platform allowing passengers, cruise lines, airlines, and delivery service providers to communicate
+                    automatically should be created.</span> Essential requirements that need to be addressed are:
+            </p>
+            <div class="flex-column reveal_y_delay">
+                <div class="column-child-2 text border-left">
+                    Creating a shared understanding of the need for change and a shift in employee perceptions.
+                </div>
+                <div class="column-child-2 text border-left">
+                    Selecting a group of senior managers and opinion formers who will play a critical role in garnering
+                    employee support for the change and spreading it broadly throughout the firm.
+                </div>
+                <div class="column-child-2 text border-left">
+                    Selecting a group of senior managers and opinion leaders who will play a crucial role in the
+                    education of in-house rules and similar knowledge to employees in the yet-to-be-formed departments.
+                </div>
+                <div class="column-child-2 text border-left">
+                    Keeping lines of communication open around essential procedures, failures, obstacles, and lessons
+                    learned from new projects.
+                </div>
+            </div>
+
+            <p class="ht3">Structure</p>
+            <div class="img-wrapper-landscape one-column reveal_y_delay">
+                <img src="./asset/sita/2-overarching servitization.png" alt="overarched servitization"
+                    class="one-column-img">
+            </div>
+            <p class="text">SITA is a B2B hardware company for the aviation industry. At the first glance, entering the
+                cruise market, which requires similar solutions as the aviation industry regarding luggage handling,
+                does not seem to require significant changes. However, <span class="s-highlight highlight-sita">in order
+                    to achieve overarching servitization to create true value for end-users, a passenger-centered
+                    perspective should be taken.</span> SITA’s products will provide value for both customers and
+                passengers. This means that both the passenger and the customer need to be kept in mind in the design
+                process. Besides, the proposed solution focuses on the software instead of hardware. <span
+                    class="s-highlight highlight-sita">For this, we recommend looking into User-Centric Design Method
+                    and the lean startup model.</span> A more elaborated explanation of these two methodologies can be
+                seen here.
+            </p>
+
+            <p class="ht3">Financial</p>
+            <p class="text">We discussed the possible payment plans for the new service SITA will provide for the
+                stakeholders.</p>
+            <p class="text"><strong>M-DCS</strong><br><span class="s-highlight highlight-sita">The M-DCS can be licensed
+                    to the cruise industry in
+                    a similar way as the L-DCS systems are licensed to airports.</span> The costs associated with it are
+                R&D and IT operational costs. <span class="s-highlight highlight-sita">Additional sources of revenue are
+                    additional analytic services based on a subscription model.</span></p>
+            <p class="text"><strong>Delivery service</strong><br>The cost associated with the delivery service per
+                delivery does not increase with more
+                luggage (unless it exceeds the limit of each delivery). The cost is directly associated with the travel
+                distance. When the quantity of luggage is high, the cost of delivery per luggage drops.
+
+                This requires a different earning model than the licensing model that SITA is used to. The cash flow
+                direction is shown below.</p>
+            <div class="img-wrapper-landscape one-column reveal_y_delay" style="border:none; border-radius:0;">
+                <img src="./asset/sita/5-cash flow direction.jpg" alt="overarched servitization" class="one-column-img">
+            </div>
+            <p class="text">There are two possible payment plans. The first one is to pay per luggage using a fixed bulk
+                price calculated by using estimations of the amount that will be delivered that year. With this option,
+                the risk is at the delivery service when passengers are not willing to take the service for whatever
+                reason. <span class="s-highlight highlight-sita">The cruise lines and airlines do not require a profit
+                    on this since they can provide extra value to their passengers for free without taking any
+                    effort.</span> The second option is, pay per vehicle, where SITA pays for the number of vehicles
+                needed for the luggage. This way, the delivery service provider earns a profit margin each time a
+                vehicle and a delivery man are needed. The risk is on SITA when the service is not used efficiently.
+                <span class="s-highlight highlight-sita">Therefore, we recommend a pay-per-luggage plan that generates
+                    profit with a low level of risk.</span>
+            </p>
+            <p class="text"><strong>Up-sales</strong><br><span class="s-highlight highlight-sita">The cruise lines and
+                    airlines will get more information about the passenger's whereabouts. Therefore, up-sales such as
+                    providing the lounge service when there is a delay can be made.</span> However, these profits are
+                not directly generated by using SITA’s software but indirectly due to the decision-making based on
+                insights generated by SITA. <span class="s-highlight highlight-sita">The pricing model for this software
+                    can be similar to the pricing models of CRM systems which includes a flat subscription fee for the
+                    enterprise with unlimited numbers of users. On top of this flat fee, modular pricing can be used for
+                    each integration, feature, or anything specific (Pingrey, 2021).</span>
+            </p>
+
+            <div id="roadmap2-c"></div>
+            <p class="ht2" id="roadmap1-c">Roadmap</p>
+            <p class="text">The solution we proposed for SITA mainly focuses on horizon 1, system integration. While we
+                also envision this solution in the long run to show its potential for future development. Two road maps
+                are created. <span class="s-highlight highlight-sita">The tactical roadmap shows the values of different
+                    stakeholders, needed data and technology, and partnership aspects of the provided business
+                    solution.</span> This roadmap can be used for operational use within SITA's internal department.
+                <span class="s-highlight highlight-sita">The strategic roadmap can be used for a more general and
+                    high-level perspective, which can be showcased to SITA's stakeholders.</span>
+            </p>
+
+            <!-------------- lightbox ----------------->
+            <!-- thumbnail image wrapped in a link -->
+            <a class="img-wrapper-landscape one-column"
+                style="border: none !important; border-radius:0 !important; max-width:100% ;" href="#roadmap1">
+                <img src="/asset/sita/5-Tactical Roadmap.jpg" alt="framework" class="one-column-img reveal_y_delay">
+                <p class="caption-dec"><i>Tactical roadmap</i></p>
+            </a>
+
+            <!-- lightbox container hidden with CSS -->
+            <a href="#roadmap1-c" class="lightbox" id="roadmap1">
+                <img src="/asset/sita/5-Tactical Roadmap.jpg" alt="framework" class="side-img vertical">
+            </a>
+            <!-------------- lightbox ----------------->
+
+            <!-------------- lightbox ----------------->
+            <!-- thumbnail image wrapped in a link -->
+            <a class="img-wrapper-landscape one-column"
+                style="border: none !important; border-radius:0 !important; max-width:100% ;" href="#roadmap2">
+                <img src="/asset/sita/5-strategic roadmap.png" alt="framework" class="one-column-img reveal_y_delay">
+                <p class="caption-dec"><i>Strategic roadmap</i></p>
+            </a>
+
+            <!-- lightbox container hidden with CSS -->
+            <a href="#roadmap2-c" class="lightbox" id="roadmap2">
+                <img src="/asset/sita/5-strategic roadmap.png" alt="framework" class="side-img vertical">
+            </a>
+            <!-------------- lightbox ----------------->
+
         </div>
     </div>
 
@@ -856,31 +1211,62 @@
         <div class="accordion-arrow"></div>
         <p class="ht1 reveal_x"><label for="reflect-title">reflect</label></p>
         <div class="content content-container">
-            <p class="ht2">If I had more time ... </p>
-            <p class="text"><strong>Make a gradual optimization plan</strong> Drastic changes in design always risk
-                causing issues of adaption. If we had more time, we will design a
-                fine-grained optimization plan to gradually roll out the new features and diminish the backlash of
-                the
-                new design.</p>
+            <p class="ht2">Future </p>
+            <div class="ht3">Multi-party Computation</div>
+            <p class="text">Creating an integrated platform introduces socio-technical challenges related to trust
+                regarding data sharing, especially when users are competing with one another. <span
+                    class="s-highlight highlight-sita">One innovative solution for generating functionality of shared
+                    data without having to share to reveal the data is secure multi-party computation (MPC).</span> MPC
+                is a cryptography technique in which the output of the computation is visible to all parties. However,
+                the inputs of each party remain encrypted and private. The solution mentioned in section 7.2 is based on
+                data regarding arrivals and departures, which is less sensitive. However, valuable insights can be drawn
+                if organizations choose to share sensitive data so that privacy is preserved (Evans et al., 2017). <span
+                    class="s-highlight highlight-sita">Research in developing MPC protocols can play a vital role in
+                    attracting new and existing partners to adopt SITA’s data platform.</span> As a facilitator of an
+                MPC-based data platform, SITA can serve as an essential value creator for its partners and potentially
+                monetize the data-sharing and computation services.
+            </p>
+            <div class="ht3">Advanced Analytics Services</div>
+            <p class="text">As the number of partners and their willingness to share data securely increases, more
+                sophisticated techniques of predictive modeling, machine learning algorithms, deep learning neural
+                networks, and other statistical methods on shared information can come into play. <span
+                    class="s-highlight highlight-sita">With this, SITA can provide cruise and airline partners with
+                    insights into the future and aid autonomous or semi-autonomous decision-making.</span> This research
+                direction focuses on using advanced analytic techniques on shared information for partners in the supply
+                chain network, which aligns with SITA’s strategic focus and existing competencies in artificial
+                intelligence (Isson Jean-Paul, 2019).</p>
+            <div class="ht3" id="delivery-optimization-c">Optimization of Delivery Service</div>
+            <p class="text"><span class="s-highlight highlight-sita">As the number of partners and their willingness to
+                    share data securely increases, more sophisticated techniques of predictive modeling, machine
+                    learning algorithms, deep learning neural networks, and other statistical methods on shared
+                    information can come into play.</span> With this, SITA can provide cruise and airline partners with
+                insights into the future and aid autonomous or semi-autonomous decision-making. This research direction
+                focuses on using advanced analytic techniques on shared information for partners in the supply chain
+                network, which aligns with SITA’s strategic focus and existing competencies in artificial intelligence
+                (Isson Jean-Paul, 2019).</p>
 
-            <p class="text"><strong>Take technical constraints into account</strong> When we proposed to use the
-                physical button for quicker timing, our client favored this idea and
-                encouraged us to go for it. However, this feature probably needs to run on a standalone application
-                rather than a web-based service. This would bring up further discussion around the tradeoff between
-                making an application or still keeping it a web-based service.</p>
+            <!-------------- lightbox ----------------->
+            <!-- thumbnail image wrapped in a link -->
+            <a class="img-wrapper-landscape one-column"
+                style="border: none !important; border-radius:0 !important; max-width:100% ;"
+                href="#delivery-optimization">
+                <img src="/asset/sita/6-future.png" alt="framework" class="one-column-img reveal_y_delay">
+                <p class="caption-dec"><i>Delivery service optimization roadmap</i></p>
+            </a>
+
+            <!-- lightbox container hidden with CSS -->
+            <a href="#delivery-optimization-c" class="lightbox" id="delivery-optimization">
+                <img src="/asset/sita/6-future.png" alt="framework" class="side-img vertical">
+            </a>
+            <!-------------- lightbox ----------------->
 
             <p class="ht2">What I have learned ... </p>
-            <p class="text"><strong>Use frameworks to structure the research process.</strong> Doing domain research
-                like product analysis can be quite a big job. Using frameworks to manage
-                the research activities help cultivate a result-driven mindset and make the process clear.</p>
+            <ul class="text">
+                <li>How to facilitate workshops across multi-disciplinary team to improve team alignment...</li>
+                <li>How to bring a user-centered perspective to innovate for the supply chain optimization ...</li>
+                <li>How to use data as a strategic asset to generate profits ...</li>
 
-            <p class="text"><strong>Make every design decision intentionally.</strong> Even though many constraints
-                have
-                been lifted in this project and bold design is encouraged, being bold doesn't mean being
-                undeliberate.
-                We have been through three big or small iterations throughout this project, and we attempted to make
-                each of our design decision intentionally <a href="#iteration-process-1"><u>by documenting our
-                        reasoning</u></a> behind each step.</p>
+            </ul>
 
         </div>
     </div>

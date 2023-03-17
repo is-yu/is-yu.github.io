@@ -173,14 +173,15 @@ hr {
     color: var(--clr-black);
     text-align: center;
     font-family: var(--sans-serif-font);
+    font-size: var(--font-size-text);
     padding: 5px;
     box-shadow: 5rem 5rem var(--clr-black);
 
 
     /* Position the tooltip text - see examples below! */
     position: absolute;
-    bottom: 100%;
-    right: 100%;
+    top: 120%;
+    right: 0%;
     z-index: 1;
 
     transition: var(--transition);
