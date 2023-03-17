@@ -6,7 +6,7 @@ date.innerHTML = new Date().getFullYear();
 //rotate on scroll
 var elem = document.getElementById('hallmark');
 window.addEventListener('scroll', function () {
-    var value = window.scrollY * 0.3;
+    var value = window.scrollY * 0.25;
     elem.style.transform = `translatex(-50%) translatey(-50%) rotate(${value}deg)`;
 });
 

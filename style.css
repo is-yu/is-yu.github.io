@@ -1,16 +1,16 @@
 :root {
-    --serif-font: 'Cormorant Garamond', 'Crimson Pro';
-    --sans-serif-font: 'DM Sans', 'Roboto';
+    --serif-font: 'Cormorant Garamond', serif;
+    --sans-serif-font: 'Proza Libre', sans-serif;
 
     --font-size-xxlarge: 96rem;
     --font-size-xlarge: 64rem;
     --font-size-large: 48rem;
-    --font-size-medium: 24rem;
-    --font-size-small: 21rem;
-    --font-size-xsmall: 16rem;
-    --font-size-xxsmall: 12rem;
+    --font-size-medium: 36rem;
+    --font-size-small: 24rem;
+    --font-size-xsmall: 21rem;
+    --font-size-xxsmall: 18rem;
 
-    --font-weight-extra-light: 200;
+    --font-weight-thin: 200;
     --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-medium: 500;
@@ -45,18 +45,19 @@
     --clr-magiclamp-highlight: rgb(196, 150, 190, 0.5);
 
     --clr-sita-one: #0a49b2;
-    --clr-sita-two: rgb(44, 143, 247);
+    --clr-sita-two: #2c8ff7;
     --clr-sita-highlight: rgb(44, 143, 247, 0.5);
     --clr-sita-three: #fdc963;
 
 
     --card-radius: 3vh;
-    --padding-grid: 1.5vw;
+    --padding-grid: 25rem;
+    --border-padding: 15rem;
 
     --font-size-h1: 72rem;
     --font-size-h2: 48rem;
-    --font-size-h3: 32rem;
-    --font-size-text: 27rem;
+    --font-size-h3: 36rem;
+    --font-size-text: 21rem;
     --font-size-caption: 21rem;
 
     --margin-section: 96rem;
@@ -1202,7 +1203,7 @@ iframe {
     font-size: var(--font-size-h3);
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--margin-para);
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .quote {
@@ -1242,7 +1243,7 @@ iframe {
     font-size: var(--font-size-h3);
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--margin-para);
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .quote-dec {
@@ -1260,9 +1261,9 @@ iframe {
 
 .text {
     grid-column: 3/-3;
-    font-family: var(--serif-font);
+    font-family: var(--sans-serif-font);
     font-size: var(--font-size-text);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-thin);
     margin-bottom: var(--margin-para);
     line-height: 1.5;
     text-align: justify;
@@ -1270,9 +1271,9 @@ iframe {
 }
 
 .text-dec {
-    font-family: var(--serif-font);
+    font-family: var(--sans-serif-font);
     font-size: var(--font-size-text);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-thin);
     margin-bottom: var(--margin-para);
     line-height: 1.5;
     text-align: justify;
@@ -1516,12 +1517,12 @@ iframe {
     display: block;
 }
 
-.part-accordion {
-    margin-bottom: 1rem;
-}
+/* .part-accordion {
+    margin-bottom: var(--margin-para);
+} */
 
 .part-accordion>input[type="checkbox"]:checked~.content {
-    padding-top: 24rem;
+    margin-top: var(--margin-caption);
 }
 
 
@@ -1559,26 +1560,26 @@ iframe {
 
 .border {
     border: solid var(--border-weight);
-    padding: 1.5%;
+    padding: var(--border-padding);
 }
 
 .border-right {
     border-right: solid var(--border-weight);
-    padding-right: 1.5%;
+    padding-right: var(--border-padding);
 }
 
 .border-left {
     border-left: solid var(--border-weight);
-    padding-left: 1.5%;
+    padding-left: var(--border-padding);
 }
 
 .border-top {
     border-top: solid var(--border-weight);
-    padding-top: 1.5%;
+    padding-top: var(--border-padding);
 }
 
 div[class~='columnn-child border-right'] {
-    padding-right: 1vw;
+    padding-right: var(--border-padding);
 }
 
 ol,
@@ -1587,7 +1588,7 @@ li {
 }
 
 ol li {
-    padding-left: 3%;
+    padding-left: var(--border-padding);
     border-left: solid var(--border-weight);
     margin-bottom: var(--margin-caption);
 }
@@ -1671,7 +1672,7 @@ ol li {
     grid-column: 3/9;
     display: flex;
     flex-direction: column;
-    margin-bottom: var(--margin-para);
+
     margin-left: auto;
     margin-right: auto;
 }

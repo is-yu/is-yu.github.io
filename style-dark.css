@@ -1,16 +1,16 @@
 :root {
-    --serif-font: 'Cormorant Garamond', 'Crimson Pro';
-    --sans-serif-font: 'DM Sans', 'Roboto';
+    --serif-font: 'Cormorant Garamond', serif;
+    --sans-serif-font: 'Proza Libre', sans-serif;
 
     --font-size-xxlarge: 96rem;
     --font-size-xlarge: 64rem;
     --font-size-large: 48rem;
-    --font-size-medium: 24rem;
-    --font-size-small: 21rem;
-    --font-size-xsmall: 16rem;
-    --font-size-xxsmall: 12rem;
+    --font-size-medium: 36rem;
+    --font-size-small: 24rem;
+    --font-size-xsmall: 21rem;
+    --font-size-xxsmall: 18rem;
 
-    --font-weight-extra-light: 200;
+    --font-weight-thin: 200;
     --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-medium: 500;
@@ -45,18 +45,19 @@
     --clr-magiclamp-highlight: rgb(196, 150, 190, 0.5);
 
     --clr-sita-one: #0a49b2;
-    --clr-sita-two: rgb(44, 143, 247);
+    --clr-sita-two: #2c8ff7;
     --clr-sita-highlight: rgb(44, 143, 247, 0.5);
     --clr-sita-three: #fdc963;
 
 
     --card-radius: 3vh;
-    --padding-grid: 1.5vw;
+    --padding-grid: 25rem;
+    --border-padding: 15rem;
 
     --font-size-h1: 72rem;
     --font-size-h2: 48rem;
-    --font-size-h3: 32rem;
-    --font-size-text: 27rem;
+    --font-size-h3: 36rem;
+    --font-size-text: 21rem;
     --font-size-caption: 21rem;
 
     --margin-section: 96rem;
@@ -100,8 +101,15 @@ a:visited,
 a:hover,
 a:active {
     cursor: crosshair;
-    color: black;
+    color: var(--clr-black);
     text-decoration: none;
+}
+
+hr {
+    grid-column: 2/10;
+    border: none;
+    border-top: solid var(--border-weight);
+    margin-bottom: var(--margin-section);
 }
 
 /** LIGHTBOX MARKUP **/
@@ -392,13 +400,13 @@ body {
     /* border-radius: 100rem; */
     box-shadow: 1rem 1rem 0px 0 var(--clr-black);
 
-    margin-top: 2vh;
+    margin-top: 3vh;
     margin-right: 3vw;
 }
 
 
 .hero-button:hover {
-    background-color: var(--clr-hover);
+    border: solid var(--border-weight);
 
     transform: translate(-5rem, -5rem);
     box-shadow: 5rem 5rem 0px 0 var(--clr-black);
@@ -410,6 +418,8 @@ body {
     /* transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); */
     /* position: sticky;
     bottom: 0; */
+    position: relative;
+    top: 1vh;
     height: 15vw;
     display: grid;
     justify-content: center;
@@ -420,7 +430,7 @@ body {
     width: 75%;
     position: relative;
     left: 50%;
-    top: 42%;
+    top: 41%;
 }
 
 .arrow-wrapper {
@@ -1193,7 +1203,7 @@ iframe {
     font-size: var(--font-size-h3);
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--margin-para);
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .quote {
@@ -1233,7 +1243,7 @@ iframe {
     font-size: var(--font-size-h3);
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--margin-para);
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .quote-dec {
@@ -1251,9 +1261,9 @@ iframe {
 
 .text {
     grid-column: 3/-3;
-    font-family: var(--serif-font);
+    font-family: var(--sans-serif-font);
     font-size: var(--font-size-text);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-thin);
     margin-bottom: var(--margin-para);
     line-height: 1.5;
     text-align: justify;
@@ -1261,9 +1271,9 @@ iframe {
 }
 
 .text-dec {
-    font-family: var(--serif-font);
+    font-family: var(--sans-serif-font);
     font-size: var(--font-size-text);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-thin);
     margin-bottom: var(--margin-para);
     line-height: 1.5;
     text-align: justify;
@@ -1348,6 +1358,7 @@ iframe {
 #design,
 #validate,
 #ramification,
+#implication,
 #reflect {
     border-bottom: solid var(--border-weight);
 }
@@ -1507,12 +1518,12 @@ iframe {
     display: block;
 }
 
-.part-accordion {
-    margin-bottom: 1rem;
-}
+/* .part-accordion {
+    margin-bottom: var(--margin-para);
+} */
 
 .part-accordion>input[type="checkbox"]:checked~.content {
-    padding-top: 24rem;
+    margin-top: var(--margin-caption);
 }
 
 
@@ -1550,20 +1561,26 @@ iframe {
 
 .border {
     border: solid var(--border-weight);
-    padding: 1.5%;
+    padding: var(--border-padding);
 }
 
 .border-right {
     border-right: solid var(--border-weight);
+    padding-right: var(--border-padding);
 }
 
 .border-left {
     border-left: solid var(--border-weight);
-    padding-left: 1.5%;
+    padding-left: var(--border-padding);
+}
+
+.border-top {
+    border-top: solid var(--border-weight);
+    padding-top: var(--border-padding);
 }
 
 div[class~='columnn-child border-right'] {
-    padding-right: 1vw;
+    padding-right: var(--border-padding);
 }
 
 ol,
@@ -1572,7 +1589,7 @@ li {
 }
 
 ol li {
-    padding-left: 3%;
+    padding-left: var(--border-padding);
     border-left: solid var(--border-weight);
     margin-bottom: var(--margin-caption);
 }
@@ -1656,7 +1673,7 @@ ol li {
     grid-column: 3/9;
     display: flex;
     flex-direction: column;
-    margin-bottom: var(--margin-para);
+
     margin-left: auto;
     margin-right: auto;
 }

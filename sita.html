@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SITA</title>
+    <title>Baggage-free</title>
     <link rel="stylesheet" href="style-dark.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/21baf14835.js" crossorigin="anonymous"></script>
 </head>
@@ -53,7 +53,7 @@
                                 class="scroll-link" target="_blank">ABOUT</a>
                         </li>
                         <li class="nav-index">
-                            <a href="#work" class="scroll-link">WORK</a>
+                            <a href="index.html" class="scroll-link">WORK</a>
                         </li>
                         <li class="nav-index tooltip">
                             <a href="https://yucreate.notion.site/Gallery-5fff4bcae3f44819bac9512ee847939a"
@@ -141,9 +141,8 @@
             <li><a href="#overview"><span class="highlight">Overview</span></a></li>
             <li><a href="#discover"><span class="highlight">Discover</span></a></li>
             <li><a href="#define"><span class="highlight">Define</span></a></li>
-            <li><a href="#ideate"><span class="highlight">Ideate</span></a></li>
             <li><a href="#design"><span class="highlight">Design</span></a></li>
-            <li><a href="#ramification"><span class="highlight">Ramification</span></a>
+            <li><a href="#implication"><span class="highlight">Implication</span></a>
             </li>
             <li><a href="#reflect"><span class="highlight">Reflect</span></a></li>
         </ul>
@@ -153,28 +152,43 @@
 
     <!------------------- overview --------------->
     <div class="section-accordion" id="overview">
-        <input type="checkbox" name="raceclocker" id="overview-title" checked>
+        <input type="checkbox" name="sita" id="overview-title" checked>
         <div class="accordion-arrow"></div>
         <article class="ht1 reveal_x"><label for="overview-title">overview</label></article>
 
         <div class="content content-container">
             <p class="index-title">challenge</p>
-            <p class="ht2">UX Optimization </p>
-            <p class="text">We were given the task to improve the user experience of RaceClocker. As our
-                client, Cees
-                van Dok (the founder of RaceClocker) <span class="s-highlight highlight-sita">mainly saw this
-                    project as a source of inspiration for future
-                    iterations, the technical constraints were lifted and bold concepts were encouraged.</span> </p>
-            <p class="text">Of course, if I were optimizing the real product,
-                I would also consider the
-                negative
-                influence brought by the changes on the product (e.g. confusion caused by drastic changes in the new
-                design) and take technical feasibility into account. I would also refer back to the company’s
-                roadmap,
-                to think about whether the new design is necessary for both its users and the business. Now
-                that the aim
-                is for envisioning the product in the most ideal state, we, therefore, left off those concerns and went
-                for the best at full force.</p>
+            <p class="ht2" id="market-c">Design the future state of the baggage processing chain in a new market</p>
+            <p class="text">SITA is giving increasing attention to the cruise market and aims to extend its business,
+                services & products (e.g., self-service kiosks, bag tag printers, platforms) there. <span
+                    class="s-highlight highlight-sita">How to design the future state of the baggage processing
+                    chain to create business value for SITA?</span></p>
+
+            <div class="one-column">
+                <!-------------- lightbox ----------------->
+                <!-- thumbnail image wrapped in a link -->
+                <a class="img-wrapper-landscape"
+                    style="border: none !important; border-radius:0 !important; max-width:100% ;" href="#market">
+                    <img src="/asset/sita/1-market.jpg" alt="framework" class="one-column-img reveal_y_delay">
+                    <p class="caption-dec" id="market-c"><i>SITA's market</i></p>
+                </a>
+
+                <!-- lightbox container hidden with CSS -->
+                <a href="#market-c" class="lightbox" id="market">
+                    <img src="/asset/sita/1-market.jpg" alt="framework" class="side-img horizontal">
+                </a>
+                <!-------------- lightbox ----------------->
+            </div>
+
+            <p class="text">To tackle this challenge, we need to answer the following questions.</p>
+
+            <div class="two-column">
+                <div class="text-dec column-child-2 border-left">Which digital (SW) and physical (HW) products of SITA
+                    can be used at cruise terminals to facilitate (passengers and) baggage processing in a secure way?
+                    What digital (SW) and physical (HW) products are missing in SITA’s portfolio?</div>
+                <div class="text-dec column-child-2 border-left">- What are the change requirements for a successful
+                    transformation to the new process? What would the business model look like?</div>
+            </div>
 
             <div class="divider-part"></div>
 
@@ -183,170 +197,115 @@
             <p class="ht2">My roles</p>
             <div class="flex-column reveal_y_delay">
                 <div class="column-child-4 border">
-                    <p class="para-title">Product analysis and usage evaluation</p>
-                    <p class="caption">I conducted product analysis and usage evaluation to generate insights about the
-                        current product design.</p>
+                    <p class="para-title">Dream the users’ dream: Provide the user-centered perspective</p>
+                    <p class="caption">In a team made up of four people with different backgrounds (engineering,
+                        business, and management), I proactively brought the user-centered perspective to the table. I
+                        envisioned the user needs and behavior in a future context by initiating user research and
+                        conducting interviews. The resulting personas helped establish the team's empathy with the
+                        passengers as a concrete foundation for our solution development.</p>
                 </div>
                 <div class="column-child-4 border">
-                    <p class="para-title">Planning and scope definition</p>
-                    <p class="caption">I facilitated the brainstorming session of conceptualization and prioritized the
-                        concepts for further development.</p>
+                    <p class="para-title">Craft the seamless journey: Bring an end-to-end process-driven mindset</p>
+                    <p class="caption">I created experiences and service interactions addressing user needs. I guided
+                        the whole team to map the user journey to pinpoint the pain points and identify the design
+                        opportunities. I created the business process model and notation diagram (BPMN) to visualize the
+                        end-to-end service and elicit all-around considerations about the whole process.</p>
                 </div>
                 <div class="column-child-4 border">
-                    <p class="para-title">Design execution and validation</p>
-                    <p class="caption">I executed the user journeys, wireframes, prototypes, and design specs. I
-                        coordinated the user tests for validation.</p>
+                    <p class="para-title">Think out of the box: Innovate a new business context</p>
+                    <p class="caption">I ideated different ways to generate additional revenue by utilizing the data as
+                        a strategic asset, which made our solution more economically appealing. I also backed up my
+                        ideas by leveraging an innovative existing solution named multi-party computation (MPC).</p>
                 </div>
                 <div class="column-child-4 border">
-                    <p class="para-title">Leadership and communication</p>
-                    <p class="caption"> I led the group working drumbeats and facilitated the meetings with the client
-                        and mentors. </p>
+                    <p class="para-title">Unite the whole team: Constantly build team alignment via workshops</p>
+                    <p class="caption"> I played an active role in coordinating the collaboration and improving the
+                        communication efficiency across the multi-disciplinary team by facilitating various workshops
+                        for different purposes including project planning, opportunity identifying, analysis
+                        integration, solution ideation, etc. </p>
                 </div>
             </div>
 
             <div class="divider-part"></div>
 
-            <p class="index-title">discovery</p>
-            <p class="ht2">problem statements </p>
-            <p class="text">By integrating the findings from first-hand experience, online reviews, interviews, and
-                methodical usage inspection, we summarized the following 5 problem statements: </p>
-            <ol class="para-title captalized flex-column reveal_y_delay" type="max-width: 660px;">
-                <li class="column-child-4">The RaceClocker app’s current hierarchy of pages causes confusion among
-                    users.
-                </li>
-                <li class="column-child-4">Users can easily get lost in the many pages due to a complicated use flow.
-                </li>
-                <li class="column-child-4">The user receives no clear feedback after clicking a button or icon.</li>
-                <li class="column-child-4">Some buttons’ or icons’ meanings cause misunderstanding or confusion.</li>
-                <li class="column-child-4">While using the product, eye-hand coordination is hard and operation within
-                    the
-                    timer
-                    is difficult to manage.</li>
-            </ol>
-
-            <div class="divider-part"></div>
-
             <p class="index-title">vision</p>
-            <p class="ht2">bridge the gap between digital timing and physical tracking </p>
-            <p class="quote reveal_x">"We want to
-                make frequent
-                users feel in control when using RaceClocker. Time
-                recording during a race should be intuitive, efficient and fast. Besides that,
-                users should feel confident when using and navigating through the functions
-                RaceClocker offers." </p>
+            <p class="ht2">bridge the siloed systems by building an integrated data platform </p>
+            <p class="quote reveal_x">"We want to break the silos of different systems to enable a seamless baggage-free
+                travel for passengers and unleash the potential of the
+                data asset to the greatest extent." </p>
 
             <div class="divider-part"></div>
 
             <p class="index-title">solution</p>
-            <div class="ht2">introducing RaceClocker 2.0</div>
+            <div class="ht2">An integrated data platform</div>
 
             <!--------------------- features ------------------->
 
             <div class="two-column-full">
                 <div class="column-child-2 reveal_x">
-                    <p class="ht3-dec">Flatten the hierarchy by collecting the non-often-used features in the menu
+                    <p class="ht3-dec">An integrated system with different viewpoints
                     </p>
-                    <p class="text-dec">We aim to keep the hierarchy of
-                        timer dashboard simple and flat by
-                        1) reducing the unnecessary digital
-                        buttons and collecting not-often-used
-                        features in the menu; 2) making the
-                        main interactions happen on the same
-                        interface and avoiding unnecessary
-                        jumping. </p>
+                    <p class="text-dec">Based on our analysis, <span class="s-highlight highlight-sita">we prescribed a
+                            solution based on interfirm system integration and interfirm collaboration.</span> The
+                        system integration enables a unified passenger identity which supports the seamless transfer of
+                        luggage from cruise ports to airports, thereby reducing inconvenience for passengers. <span
+                            class="s-highlight highlight-sita">Since different stakeholders would like to view the same
+                            solution from different perspectives, multiple viewpoints such as system viewpoint, data
+                            flow viewpoint, business processes viewpoint (BPMN), etc. were created.</span> Based on the
+                        principles of Industry 4.0, we also proposed how the data from system integration can be
+                        leveraged securely to create additional analytic services for different supply chain partners
+                        thereby increasing the value.
                 </div>
-                <div class="img-wrapper-landscape reveal_x_delay"><img src="/asset/raceclocker/design1-menu.gif"
-                        alt="onboarding" class="side-img"></div>
+                <div class="img-wrapper-landscape reveal_x_delay" style="border:none; border-radius:0;"><img
+                        src="/asset/sita/1-solution system viewpoint.jpg" alt="onboarding" class="side-img">
+                    <p class="caption-dec"><i>system solution viewpoint</i></p>
+                </div>
             </div>
 
             <div class="two-column-full-reverse">
-                <div class="img-wrapper-portrait reveal_x"><img src="/asset/raceclocker/design2-onboarding.gif"
-                        alt="onboarding" class="side-img"></div>
+                <div class="img-wrapper-landscape reveal_x" style="border:none; border-radius:0;"><img
+                        src="/asset/sita/1-Technology Adaptation.png" alt="onboarding" class="side-img">
+                    <div class="caption-dec"><i>technology adaptation solution</i></div>
+                </div>
                 <div class="column-child-2 reveal_x_delay">
-                    <p class="ht3-dec">Smoothen the use flow by replacing choice-making with automatic recommendations
+                    <p class="ht3-dec">Change requirements and practical implications
                     </p>
-                    <p class="text-dec">We intend to smoothen the use
-                        flow by limiting users’ choices. For
-                        example, we recommend timekeepers
-                        to choose the timing mode that most
-                        suits the race beforehand, which helps
-                        to offload the pressure of choosing
-                        the best timing mode and also avoid
-                        distractions when keeping track of the
-                        time during the race. </p>
+                    <p class="text-dec">To ensure the findings and prescribed solutions are of practical relevance, we
+                        considered the change requirements (e.g., technology adaptation) in the transition from the
+                        existing systems to the new systems. We also thoroughly discussed the relevant implications
+                        including the possible new development in supply chain partnerships, processes, the
+                        organizational structure of SITA, and the financial aspects. </p>
                 </div>
             </div>
 
             <div class="two-column-full">
                 <div class="column-child-2 reveal_x">
-                    <p class="ht3-dec">Boost the feeling of control by providing multi-sensory feedback
+                    <p class="ht3-dec">Create value for users and business
                     </p>
-                    <p class="text-dec">We use various types of output as the
-                        feedback, including the visual feedback
-                        (the color changing) and the haptic
-                        feedback (the vibration of the phone).
-                        We carefully designed our color code
-                        to make it intuitive. We also decide the
-                        form of feedback according to the level
-                        of importance and the context. For
-                        example, during the phase of timing,
-                        we provide visual and haptic feedback
-                        as a double confirmation of certain
-                        actions. After timing all participants,
-                        a pop-out window will show the
-                        timekeepers they have already finish
-                        their job. </p>
+                    <p class="text-dec">In order to understand how the solution can create, deliver and capture value,
+                        <span class="s-highlight highlight-sita">a business model canvas was created that can be used to
+                            influence SITA’s business model innovation</span>. The scope of this project is limited to
+                        addressing the problem of transferring baggage between cruise ports and airports and creating
+                        value for the same but we didn’t stop there. Based on our findings of the current research, new
+                        research directions are also proposed which would be conducive for SITA to lead innovation in
+                        the cruise line and airline industry. <span class="s-highlight highlight-sita">We also made a
+                            roadmap that provides a strategic plan by recommending different activities in three
+                            different horizons to achieve the solution and augment it further.</span>
+                    </p>
                 </div>
-                <div class="img-wrapper-landscape reveal_x_delay"><img src="/asset/raceclocker/design3-color.gif"
-                        alt="color" class="side-img">
+                <div class="img-wrapper-landscape reveal_x_delay" style="border:none; border-radius:0;"><img
+                        src="/asset/sita/1-business canvas.png" alt="color" class="side-img">
+                    <div class="caption-dec"><i>Business model canvas</i></div>
                 </div>
             </div>
 
-            <div class="two-column-full-reverse ">
-                <div class="img-wrapper-landscape reveal_x"><img src="/asset/raceclocker/design4-guideline.png"
-                        alt="onboarding" class="side-img"></div>
-                <div class="column-child-2 reveal_x_delay">
-                    <p class="ht3-dec">Improve visual clarity and consistency by standardizing the design guideline
-                    </p>
-                    <p class="text-dec">We standardized our design according
-                        to a set of UI design guideline, which
-                        includes the size of eachibutton, the
-                        color code, the font and font size, and
-                        the state changing code. We set up the
-                        guideline to make sure each element
-                        on the interface is clearly presented,
-                        logically laid out at the appropriate
-                        location and also meets the aesthetic
-                        need. </p>
-                </div>
-            </div>
-
-            <div class="two-column-full">
-                <div class="column-child-2 reveal_x">
-                    <p class="ht3-dec">Enhance eye-hand coordination, and operation by using the hard key of phones
-                    </p>
-                    <p class="text-dec">We got inspired by the use of
-                        the
-                        stopwatch during timekeeping - a
-                        traditional but efficient way of
-                        timekeeping without the problem
-                        of operation - and decided to use
-                        the hard keys of the mobile phone
-                        to replicate the familiar feeling of
-                        timekeeping with a stopwatch thereby
-                        solving the problem of hand-eye
-                        discoordination.</p>
-                </div>
-                <div class="img-wrapper-landscape reveal_x_delay"><img src="/asset/raceclocker/design5-hard key.gif"
-                        alt="onboarding" class="side-img"></div>
-            </div>
 
             <!-----------------feature------------------->
 
             <!-------- jumper ---------->
-            <a href="#final-design" class="ht3 reveal_x jumper">
-                <span class="highlight">Jump to final design</span>
-                <div class="jump-arrow-wrapper"><img src="/asset/arrow.svg" alt="jump">
+            <a href="#design" class="ht3 reveal_x jumper">
+                <span class="highlight">Jump to final solution</span>
+                <div class="jump-arrow-wrapper"><img src="/asset/arrow-white.svg" alt="jump">
                 </div>
             </a>
 
@@ -358,30 +317,53 @@
             <p class="ht2">How we got there</p>
 
 
+
+            <p class="ht3">Use the Scrum method to manage the progress </p>
+            <p class="text">We decided to use the scrum method to control our work progress in the upfront of this
+                project. <span class="s-highlight highlight-sita">We had a sprint planning meeting every Friday
+                    afternoon in which we wrote down everything in
+                    our mind that probably needed to be done in the ‘backlog’,</span> such as SWOT analysis and
+                stakeholder
+                analysis. Then we started our ‘sprint’. Every one of us was assigned several ‘backlogs’ to finish by the
+                next Friday. <span class="s-highlight highlight-sita">During the week, we did 1-2 weekly ‘standup(s)’ to
+                    exchange our progress and help each
+                    other out.</span> And finally, it turns out to be efficient to work in this way. We had a quite nice
+                time
+                management and task division. <span class="s-highlight highlight-sita">It not only allowed us to
+                    leverage our strengths to the greatest extent
+                    but also gave us opportunities to challenge ourselves to practice outside our ‘comfort
+                    zones’.</span></p>
+
             <div class="two-column">
-                <div class="column-child-2-narrow reveal_x">
-                    <p class="ht3">A proper scoping is based on a thorough understanding </p>
-                    <p class="text">Since the design brief is quite broad and vague, one of the many challenges is how
-                        to
-                        properly define the design scope. The foundation of scoping is a thorough understanding of the
-                        product.
-                        We used the following framework to retrieve different cross-sections of the product.</p>
+                <div class="img-wrapper-landscape reveal_y_delay column-child-2"
+                    style="border: none !important; border-radius:0 !important; max-width:100%;">
+                    <img src="/asset/sita/1-Screenshot of Sprint Board in Jira.png" alt="framework" class="side-img">
+                    <p class="caption-dec"><i>Screenshot of Sprint Board in Jira</i></p>
                 </div>
 
-                <div class="img-wrapper-landscape reveal_x_delay"
-                    style="border: none !important; border-radius:0 !important; width: 400px !important;">
-                    <img src="/asset/raceclocker/product-analysis-framework.png" alt="framework" class="side-img">
-                    <p class="caption-dec"><i>Product analysis framework</i></p>
+                <div class="img-wrapper-landscape reveal_y_delay column-child-2"
+                    style="border: none !important; border-radius:0 !important; max-width:100%;">
+                    <img src="/asset/sita/1-Screenshot of One of the Many Miro Workshops.png" alt="framework"
+                        class="side-img">
+                    <p class="caption-dec"><i>Screenshot of Workshop Board in Miro</i></p>
                 </div>
             </div>
 
-            <p class="ht3 reveal_x">Design directions emerge from formative evaluation</p>
-            <p class="text">In order to ideate solutions to improve the usability of RaceClocker, we used
-                various
-                methods including first-hand experience, online reviews, interview, methodical user involvement usage
-                inspection, etc. to conduct the formative evaluation to know how to make the usability improvements.
-            </p>
 
+
+            <p class="ht3 reveal_x">Understand the different socio-technical aspects</p>
+            <p class="text">We conducted the cruise market study and investigated SITA’s current systems and processes,
+                which provided us with a deep understanding of the context. We also analyzed different stakeholders of
+                the supply chain, identified the strengths, weaknesses, opportunities, and threats (TOWS analysis) of
+                SITA as a service provider, and considered the different competitive forces that control the market
+                dynamics (Porter’s Five Forces). <span class="s-highlight highlight-sita">The findings were complemented
+                    with empirical data from user research
+                    and user journey mapping and resulted in strategic action points that influence system requirements
+                    and
+                    guide the new supplier relationships strategy</span>. Further, investigating the current
+                processes and systems and customers and journeys provides an understanding of the different
+                socio-technical aspects that must be considered in the design.
+            </p>
         </div>
     </div>
 
@@ -389,21 +371,361 @@
     <!--------------------- discover ------------------------>
 
     <div class="section-accordion" id="discover">
-        <input type="checkbox" name="raceclocker" id="discover-title">
+        <input type="checkbox" name="sita" id="discover-title">
         <div class="accordion-arrow"></div>
         <p class="ht1 reveal_x"><label for="discover-title">discover</label></p>
         <div class="content content-container">
 
-            <p class="index-title">challenge</p>
-            <p class="ht2">History: </p>
-            <p class="text"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
-                carbonated Trappist
-                ale,
-                <span class="s-highlight highlight-sita"> showing a fruity-spicy Trappist yeast character, a
-                    spicy-floral hop profile, and a soft,</span>
-                supportive
-                grainy-sweet malt palate.
+            <p class="index-title">scope</p>
+            <p class="ht2">Background and the Problem Scope </p>
+            <p class="text">The airport’s luggage handling system has an essential role in keeping passengers pleased,
+                which is a critical component in the ability of an airport to attract or retain a significant airline
+                hub (Nice, 2001). SITA is the world’s leading specialist in air transport communications and information
+                technology. Currently, SITA is serving 95% of international destinations, including collaboration with
+                over 2.500 airlines, airports, ground handlers, and governments (SITA, 2021). This means that SITA's
+                services have a huge impact on passengers’ satisfaction. On top of that, <span
+                    class="s-highlight highlight-sita">SITA wants to extend its business by including the cruise line
+                    market in the customer journey</span> (<a href="./asset/sita/Appendix 1 - Market SITA.pdf"
+                    target="_blank"> see the elaborated version of SITA’s market <u>here</u></a>). <span
+                    class="s-highlight highlight-sita">The goal is to provide an effortless, secure, and cost-efficient
+                    baggage transfer experience for passengers in-between different destinations such as cruise ports,
+                    airports, and other locations like passengers’ homes and hotels.</span> This project aims to provide
+                a solution to achieve this goal and create a business model including its implications for SITA.
             </p>
+
+            <div class="flex-column reveal_y_delay">
+                <div class="column-child-4 border-left">
+                    <p class="para-title">Location</p>
+                    <p class="caption">In this project, the geographic scope is limited to the Netherlands.</p>
+                </div>
+                <div class="column-child-4 border-left">
+                    <p class="para-title">Process</p>
+                    <p class="caption">In this project, we only focused on the journey between the cruise ports and
+                        airports</p>
+                </div>
+                <div class="column-child-4 border-left">
+                    <p class="para-title">System</p>
+                    <p class="caption"> In this project, we would mainly focus on the software systems</p>
+                </div>
+                <div class="column-child-4 border-left">
+                    <p class="para-title">Scalability</p>
+                    <p class="caption">In this project, we should also consider how to implement the solution on an
+                        international scale regardless the geographic scope.</p>
+                </div>
+            </div>
+
+            <p class="index-title">position</p>
+            <p class="ht2">Where is SITA located in the whole system </p>
+            <p class="text">To understand SITA and its environment better, we conducted stakeholder analysis and TOWS
+                analysis. <span class="s-highlight highlight-sita">A basic understanding of stakeholder dynamics is
+                    needed to develop a suitable solution that
+                    satisfies as many stakeholders as possible.</span> Therefore, the complete system has been
+                summarized in a map
+                showing how the different actors are intertwined.
+            </p>
+
+            <p class="ht3" id="stakeholder-c">Stakeholder analysis</p>
+            <p class="text">A stakeholder analysis was conducted to map out various relevant actors and understand them
+                better. Relative stakeholders are plotted in a power/interest grid. Two things are noteworthy here. <br>
+
+                Firstly, transfer agencies are added to the grid twice. The one in quadrant B is a one-to-one
+                relationship with SITA, which means there is a single big company with which SITA has a partnership. The
+                one in quadrant D is a one-to-many relationship, which means multiple smaller transfer agencies are in
+                contract with SITA. The pros and cons of these relationships will be discussed later in the supplier
+                relationship.<br>
+
+                Secondly, consumers (quadrant D) are the end-users of all stakeholders in quadrant B except for SITA.
+                All actors ultimately will try to provide value for their end-users to gain long-term benefits
+                themselves. SITA’s main customers/clients are mainly toB (e.g. airlines) and these clients have the
+                customers whom they provide services for.</p>
+            <div class="one-column">
+                <!-------------- lightbox ----------------->
+                <!-- thumbnail image wrapped in a link -->
+                <a class="img-wrapper-landscape"
+                    style="border: none !important; border-radius:0 !important; max-width:100% ;" href="#stakeholder">
+                    <img src="/asset/sita/2- Power-Interest matrix.jpg" alt="framework"
+                        class="one-column-img reveal_y_delay">
+                    <p class="caption-dec"><i>Stakeholder analysis</i></p>
+                </a>
+
+                <!-- lightbox container hidden with CSS -->
+                <a href="#stakeholder-c" class="lightbox" id="stakeholder">
+                    <img src="/asset/sita/2- Power-Interest matrix.jpg" alt="framework" class="side-img horizontal">
+                </a>
+                <!-------------- lightbox ----------------->
+            </div>
+
+            <a href="./asset/sita/Appendix 2 - stakeholder analysis.pdf" target="_blank" class="ht3 reveal_x jumper">
+                <span class="highlight">A full list of stakeholders</span>
+                <div class="jump-arrow-wrapper"><img src="/asset/arrow-white.svg" alt="jump">
+                </div>
+            </a>
+
+            <p class="ht3" id="system-c">System map</p>
+            <p class="text">
+                The different stakeholders and their connections have been visualized to better understand the whole
+                system and the dynamics.</p>
+            <div class="one-column">
+                <!-------------- lightbox ----------------->
+                <!-- thumbnail image wrapped in a link -->
+                <a class="img-wrapper-landscape"
+                    style="border: none !important; border-radius:0 !important; max-width:100% ;" href="#system">
+                    <img src="/asset/sita/2-System map.jpg" alt="framework" class="one-column-img reveal_y_delay">
+                    <p class="caption-dec"><i>System map</i></p>
+                </a>
+
+                <!-- lightbox container hidden with CSS -->
+                <a href="#system-c" class="lightbox" id="system">
+                    <img src="/asset/sita/2-System map.jpg" alt="framework" class="side-img vertical">
+                </a>
+                <!-------------- lightbox ----------------->
+            </div>
+
+            <p class="index-title">market analysis</p>
+            <p class="ht2">The prospects for the cruise industry are optimistic</p>
+            <p class="text">A detailed analysis of the cruise ship market is shown here, from which the following key
+                insights were yielded:</p>
+            <p class="text border-left">The global cruise ship market is dominated by three key parent companies which
+                include Carnival, Royal Caribbean International (RCI), and Norwegian. Carnival possesses the highest
+                market share at 37.1 %. Other smaller cruise lines possess a significant market share of 29.2%.</p>
+            <p class="text border-left">The number of passengers grew by almost 60% between 2009 and 2019, until the
+                pandemic resulted in a steep drop. The prospects for the cruise industry, however, seem optimistic as
+                the economies emerge out of the pandemic, which can be validated by the two-fold increase in the number
+                of passengers between 2020 and 2021.</p>
+            <p class="text border-left">Europe is the second largest passenger source with 3.5 million passengers. The
+                passenger source can be further drilled down to Germany: 1,068,900, France: 374,100, and Benelux:
+                97,900.</p>
+            <p class="text border-left">Most cruises in Amsterdam port operate between May and October representing a
+                predictable seasonal trend.</p>
+
+            <p class="index-title">TOWS Analysis</p>
+            <p class="ht2">Know yourself</p>
+            <p class="text">A TOWS analysis, or SWOT, involves identifying an organization's strengths, weaknesses,
+                opportunities, and threats. On top of that, it will combine internal and external aspects to identify
+                appropriate strategic choices that an organization may follow. <span
+                    class="s-highlight highlight-sita">It may help a firm identify
+                    opportunities, reduce threats, overcome weaknesses, and maximize strengths (TOWS, n.d.).</span>
+                Three critical
+                strategies can be externalized from the TOWS analysis. </p>
+            <div class="flex-column">
+                <p class="text column-child-4 border-left">Firstly, SITA should use existing capabilities to innovate
+                    and optimize the cruise port to airport delivery. Since SITA already has years of experience with
+                    airport luggage handling, similar systems can be used for cruise lines. </p>
+                <p class="text column-child-4 border-left">Secondly, the pandemic can be used to set up/negotiate new
+                    systems which will provide more value to passengers. Brand reputation and business expertise can be
+                    used to leverage the position of SITA. </p>
+                <p class="text column-child-4 border-left">Lastly, establishing innovation labs/skunkworks to enable
+                    creative and fast development. SITA will operate faster in the new industry as an incumbent company.
+                </p>
+            </div>
+            <a href="./asset/sita/Appendix 3 - TOWS analysis.pdf" target="_blank" class="ht3 reveal_x jumper">
+                <span class="highlight">The complete TOWS analysis</span>
+                <div class="jump-arrow-wrapper"><img src="/asset/arrow-white.svg" alt="jump">
+                </div>
+            </a>
+
+            <div class="divider-part"></div>
+
+            <p class="index-title">Porter's five forces</p>
+            <p class="ht2">Know the enemy </p>
+            <p class="text">Entering a new market is a strategic decision that requires a good understanding of the
+                competitive landscape. While there are currently no direct competitors in the market of interest, the
+                dynamics of the competition can be identified in the underlying economics of the industry (Michael &
+                Porter, 1979). Porter’s framework analyses different competitive forces.</p>
+            <div class="flex-column reveal_y_delay">
+                <div class="column-child-4 border-left">
+                    <p class="para-title">Threat of new entrants</p>
+                    <p class="caption"><span class="s-highlight highlight-sita">The market under consideration has high
+                            barriers to entry.</span>This can be attributed to three primary reasons: capital investment
+                        needed for development, process complexity, and the involved network of stakeholders. Given
+                        SITA's financial strength, experience in baggage management, and existing partnerships with
+                        airports and airlines, SITA can leverage this to its advantage.</p>
+                </div>
+                <div class="column-child-4 border-left">
+                    <p class="para-title">Power of Suppliers</p>
+                    <p class="caption">In this research, <span class="s-highlight highlight-sita">baggage transfer
+                            agencies are considered the supplier of interest</span>. SITA must establish a balanced
+                        power relationship with its supplier. Furthermore, to ensure a sustainable relationship that
+                        allows for interaction between the people and systems, <span
+                            class="s-highlight highlight-sita">a strong emphasis must be laid on co-creation</span>.</p>
+                </div>
+                <div class="column-child-4 border-left">
+                    <p class="para-title">Power of Customers</p>
+                    <p class="caption">Buyer-seller relationships are often driven by resource utility and market
+                        scarcity and can be controlled through coercive (punishment) and non-coercive (assistance)
+                        practices (Rehme et al., 2016). <span class="s-highlight highlight-sita">To maintain a power
+                            balance and positive relationship with buyers (both cruise lines and cruise passengers),
+                            SITA should focus on non-coercive practices. Distinctive product offerings and complimentary
+                            services can achieve this.</span></p>
+                </div>
+                <div class="column-child-4 border-left">
+                    <p class="para-title">Threat of substitutes</p>
+                    <p class="caption"> <span class="s-highlight highlight-sita">Forward integration by delivery service
+                            suppliers and luggage shipping agencies like Eelway, Sendmybag, and Yamato transport can be
+                            recognized as significant threats.</span> A service differentiation strategy (based on both
+                        technology and partnerships) can be used to develop and maintain a competitive advantage. </p>
+                </div>
+            </div>
+            <a href="./asset/sita/Appendix 4 - Porter's five forces.pdf" target="_blank" class="ht3 reveal_x jumper">
+                <span class="highlight">The complete Porter's Fice Forces analysis</span>
+                <div class="jump-arrow-wrapper"><img src="/asset/arrow-white.svg" alt="jump">
+                </div>
+            </a>
+
+            <div class="divider-part"></div>
+
+            <p class="index-title">Supplier Relations</p>
+            <p class="ht2">Build strategic collaborative relationships with suppliers </p>
+            <p class="text">The baggage must be physically transported from the cruise ship terminal to the airport
+                terminal. <span class="s-highlight highlight-sita">Considering SITA’s core competencies and the
+                    company's strategic vision, baggage transportation must be outsourced.</span> Given this, baggage
+                delivery service providers are the main suppliers in this research. The possible relationships are
+                analyzed by using the Karlijk matrix, which serves as a framework for analyzing modern purchasing
+                (Kraljic, 1983). Two feasible relationships were analyzed:</p>
+            <div class="two-column">
+                <div class="caption-dec column-child-2" style="text-align:start;"><strong>Routine Transactional
+                        Relationships:</strong>
+                    The product or service is easily available in a routine transactional relationship. In such a
+                    relationship, the actors are not deeply invested in each other, and the switching cost is low.
+                    Therefore the purchasing risk is low. SITA may work with several delivery service providers to
+                    arrange ad-hoc services in the given context.</div>
+                <div class="caption-dec column-child-2" style="text-align:start;"><strong>Strategic collaborative
+                        relationships:</strong>
+                    The buyer and supplier develop a partnership built on long-term contracts, fair agreements, and
+                    collaborative support. While the risks involved are high, they are often shared, and strategic
+                    interfirm collaboration results in higher responsiveness and superior performance of the supply
+                    network (Kim & Lee, 2010). Strategic collaboration also facilitates inter-system communication
+                    between SITA systems and delivery service providers. This can be instrumental in ensuring bags are
+                    tracked, traced, and accounted for during the transfer process.</div>
+                <p class="text">The analysis shows that the benefits of a strategic collaborative relationship outweigh
+                    the routine transaction relationship in this case. Further insights from market data emphasize a
+                    predictable passenger influx that does not require an ad-hoc service. Therefore, <span
+                        class="s-highlight highlight-sita">we recommend strategic collaboration as the preferred
+                        relationship model between SITA and the delivery service providers, which fosters reliability,
+                        resilience, and service excellence</span>.</p>
+            </div>
+
+            <div class="divider-part"></div>
+
+            <p class="index-title">User research</p>
+            <p class="ht2">Achieve overarched servitization in the B2B industry by knowing your end-users</p>
+            <p class="text">SITA is a B2B-driven organisation. Logically, they investigate the interest and needs of
+                their direct customers, such as airlines and airports. However, this would neglect a stakeholder, which
+                is not significant at first glance with its low power and high interest, namely, consumers. Consumers,
+                also known as cruise and airline passengers, are end-users. <span
+                    class="s-highlight highlight-sita">SITA’s direct customers do not only try to generate value for
+                    themselves in terms of improved processes and reduced overhead cost but also try to improve
+                    passengers’ experience to improve consumer loyalty and gain additional income streams.</span> For
+                this reason, we conducted deep user research to gain more insights about the end-users and their pain
+                points.</p>
+
+            <p class="ht3">Segment: Luxurious and travel-oriented</p>
+            <p class="text">The four primary categories of market segmentation are demographic, psychographic,
+                behavioral, and geographic segmentation. However, one can apply many additional tactics, including
+                variants of the four main types (LOTAME, 2019). To come up with the different customer types and better
+                scope our consumers, some desk research on cruise line consumers was conducted. Afterward, people who
+                recently have been on a cruise trip were interviewed.</p>
+
+
+            <a href="./asset/sita/Appendix 6 - Interview.pdf" target="_blank" class="ht3 reveal_x jumper">
+                <span class="highlight">More information about interviews</span>
+                <div class="jump-arrow-wrapper"><img src="/asset/arrow-white.svg" alt="jump">
+                </div>
+            </a>
+
+            <div class="one-column">
+                <div class="img-wrapper-landscape reveal_y_delay"
+                    style="border: none !important; border-radius:0 !important; max-width:100%;">
+                    <img src="/asset/sita/2-Customer Segmentation Quadrants.jpg" alt="framework" class="side-img">
+                    <p class="caption-dec"><i>Customer segmentation</i></p>
+                </div>
+            </div>
+
+            <a href="./asset/sita/Appendix 5 - segmentation.pdf" target="_blank" class="ht3 reveal_x jumper">
+                <span class="highlight">More information about segments</span>
+                <div class="jump-arrow-wrapper"><img src="/asset/arrow-white.svg" alt="jump">
+                </div>
+            </a>
+
+            <p class="text">The desk research and interviews resulted in a behavioral and partly demographic
+                segmentation. Since the project's scope is within the Netherlands, the segmentation is
+                geographic to a certain level by default. The matrix exists out of 4 quadrants and is divided by
+                luxurious and economic on the Y-axis and vacation-oriented and transport-oriented on the X-axis.
+                <span class="s-highlight highlight-sita">Luggage-free transport appeals to the luxurious
+                    quadrants. Also, vacation-oriented travel is more popular than transport-oriented travel,
+                    which is concluded by the interviews.</span> Therefore, the target group of the solution for
+                this project will be in Quadrant A (left-top). In order to gain more empathy with the consumers,
+                <a href="./asset/sita/Appendix 7 - persona.pdf"> we created different <u>personas</u>
+                    representing the target group</a>.
+            </p>
+
+
+
+            <a href="./asset/sita/Appendix 7 - persona.pdf" class="flex-column reveal_y_delay" target="_blank">
+                <div class="img-wrapper-landscape column-child-4" style="border:none; border-radius:0; max-width
+                100%;"><img src="/asset/sita/2-persona 1.jpg" alt="persona"></div>
+                <div class="img-wrapper-landscape column-child-4" style="border:none; border-radius:0; max-width
+                100%;"><img src="/asset/sita/2-persona 2.jpg" alt="persona"></div>
+                <div class="img-wrapper-landscape column-child-4" style="border:none; border-radius:0; max-width
+                100%;"><img src="/asset/sita/2-persona 3.jpg" alt="persona"></div>
+            </a>
+
+            <div class="ht3">Customer journey map</div>
+            <p class="text">To better identify the design opportunities along with the whole user journey, we mapped out
+                the complete user journey and brainstormed different ‘if’ scenarios to help us complete the user
+                stories. We also considered the assumptions we based on that need to be checked later and the related
+                regulations.</p>
+
+            <div class="one-column">
+                <div class="img-wrapper-landscape reveal_y_delay"
+                    style="border: none !important; border-radius:0 !important; max-width:100%;">
+                    <img src="/asset/sita/2-user journey_scenarios_assumptions.jpg" alt="framework" class="side-img">
+                    <p class="caption-dec"><i>the 'if' scenarios mapping</i></p>
+                </div>
+            </div>
+            <p class="text"><a href="./asset/sita/Appendix 8 - customer journey.pdf"> The complete <u>user journey
+                        maps</u> can be seen here.</a> Here are the main insights: </p>
+
+            <div class="flex-column">
+                <p class="text column-child-4 border-left">Luggage on the cruise ship can differ at the end than from
+                    the beginning. Therefore, there should be a control point on both sides.</p>
+                <p class="text column-child-4 border-left">Luggage destination can change. There should be clear
+                    deadlines for changing luggage which should be communicated with the pickup service. </p>
+                <p class="text column-child-4 border-left">Luggage should be traceable for the consumer. In other words,
+                    the process should be transparent.
+                </p>
+                <p class="text column-child-4 border-left">Consumers should get notifications of important information
+                    such as luggage delays, if luggage reached the destination, or if the pickup service is on its way.
+                </p>
+                <p class="text column-child-4 border-left">The technology should be easy to use, and there should be
+                    assistance available when the consumer is in need.
+                </p>
+                <p class="text column-child-4 border-left">Selecting the luggage service should be togglable, and the
+                    service itself should be easy to understand, including payments.
+                </p>
+            </div>
+            <p class="text">Interesting consumer pain points are below: </p>
+            <div class="flex-column">
+                <p class="text column-child-4 border-left">Consumers do not keep track of the weight of bought goods on
+                    the cruise. Therefore, luggage weight can differ.
+                </p>
+                <p class="text column-child-4 border-left">Consumers' agendas can change, especially when tickets are
+                    booked way in advance. Life happens, and last-minute things can occur, which can cause a delay in
+                    the luggage handling process.
+                </p>
+                <p class="text column-child-4 border-left">It’s a new process that should be clear for consumers without
+                    reading too much or doing much external stuff.
+                </p>
+                <p class="text column-child-4 border-left">Consumers might bring higher quantities of luggage now that
+                    they do not need to carry it anymore.
+                </p>
+                <p class="text column-child-4 border-left">Consumers with kids want to use the service as a stress
+                    reliever. So, it shouldn’t give them extra steps.
+                </p>
+
+            </div>
+
+
         </div>
     </div>
 
@@ -416,25 +738,6 @@
         <div class="content content-container">
 
             <p class="index-title">challenge</p>
-            <p class="ht2">History: </p>
-            <p class="text"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
-                carbonated Trappist
-                ale,
-                showing a fruity-spicy Trappist yeast character, a spicy-floral hop profile, and a soft,
-                supportive
-                grainy-sweet malt palate.</p>
-        </div>
-    </div>
-
-    <!--------------------- ideate ------------------------>
-
-    <div class="section-accordion" id="ideate">
-        <input type="checkbox" name="raceclocker" id="ideate-title">
-        <div class="accordion-arrow"></div>
-        <p class="ht1 reveal_x"><label for="ideate-title">ideate</label></p>
-        <div class="content content-container">
-
-            <p class="index-title">ideation</p>
             <p class="ht2">History: </p>
             <p class="text"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
                 carbonated Trappist
@@ -464,22 +767,25 @@
         </div>
     </div>
 
-    <!--------------------- ramification ------------------------>
+    <!--------------------- implication ------------------------>
 
-    <div class="section-accordion" id="ramification">
-        <input type="checkbox" name="raceclocker" id="ramification-title">
+    <div class="section-accordion" id="implication">
+        <input type="checkbox" name="sita" id="implication-title">
         <div class="accordion-arrow"></div>
-        <p class="ht1 reveal_x"><label for="ramification-title">Ramification</label></p>
+        <p class="ht1 reveal_x"><label for="implication-title">Implication</label></p>
         <div class="content content-container">
 
-            <p class="index-title">challenge</p>
-            <p class="ht2">History: </p>
+            <p class="ht2">Change Requirements</p>
+            <p class="ht3">Partnership</p>
             <p class="text"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
                 carbonated Trappist
                 ale,
                 showing a fruity-spicy Trappist yeast character, a spicy-floral hop profile, and a soft,
                 supportive
                 grainy-sweet malt palate.</p>
+
+            <p class="index-title">change requirement</p>
+            <p class="ht2">Partnership</p>
         </div>
     </div>
 
@@ -494,7 +800,8 @@
             <p class="ht2">If I had more time ... </p>
             <p class="text"><strong>Make a gradual optimization plan</strong> Drastic changes in design always risk
                 causing issues of adaption. If we had more time, we will design a
-                fine-grained optimization plan to gradually roll out the new features and diminish the backlash of the
+                fine-grained optimization plan to gradually roll out the new features and diminish the backlash of
+                the
                 new design.</p>
 
             <p class="text"><strong>Take technical constraints into account</strong> When we proposed to use the
@@ -508,8 +815,10 @@
                 like product analysis can be quite a big job. Using frameworks to manage
                 the research activities help cultivate a result-driven mindset and make the process clear.</p>
 
-            <p class="text"><strong>Make every design decision intentionally.</strong> Even though many constraints have
-                been lifted in this project and bold design is encouraged, being bold doesn't mean being undeliberate.
+            <p class="text"><strong>Make every design decision intentionally.</strong> Even though many constraints
+                have
+                been lifted in this project and bold design is encouraged, being bold doesn't mean being
+                undeliberate.
                 We have been through three big or small iterations throughout this project, and we attempted to make
                 each of our design decision intentionally <a href="#iteration-process-1"><u>by documenting our
                         reasoning</u></a> behind each step.</p>
