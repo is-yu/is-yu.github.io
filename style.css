@@ -1288,8 +1288,9 @@ iframe {
     margin-top: var(--margin-caption);
     margin-bottom: var(--margin-caption);
     line-height: normal;
-    text-align: start;
+
     text-transform: initial;
+    text-align: justify;
 }
 
 .caption-dec {
@@ -1299,8 +1300,9 @@ iframe {
     margin-top: var(--margin-caption);
     margin-bottom: var(--margin-caption);
     line-height: normal;
-    text-align: center;
+
     text-transform: initial;
+    text-align: center;
 }
 
 .index-title {
