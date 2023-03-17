@@ -6,9 +6,9 @@
     --font-size-xlarge: 64rem;
     --font-size-large: 48rem;
     --font-size-medium: 36rem;
-    --font-size-small: 24rem;
-    --font-size-xsmall: 21rem;
-    --font-size-xxsmall: 18rem;
+    --font-size-small: 27rem;
+    --font-size-xsmall: 24rem;
+    --font-size-xxsmall: 21rem;
 
     --font-weight-thin: 200;
     --font-weight-light: 300;
@@ -327,7 +327,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-xxsmall);
 }
 
 .links .scroll-link {
@@ -391,7 +391,7 @@ body {
 .hero-button {
     text-align: center;
     text-decoration: none;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-xxsmall);
     font-family: var(--sans-serif-font);
     font-weight: var(--font-weight-bold);
     width: 10vw;
@@ -1146,10 +1146,12 @@ img[class='warn'] {
 .contents li {
     text-align: left;
     font-size: var(--font-size-caption);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-light);
     font-family: var(--serif-font);
     margin-left: 1vw;
     margin-bottom: 0.75vw;
+
+    opacity: 0.75;
 
 }
 

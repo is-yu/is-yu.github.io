@@ -53,7 +53,7 @@
                                 class="scroll-link" target="_blank">ABOUT</a>
                         </li>
                         <li class="nav-index">
-                            <a href="index.html" class="scroll-link">WORK</a>
+                            <a href="index.html#work" class="scroll-link">WORK</a>
                         </li>
                         <li class="nav-index tooltip">
                             <a href="https://yucreate.notion.site/Gallery-5fff4bcae3f44819bac9512ee847939a"
@@ -186,7 +186,7 @@
                 <div class="text-dec column-child-2 border-left">Which digital (SW) and physical (HW) products of SITA
                     can be used at cruise terminals to facilitate (passengers and) baggage processing in a secure way?
                     What digital (SW) and physical (HW) products are missing in SITA’s portfolio?</div>
-                <div class="text-dec column-child-2 border-left">- What are the change requirements for a successful
+                <div class="text-dec column-child-2 border-left">What are the change requirements for a successful
                     transformation to the new process? What would the business model look like?</div>
             </div>
 
@@ -196,7 +196,7 @@
 
             <p class="ht2">My roles</p>
             <div class="flex-column reveal_y_delay">
-                <div class="column-child-4 border">
+                <div class="column-child-2 border">
                     <p class="para-title">Dream the users’ dream: Provide the user-centered perspective</p>
                     <p class="caption">In a team made up of four people with different backgrounds (engineering,
                         business, and management), I proactively brought the user-centered perspective to the table. I
@@ -204,20 +204,20 @@
                         conducting interviews. The resulting personas helped establish the team's empathy with the
                         passengers as a concrete foundation for our solution development.</p>
                 </div>
-                <div class="column-child-4 border">
+                <div class="column-child-2 border">
                     <p class="para-title">Craft the seamless journey: Bring an end-to-end process-driven mindset</p>
                     <p class="caption">I created experiences and service interactions addressing user needs. I guided
                         the whole team to map the user journey to pinpoint the pain points and identify the design
                         opportunities. I created the business process model and notation diagram (BPMN) to visualize the
                         end-to-end service and elicit all-around considerations about the whole process.</p>
                 </div>
-                <div class="column-child-4 border">
+                <div class="column-child-2 border">
                     <p class="para-title">Think out of the box: Innovate a new business context</p>
                     <p class="caption">I ideated different ways to generate additional revenue by utilizing the data as
                         a strategic asset, which made our solution more economically appealing. I also backed up my
                         ideas by leveraging an innovative existing solution named multi-party computation (MPC).</p>
                 </div>
-                <div class="column-child-4 border">
+                <div class="column-child-2 border">
                     <p class="para-title">Unite the whole team: Constantly build team alignment via workshops</p>
                     <p class="caption"> I played an active role in coordinating the collaboration and improving the
                         communication efficiency across the multi-disciplinary team by facilitating various workshops
@@ -751,14 +751,59 @@
         <p class="ht1 reveal_x"><label for="define-title">define</label></p>
         <div class="content content-container">
 
-            <p class="index-title">challenge</p>
-            <p class="ht2">History: </p>
-            <p class="text"><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well
-                carbonated Trappist
-                ale,
-                showing a fruity-spicy Trappist yeast character, a spicy-floral hop profile, and a soft,
-                supportive
-                grainy-sweet malt palate.</p>
+            <p class="index-title">define</p>
+            <p class="ht2" id="process-c">Identify the Opportunities from the Current Process</p>
+            <!-------------- lightbox ----------------->
+            <!-- thumbnail image wrapped in a link -->
+            <a class="one-column" href="#process">
+                <img src="/asset/sita/3-Current process.png" alt="framework" class="one-column-img reveal_y_delay">
+                <p class="caption-dec"><i>Current process at cruise ports</i></p>
+            </a>
+
+            <!-- lightbox container hidden with CSS -->
+            <a href="#process-c" class="lightbox" id="process">
+                <img src="/asset/sita/3-Current process.png" alt="framework" class="side-img vertical">
+            </a>
+            <!-------------- lightbox ----------------->
+            <p class="text border-left">Cruise ports and cruise lines are less digitalized than airports. Therefore, in
+                some scenarios, generic handwritten bag tags are used.</p>
+            <p class="text border-left">The baggage handling and passenger check-in at cruise ports are not automated by
+                using a local system that stores unified information about the passenger, luggage, and cruise ship.</p>
+            <p class="text border-left">Information about the baggage, passenger, and ship departure and arrivals is
+                stored in the IT system of cruise lines. The Platform Management System (PMS) stores passenger and
+                luggage information, while the real-time data about cruise ship departures, arrivals, and delays is
+                stored in a separate system named Fleet Management System (FMS).</p>
+
+            <div class="divider-part"></div>
+
+            <p class="index-title">define</p>
+            <p class="ht2" id="silo-c">Siloed Systems of the Supply Chain Network</p>
+            <p class="text"> In the current setup, the cruise line and airline systems are not integrated. Instead, each
+                system has its own passenger entity linked to the cruise ship and its corresponding arrival and
+                departure times, luggage, and the source and destination cruise port. Similarly, the airline system used
+                by SITA (L-DCS) consists of a separate entity of passengers linked to flight (and its corresponding
+                arrival and departure times), luggage, and airport.
+            </p>
+            <!-------------- lightbox ----------------->
+            <!-- thumbnail image wrapped in a link -->
+            <a class="one-column" href="#silo">
+                <img src="/asset/sita/3-silo.png" alt="framework" class="one-column-img reveal_y_delay">
+                <p class="caption-dec"><i>Current process at cruise ports</i></p>
+            </a>
+
+            <!-- lightbox container hidden with CSS -->
+            <a href="#silo-c" class="lightbox" id="silo">
+                <img src="/asset/sita/3-silo.png" alt="framework" class="side-img vertical">
+            </a>
+            <!-------------- lightbox ----------------->
+
+            <p class="text"><span class="s-highlight highlight-sita">A coherent identity of the passenger is required to
+                    facilitate the delivery of baggage from the cruise port to the airport. </span>The cruise line
+                systems must be connected to the airline systems to share information. The system integration will
+                provide delivery service providers with crucial information about the baggage pick-up (bag tag, cruise
+                port, terminal, arrival) and baggage drop (bag tag, airport, terminal, departure). This connection is
+                also essential for tracking and tracing luggage and mapping the luggage to the right passenger.</p>
+
         </div>
     </div>
 

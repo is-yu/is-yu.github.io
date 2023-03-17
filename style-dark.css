@@ -327,7 +327,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-xxsmall);
 }
 
 .links .scroll-link {
@@ -391,7 +391,7 @@ body {
 .hero-button {
     text-align: center;
     text-decoration: none;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-xsmall);
     font-family: var(--sans-serif-font);
     font-weight: var(--font-weight-bold);
     width: 10vw;
@@ -1146,10 +1146,12 @@ img[class='warn'] {
 .contents li {
     text-align: left;
     font-size: var(--font-size-caption);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-light);
     font-family: var(--serif-font);
     margin-left: 1vw;
     margin-bottom: 0.75vw;
+
+    opacity: 0.75;
 
 }
 
@@ -1265,7 +1267,7 @@ iframe {
     font-size: var(--font-size-text);
     font-weight: var(--font-weight-thin);
     margin-bottom: var(--margin-para);
-    line-height: 1.5;
+    line-height: 1.6;
     text-align: justify;
     text-justify: auto;
 }
@@ -1275,7 +1277,7 @@ iframe {
     font-size: var(--font-size-text);
     font-weight: var(--font-weight-thin);
     margin-bottom: var(--margin-para);
-    line-height: 1.5;
+    line-height: 1.6;
     text-align: justify;
     text-justify: auto;
 }
