@@ -508,9 +508,20 @@ body {
     background-image: linear-gradient(to right, transparent 50%, var(--clr-magiclamp-highlight) 50%);
 }
 
-/* .highlight-raceclocker.active {
-    background-image: linear-gradient(to right, transparent 50%, var(--clr-raceclocker-two) 50%);
-} */
+.highlight-static {
+    position: relative;
+}
+
+.highlight-static::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(0.1*var(--font-size-xlarge));
+    left: -2rem;
+    bottom: 3rem;
+    z-index: 1000;
+    background-color: var(--clr-hover);
+}
 
 .highlight {
     position: relative;
@@ -1471,11 +1482,17 @@ iframe {
 }
 
 .section-accordion:hover .accordion-arrow {
-    background-color: var(--clr-black);
+    /* background-color: var(--clr-black); */
+    background-image: url(./asset/cross2-1.png);
+    background-position: center;
+    background-size: contain;
 }
 
 .section-accordion>input[type="checkbox"]:checked~.accordion-arrow {
-    background-color: var(--clr-black);
+    /* background-color: var(--clr-black); */
+    background-image: url(./asset/cross2-2.png);
+    background-position: center;
+    background-size: contain;
 }
 
 .content-container {
