@@ -1394,16 +1394,35 @@ iframe {
 
 /* arrow-wrapper */
 
+
 .accordion-arrow {
-    grid-column: 2/3;
     position: relative;
+    grid-column: 2/3;
     margin: auto;
     border: solid var(--border-weight);
     border-radius: 50%;
     width: calc(0.7*var(--font-size-h1));
     height: calc(0.7*var(--font-size-h1));
-    display: grid;
-    place-items: center;
+}
+
+.line1 {
+    position: absolute;
+    border: solid var(--clr-black) var(--border-weight);
+    width: 80%;
+    top: 50%;
+    left: 10%;
+    transform: scale(0);
+    transition: 0.3s ease-in-out;
+}
+
+.line2 {
+    position: absolute;
+    border: solid var(--border-weight);
+    height: 80%;
+    top: 10%;
+    left: 50%;
+    transform: scale(0);
+    transition: 0.3s ease-in-out;
 }
 
 .line-vertical {
@@ -1484,18 +1503,25 @@ iframe {
     cursor: crosshair;
 }
 
-.section-accordion:hover .accordion-arrow {
-    /* background-color: var(--clr-black); */
-    background-image: url(./asset/cross1-1.png);
+.section-accordion:hover .accordion-arrow .line1 {
+    /* background-image: url(./asset/cross2-1.png);
     background-position: center;
-    background-size: contain;
+    background-size: contain; */
+    transform: scale(1);
 }
 
-.section-accordion>input[type="checkbox"]:checked~.accordion-arrow {
-    /* background-color: var(--clr-black); */
-    background-image: url(./asset/cross1-2.png);
+.section-accordion:hover .accordion-arrow .line2 {
+    /* background-image: url(./asset/cross2-1.png);
     background-position: center;
-    background-size: contain;
+    background-size: contain; */
+    transform: scale(1);
+}
+
+.section-accordion>input[type="checkbox"]:checked~.accordion-arrow .line2 {
+    /* background-image: url(./asset/cross2-2.png);
+    background-position: center;
+    background-size: contain; */
+    transform: rotate(90deg);
 }
 
 .content-container {
