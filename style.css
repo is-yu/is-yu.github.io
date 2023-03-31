@@ -100,7 +100,7 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-    cursor: crosshair;
+    /* cursor: crosshair; */
     color: black;
     text-decoration: none;
 }
