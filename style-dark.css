@@ -1142,18 +1142,18 @@ img[class='warn'] {
 .contents li {
     text-align: left;
     font-size: var(--font-size-caption);
-    font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-medium);
     font-family: var(--serif-font);
     margin-left: 1vw;
     margin-bottom: 0.75vw;
 
-    opacity: 0.75;
+    opacity: 1;
 
 }
 
 .contents a {
     color: var(--clr-black);
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .sidebar.active {
