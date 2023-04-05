@@ -2,6 +2,14 @@
 const date = document.getElementById('date')
 date.innerHTML = new Date().getFullYear();
 
+
+//rotate on scroll
+var elem = document.getElementById('hallmark');
+window.addEventListener('scroll', function () {
+    var value = window.scrollY * 0.25;
+    elem.style.transform = `rotate(${value}deg)`;
+});
+
 //revealing effect
 
 function reveal_y() {
@@ -185,28 +193,16 @@ simple_highlight();
 
 const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll(".sidebar ul li");
-
 window.addEventListener("scroll", () => {
     let current = "";
     sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop - sectionHeight / 20) {
+        console.log(scrollY);
+        if (scrollY >= sectionTop - sectionHeight / 3) {
             current = section.getAttribute("id");
         }
-        console.log(current);
     });
-
-    let checkbox = document.getElementById(current);
-    checkbox.addEventListener("change", () => {
-        if (checkbox.checked) {
-            console.log(checked);
-        } else {
-            console.log(unchecked);
-        }
-    });
-
-    console.log('hi');
 
     navLi.forEach((li) => {
         li.classList.remove("active");

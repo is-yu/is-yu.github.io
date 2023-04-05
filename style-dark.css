@@ -50,17 +50,17 @@
     --clr-sita-three: #fdc963;
 
 
-    --card-radius: 3vh;
+    --card-radius: 30rem;
     --padding-grid: 25rem;
     --border-padding: 15rem;
 
     --font-size-h1: 72rem;
     --font-size-h2: 48rem;
     --font-size-h3: 36rem;
-    --font-size-text: 18rem;
+    --font-size-text: 21rem;
     --font-size-caption: 21rem;
 
-    --margin-section: 96rem;
+    --margin-section: 48rem;
     --margin-part: 72rem;
     --margin-para: 36rem;
     --margin-caption: 12rem;
@@ -69,8 +69,8 @@
     --transition-only: 0.3s linear;
     --transition-reveal: 0.5s ease-in-out;
     --border-weight: 0.02rem;
-    --footer-padding: 2.8vw;
-    --nav-height: 6.5vw;
+    --footer-padding: 56rem;
+    --nav-height: 160rem;
 }
 
 /* Hide scrollbars */
@@ -101,7 +101,7 @@ a:visited,
 a:hover,
 a:active {
     /* cursor: crosshair; */
-    color: var(--clr-black);
+    color: black;
     text-decoration: none;
 }
 
@@ -113,6 +113,14 @@ hr {
 }
 
 /** LIGHTBOX MARKUP **/
+
+.zoom {
+    cursor: zoom-in;
+}
+
+.lightbox:hover {
+    cursor: zoom-out;
+}
 
 .lightbox {
     /* Default to hidden */
@@ -130,7 +138,7 @@ hr {
     padding: 1em;
 
     /* Translucent background */
-    background: var(--clr-background);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 /* Unhide the lightbox when it's the target */
@@ -173,14 +181,15 @@ hr {
     color: var(--clr-black);
     text-align: center;
     font-family: var(--sans-serif-font);
+    font-size: var(--font-size-text);
     padding: 5px;
     box-shadow: 5rem 5rem var(--clr-black);
 
 
     /* Position the tooltip text - see examples below! */
     position: absolute;
-    top: 100%;
-    right: 50%;
+    top: 120%;
+    right: 0%;
     z-index: 1;
 
     transition: var(--transition);
@@ -268,7 +277,7 @@ li[class~='nav-index'] {
 }
 
 .logo {
-    width: 2vw;
+    height: calc(0.5*var(--nav-height));
 }
 
 body {
@@ -327,7 +336,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: var(--font-size-xxsmall);
+    font-size: var(--font-size-xsmall);
 }
 
 .links .scroll-link {
@@ -354,7 +363,7 @@ body {
 }
 
 .nav-index:hover .scroll-link::before {
-    width: calc(100% + 4px);
+    width: calc(100% + 4rem);
 }
 
 
@@ -384,7 +393,7 @@ body {
 .hero-button-wrapper {
     grid-column: 1/11;
     position: relative;
-    left: 3vw;
+    left: 60rem;
     display: flex;
 }
 
@@ -416,29 +425,85 @@ body {
 .hallmark {
     grid-column: 9/11;
     /* transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); */
-    /* position: sticky;
-    bottom: 0; */
-    position: relative;
-    top: 1vh;
-    height: 15vw;
+    position: fixed;
+    top: 12vw;
+    right: 12vw;
+    /* position: relative;
+    top: 0rem; */
+    height: 260rem;
     display: grid;
     justify-content: center;
     align-items: center;
+
+    animation: bounce 2s ease-in-out infinite;
+    opacity: 0;
+    transform: translateX(-150rem);
+
+    transition: var(--transition-reveal);
+}
+
+
+
+.hallmark.active {
+    grid-column: 9/11;
+    /* transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); */
+    position: fixed;
+    top: 12vw;
+    right: 12vw;
+    /* position: relative;
+    top: 0rem; */
+    height: 260rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    animation: bounce 2s ease-in-out infinite;
+    opacity: 0.5;
+    transform: translateX(-50rem);
+
+    transition: var(--transition-reveal);
+}
+
+#badge {
+    opacity: 0;
+}
+
+.hallmark.active:hover {
+    grid-column: 9/11;
+    /* transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); */
+    position: fixed;
+    top: 12vw;
+    right: 12vw;
+    /* position: relative;
+    top: 0rem; */
+    height: 260rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    animation: bounce 2s ease-in-out infinite;
+    opacity: 1;
+    transform: translateX(-50rem);
+
+    transition: var(--transition-reveal);
+}
+
+.hallmark.active:hover #badge {
+    opacity: 1;
+    transition: var(--transition-reveal);
 }
 
 #hallmark {
-    width: 75%;
-    position: relative;
-    left: 50%;
-    top: 41%;
+    width: 260rem;
+    opacity: 0.9;
 }
 
 .arrow-wrapper {
     position: absolute;
     justify-self: center;
 
-    width: 8vw;
-    height: 8vw;
+    width: 160rem;
+    height: 160rem;
     background-color: var(--clr-transparent);
 
     border: solid var(--border-weight) var(--clr-black);
@@ -446,6 +511,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.badge {
+    width: 100%;
 }
 
 .hallmark .arrow-wrapper {
@@ -456,10 +525,10 @@ body {
     position: relative;
     display: inline-block;
     grid-column: 4/5;
-    width: 6vw;
-    height: 6vw;
-    top: 1vw;
-    left: 1vw;
+    width: 120rem;
+    height: 120rem;
+    top: 20rem;
+    left: 20rem;
     margin-right: 1vw;
 }
 
@@ -508,6 +577,10 @@ body {
     background-image: linear-gradient(to right, transparent 50%, var(--clr-magiclamp-highlight) 50%);
 }
 
+/* .highlight-raceclocker.active {
+    background-image: linear-gradient(to right, transparent 50%, var(--clr-raceclocker-two) 50%);
+} */
+
 .highlight {
     position: relative;
 }
@@ -516,9 +589,9 @@ body {
     content: "";
     position: absolute;
     width: 0%;
-    height: calc(0.1*var(--font-size-xlarge));
+    height: calc(0.1*var(--font-size-large));
     left: -2rem;
-    bottom: 3rem;
+    bottom: 1rem;
     z-index: -1;
     background-color: var(--clr-hover);
     transition: width 0.5s;
@@ -526,7 +599,7 @@ body {
 }
 
 article:hover .highlight::before {
-    width: calc(100% + 4px);
+    width: calc(100% + 4rem);
 }
 
 .profile-1 {
@@ -551,6 +624,11 @@ article:hover .highlight::before {
     left: -100vw;
 }
 
+.accordion>input[type="radio"] {
+    position: absolute;
+    left: -100vw;
+}
+
 .accordion .content {
     overflow-y: hidden;
     height: 0;
@@ -558,6 +636,12 @@ article:hover .highlight::before {
 }
 
 .accordion>input[type="checkbox"]:checked~.content {
+    height: auto;
+    overflow: visible;
+    transition: var(--transition);
+}
+
+.accordion>input[type="radio"]:checked~.content {
     height: auto;
     overflow: visible;
     transition: var(--transition);
@@ -575,6 +659,9 @@ article:hover .highlight::before {
     padding-top: 24rem;
 }
 
+.accordion>input[type="radio"]:checked~.content {
+    padding-top: 24rem;
+}
 
 .accordion label:hover,
 .accordion label:focus {
@@ -596,6 +683,10 @@ article:hover .highlight::before {
 }
 
 .accordion>input[type="checkbox"]:checked~.handle label:before {
+    content: "\f068";
+}
+
+.accordion>input[type="radio"]:checked~.handle label:before {
     content: "\f068";
 }
 
@@ -750,14 +841,19 @@ article:hover .highlight::before {
 }
 
 #contact {
-    z-index: 1000;
-    height: cal(1.5*var(--nav-height));
+    grid-column: 2/-2;
+    height: var(--nav-height);
+
     display: flex;
     flex-direction: column;
     border-top: solid var(--border-weight);
-    padding: var(--footer-padding);
+    border-right: solid var(--border-weight);
+    border-left: solid var(--border-weight);
     justify-content: center;
     align-items: center;
+
+    z-index: 1000;
+    background: var(--clr-background-transparent);
 }
 
 .contacts {
@@ -765,21 +861,21 @@ article:hover .highlight::before {
     justify-content: center;
     align-items: center;
     opacity: 0.3;
-    margin-bottom: 1vw;
+    margin-bottom: 20rem;
 }
 
 .contact {
-    width: 3vw;
-    font-size: 1.5vw;
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
+    width: 60rem;
+    font-size: 30rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 
 .footer {
     grid-column: 1/-1;
     text-align: center;
     width: 100%;
-    font-size: calc(var(--nav-height) - 2*var(--footer-padding));
+    font-size: var(--font-size-xxsmall);
 }
 
 #top {
@@ -880,8 +976,8 @@ article:hover .highlight::before {
 }
 
 img[class='loader'] {
-    height: 30vh;
-    max-width: 500px;
+    height: auto;
+    max-width: 35vh;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vh;
@@ -1164,6 +1260,10 @@ img[class='warn'] {
     transition: var(--transition);
 }
 
+.contents li.active .highlight::before {
+    width: calc(100% + 4px);
+}
+
 .contents>li:hover .highlight::before {
     width: calc(100% + 4px);
 }
@@ -1263,7 +1363,7 @@ iframe {
     font-size: var(--font-size-text);
     font-weight: var(--font-weight-thin);
     margin-bottom: var(--margin-para);
-    line-height: 1.6;
+    line-height: 1.5;
     text-align: justify;
     text-justify: auto;
 }
@@ -1273,7 +1373,7 @@ iframe {
     font-size: var(--font-size-text);
     font-weight: var(--font-weight-thin);
     margin-bottom: var(--margin-para);
-    line-height: 1.6;
+    line-height: 1.5;
     text-align: justify;
     text-justify: auto;
 }
@@ -1357,8 +1457,8 @@ iframe {
 #ideate,
 #design,
 #validate,
-#ramification,
 #implication,
+#ramification,
 #reflect {
     border-bottom: solid var(--border-weight);
 }
@@ -1388,46 +1488,47 @@ iframe {
     animation: title-color 3s linear infinite;
 }
 
+.label-l {
+    grid-column: 2/-1;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.label-l .ht1 {
+    grid-column: 2/-1;
+}
+
 /* arrow-wrapper */
 
-/* .accordion-arrow {
-    grid-column: 2/3;
-    margin: auto;
-    border: solid var(--border-weight);
-    border-radius: 50%;
-    width: calc(0.7*var(--font-size-h1));
-    height: calc(0.7*var(--font-size-h1));
-    display: grid;
-    place-items: center;
-} */
 
 .accordion-arrow {
     position: relative;
-    grid-column: 2/3;
+    grid-column: 1/2;
     margin: auto;
     border: solid var(--border-weight);
     border-radius: 50%;
     width: calc(0.7*var(--font-size-h1));
     height: calc(0.7*var(--font-size-h1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .line1 {
     position: absolute;
     border: solid var(--clr-black) var(--border-weight);
     width: 80%;
-    top: 50%;
-    left: 10%;
-    transform: scale(0);
+    margin: auto;
+    transform: scale(0.7);
     transition: 0.3s ease-in-out;
 }
 
 .line2 {
     position: absolute;
-    border: solid var(--border-weight);
+    border: solid var(--clr-black) var(--border-weight);
     height: 80%;
-    top: 10%;
-    left: 50%;
-    transform: scale(0);
+    margin: auto;
+    transform: scale(0.7);
     transition: 0.3s ease-in-out;
 }
 
@@ -1465,6 +1566,11 @@ iframe {
     left: -100vw;
 }
 
+.section-accordion>input[type="radio"] {
+    position: absolute;
+    left: -100vw;
+}
+
 .section-accordion .content {
     overflow-y: hidden;
     height: 0;
@@ -1478,8 +1584,11 @@ iframe {
     margin-bottom: var(--margin-part);
 }
 
-.section-accordion label {
-    display: block;
+.section-accordion>input[type="radio"]:checked~.content {
+    height: auto;
+    overflow: visible;
+    transition: var(--transition);
+    margin-bottom: var(--margin-part);
 }
 
 .section-accordion {
@@ -1487,6 +1596,10 @@ iframe {
 }
 
 .section-accordion>input[type="checkbox"]:checked~.content {
+    padding-top: 24rem;
+}
+
+.section-accordion>input[type="radio"]:checked~.content {
     padding-top: 24rem;
 }
 
@@ -1510,7 +1623,14 @@ iframe {
     transform: scale(1);
 }
 
-.section-accordion>input[type="checkbox"]:checked~.accordion-arrow .line2 {
+.section-accordion>input[type="checkbox"]:checked~.label-l .line2 {
+    /* background-image: url(./asset/cross2-2.png);
+    background-position: center;
+    background-size: contain; */
+    transform: rotate(90deg);
+}
+
+.section-accordion>input[type="radio"]:checked~.label-l .line2 {
     /* background-image: url(./asset/cross2-2.png);
     background-position: center;
     background-size: contain; */
@@ -1544,6 +1664,11 @@ iframe {
     left: -100vw;
 }
 
+.part-accordion>input[type="radio"] {
+    position: absolute;
+    left: -100vw;
+}
+
 .part-accordion .content {
     overflow-y: hidden;
     height: 0;
@@ -1551,6 +1676,13 @@ iframe {
 }
 
 .part-accordion>input[type="checkbox"]:checked~.content {
+    height: auto;
+    overflow: visible;
+    transition: var(--transition);
+    margin-bottom: var(--margin-part);
+}
+
+.part-accordion>input[type="radio"]:checked~.content {
     height: auto;
     overflow: visible;
     transition: var(--transition);
@@ -1569,6 +1701,9 @@ iframe {
     margin-top: var(--margin-caption);
 }
 
+.part-accordion>input[type="radio"]:checked~.content {
+    margin-top: var(--margin-caption);
+}
 
 .part-accordion label:hover,
 .part-accordion label:focus {
@@ -1586,6 +1721,10 @@ iframe {
 }
 
 .part-accordion>input[type="checkbox"]:checked~.handle label:before {
+    content: "\f068";
+}
+
+.part-accordion>input[type="radio"]:checked~.handle label:before {
     content: "\f068";
 }
 
@@ -1658,7 +1797,7 @@ ol li {
 }
 
 .column-child-3 {
-    flex: 1 1 400px;
+    flex: 1 1 300px;
 
     display: flex;
     flex-direction: column;
@@ -1739,8 +1878,8 @@ ol li {
     align-self: center;
     justify-self: stretch;
 
-    margin-right: 150px;
-    margin-left: 150px;
+    margin-right: 150rem;
+    margin-left: 150rem;
     margin-bottom: var(--margin-part);
 }
 
@@ -1809,8 +1948,8 @@ ol li {
     }
 
     .project-card {
-        width: 100%;
-        height: 30vw;
+        /* width: 100%; */
+        height: 600rem;
     }
 
     .ht1,
@@ -1823,7 +1962,49 @@ ol li {
         grid-column: 2/-2;
     }
 
-    .accordion-arrow {
-        grid-column: 1/2;
+    .label-l {
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+    }
+}
+
+@media screen and (min-width:1920px) {
+
+    html {
+        scroll-behavior: smooth;
+        background-color: var(--clr-background);
+        font-family: 'Open Sans', sans-serif;
+        font-size: 0.72px;
+        cursor: url(./asset/cursor.png) 4 5, pointer;
+    }
+
+    .introduction {
+        grid-column: 2/-2;
+        max-width: 1800rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-button-wrapper {
+        grid-column: 2/-2;
+    }
+
+    .links-container {
+        grid-column: 9/11;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project-card {
+        grid-column: 1/-1;
+        max-width: 1200rem;
+        height: 600rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #hallmark {
+        width: 260rem;
     }
 }
