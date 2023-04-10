@@ -1786,7 +1786,7 @@ ol li {
     display: flex;
     flex-direction: row;
 
-    gap: 25px;
+    gap: 20px;
     flex-wrap: wrap;
     margin-top: var(--margin-part);
     margin-bottom: var(--margin-part);
