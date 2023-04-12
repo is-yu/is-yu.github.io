@@ -1917,6 +1917,20 @@ ol li {
         text-align: center;
     }
 
+    footer {
+        height: 8vh;
+        grid-column: 1/-1;
+        text-align: center;
+        width: 100%;
+        font-size: var(--font-size-xxsmall);
+        position: absolute;
+        bottom: 0;
+        z-index: 3;
+        border: none;
+        border-top: solid var(--border-weight);
+    }
+
+
     *,
     ::before,
     ::after {
