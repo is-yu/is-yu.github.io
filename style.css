@@ -856,7 +856,7 @@ footer {
     justify-content: center;
     align-items: center;
 
-    font-size: var(--font-size-xxsmall);
+    font-size: var(--font-size-xsmall);
 
     background: var(--clr-background-transparent);
     z-index: 3;
@@ -870,8 +870,8 @@ footer {
 }
 
 .contact {
-    width: 6vw;
-    font-size: var(--font-size-xsmall);
+    width: 5vw;
+    font-size: var(--font-size-small);
     margin-left: 1vw;
     margin-right: 1vw;
     opacity: 0.2;
@@ -1071,7 +1071,7 @@ img[class='loader'] {
     height: 100vh;
     width: 100vw;
     background-color: var(--clr-background);
-    font-size: var(--font-size-xxlarge);
+    font-size: var(--font-size-xlarge);
     line-height: normal;
     padding: 5vw;
     z-index: 2;
@@ -1914,16 +1914,24 @@ ol li {
     }
 
     footer {
-        height: 8vh;
+        height: 10vh;
         grid-column: 1/-1;
         text-align: center;
         width: 100%;
-        font-size: var(--font-size-xxsmall);
+        font-size: var(--font-size-large);
         position: absolute;
         bottom: 0;
         z-index: 3;
         border: none;
         border-top: solid var(--border-weight);
+        margin-bottom: 1vh;
+    }
+
+    .contact {
+        font-size: var(--font-size-xxlarge);
+        width: 15vw;
+        margin-bottom: 1vh;
+        margin-top: 1vh;
     }
 
     *,
