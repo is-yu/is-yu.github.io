@@ -1,0 +1,24 @@
+id: "q-010"
+slug: "unsupervised-pretraining-transfer"
+text: "Can unsupervised pre-training on text transfer effectively to all NLP tasks?"
+description: |
+  Traditional NLP required task-specific architectures and labeled data for
+  each problem. Could a single model pre-trained on unlabeled text learn
+  general language understanding transferable to any downstream task?
+status: "ANSWERED"
+category: "nlp"
+era: "foundation-models"
+date_first_posed: "2017-06-01"
+date_answered: "2018-10-11"
+answered_by:
+  - "b-010"
+  - "b-011"
+related_questions:
+  - "q-009"
+  - "q-011"
+tags:
+  - "pre-training"
+  - "transfer-learning"
+  - "language-models"
+  - "bert"
+  - "gpt"

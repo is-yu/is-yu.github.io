@@ -1,0 +1,48 @@
+id: "b-014"
+slug: "instructgpt"
+title: "Training language models to follow instructions with human feedback"
+paper_refs:
+  - "2203.02155"
+authors:
+  - "Long Ouyang"
+  - "Jeffrey Wu"
+  - "Xu Jiang"
+  - "Diogo Almeida"
+  - "Carroll Wainwright"
+  - "Pamela Mishkin"
+  - "Chong Zhang"
+  - "Sandhini Agarwal"
+  - "Katarina Slama"
+  - "Alex Ray"
+  - "John Schulman"
+  - "Jacob Hilton"
+  - "Fraser Kelton"
+  - "Luke Miller"
+  - "Maddie Simens"
+  - "Amanda Askell"
+  - "Peter Welinder"
+  - "Paul Christiano"
+  - "Jan Leike"
+  - "Ryan Lowe"
+date: "2022-03-04"
+venue: "NeurIPS 2022"
+question_ids:
+  - "q-013"
+key_findings:
+  - finding: |
+      RLHF (Reinforcement Learning from Human Feedback) using a reward model
+      trained on human preference comparisons dramatically improves instruction
+      following. A 1.3B InstructGPT model was preferred over a 175B GPT-3.
+    significance: |
+      Proved that alignment techniques can make smaller models more useful
+      than larger unaligned ones, establishing RLHF as the standard
+      post-training method.
+significance_level: "paradigm-shift"
+new_questions_raised:
+  - "q-016"
+context: |
+  InstructGPT built on earlier RLHF work (Christiano et al. 2017) and
+  directly enabled ChatGPT, which brought LLMs to mainstream adoption.
+summary: |
+  InstructGPT showed RLHF can align LLMs to human intent, making a small
+  aligned model preferred over a much larger unaligned one.

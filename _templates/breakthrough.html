@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}{{ breakthrough.title }} — AI Breakthroughs{% endblock %}
+
+{% block content %}
+<div class="detail-header">
+    <div class="detail-meta">
+        <span class="badge badge-{{ breakthrough.significance_level }}">{{ breakthrough.significance_level }}</span>
+        <span>{{ breakthrough.date.year }}</span>
+        <span>{{ breakthrough.venue }}</span>
+    </div>
+    <h1>{{ breakthrough.title }}</h1>
+    <div class="detail-meta">
+        {{ breakthrough.authors | join(", ") }}
+    </div>
+</div>
+
+<div class="detail-body">
+    <div class="detail-section">
+        <h2>Summary</h2>
+        <div class="detail-text">
+            <p>{{ breakthrough.summary }}</p>
+        </div>
+    </div>
+
+    <div class="detail-section">
+        <h2>Key Findings</h2>
+        {% for kf in breakthrough.key_findings %}
+        <div class="finding">
+            <div class="finding-label">Finding {{ loop.index }}</div>
+            <div class="finding-text">{{ kf.finding }}</div>
+            <div class="finding-significance">{{ kf.significance }}</div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="detail-section">
+        <h2>Context</h2>
+        <div class="detail-text">
+            <p>{{ breakthrough.context }}</p>
+        </div>
+    </div>
+
+    {% if breakthrough.questions %}
+    <div class="detail-section">
+        <h2>Questions Answered</h2>
+        <ul class="related-list">
+            {% for q in breakthrough.questions %}
+            <li>
+                <span class="badge badge-answered">Answered</span>
+                <a href="{{ base_url }}/questions/{{ q.slug }}/">{{ q.text }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if breakthrough.new_questions %}
+    <div class="detail-section">
+        <h2>New Questions Raised</h2>
+        <ul class="related-list">
+            {% for q in breakthrough.new_questions %}
+            <li>
+                {% if q.status == "ANSWERED" %}
+                <span class="badge badge-answered">Answered</span>
+                {% elif q.status == "OPEN" %}
+                <span class="badge badge-open">Open</span>
+                {% else %}
+                <span class="badge badge-partial">Partial</span>
+                {% endif %}
+                <a href="{{ base_url }}/questions/{{ q.slug }}/">{{ q.text }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if breakthrough.paper_refs %}
+    <div class="detail-section">
+        <h2>Papers</h2>
+        <ul class="related-list">
+            {% for ref in breakthrough.paper_refs %}
+            <li>
+                <a href="https://arxiv.org/abs/{{ ref }}" target="_blank" rel="noopener">arXiv:{{ ref }}</a>
+                &middot;
+                <a href="https://arxiv.org/pdf/{{ ref }}" target="_blank" rel="noopener">PDF</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

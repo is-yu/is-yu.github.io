@@ -1,0 +1,342 @@
+{
+  "docs": [
+    {
+      "id": "q-001",
+      "type": "question",
+      "title": "Can machines learn to classify patterns from labeled examples?",
+      "body": "The foundational question of whether a mechanical system could learn\ninput-output mappings from examples, rather than being explicitly\nprogrammed with rules. This was the core premise of the perceptron\nand the starting point for all supervised learning.\n",
+      "tags": "perceptron, supervised-learning, classification",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/machine-learning-from-examples/"
+    },
+    {
+      "id": "q-002",
+      "type": "question",
+      "title": "Can perceptrons solve non-linearly separable problems like XOR?",
+      "body": "Minsky and Papert showed that single-layer perceptrons cannot represent\nXOR or other non-linearly separable functions. This raised the question\nof whether neural networks were fundamentally limited.\n",
+      "tags": "perceptron-limitations, xor-problem, nonlinearity",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/nonlinear-problems/"
+    },
+    {
+      "id": "q-003",
+      "type": "question",
+      "title": "Can multi-layer neural networks be trained effectively with gradient descent?",
+      "body": "After Minsky and Papert showed single-layer limits, the key question became\nwhether deeper networks (which theoretically could solve non-linear problems)\ncould actually be trained. The credit assignment problem \u2014 how to update\nweights in hidden layers \u2014 was the core challenge.\n",
+      "tags": "backpropagation, gradient-descent, credit-assignment",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/training-deep-networks/"
+    },
+    {
+      "id": "q-004",
+      "type": "question",
+      "title": "Can neural networks learn long-range temporal dependencies in sequences?",
+      "body": "Standard recurrent neural networks suffer from vanishing and exploding\ngradients, making it impossible to learn dependencies across many time\nsteps. This was a fundamental barrier for sequence modeling.\n",
+      "tags": "vanishing-gradients, sequence-modeling, recurrent-networks",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/long-range-dependencies/"
+    },
+    {
+      "id": "q-005",
+      "type": "question",
+      "title": "Can neural networks learn hierarchical feature representations directly from raw data?",
+      "body": "The fundamental question of whether deep architectures could automatically\ndiscover increasingly abstract features without hand-engineered feature\nextractors. This challenged the prevailing approach of manual feature\nengineering that dominated computer vision and NLP through the 2000s.\n",
+      "tags": "representation-learning, feature-extraction, convolutional-networks",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/hierarchical-representations/"
+    },
+    {
+      "id": "q-007",
+      "type": "question",
+      "title": "Can neural networks generate realistic, novel images?",
+      "body": "Whether neural networks could move beyond classification to actually\ngenerate new data \u2014 images that look real but don't exist in the\ntraining set. This required learning the underlying data distribution.\n",
+      "tags": "generative-models, image-generation, adversarial-training",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/realistic-image-generation/"
+    },
+    {
+      "id": "q-006",
+      "type": "question",
+      "title": "Can very deep networks be trained without performance degradation?",
+      "body": "As networks got deeper beyond ~20 layers, training accuracy actually\ndecreased \u2014 not from overfitting but from optimization difficulty.\nSimply stacking more layers did not improve performance.\n",
+      "tags": "residual-learning, depth, optimization",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/depth-degradation/"
+    },
+    {
+      "id": "q-008",
+      "type": "question",
+      "title": "Can AI achieve superhuman performance in complex strategic games through self-play?",
+      "body": "Go was considered a grand challenge for AI due to its enormous search\nspace (10^170 positions). Traditional game tree search was insufficient.\nCould neural networks combined with reinforcement learning master it?\n",
+      "tags": "reinforcement-learning, self-play, game-ai, monte-carlo-tree-search",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/superhuman-game-play/"
+    },
+    {
+      "id": "q-009",
+      "type": "question",
+      "title": "Is there a more parallelizable alternative to RNNs for sequence modeling?",
+      "body": "RNNs (including LSTMs) process sequences step-by-step, making them\ninherently sequential and slow to train. Could an architecture process\nall positions simultaneously while still capturing long-range dependencies?\n",
+      "tags": "attention, transformer, parallelism, self-attention",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/parallelizable-sequence-modeling/"
+    },
+    {
+      "id": "q-010",
+      "type": "question",
+      "title": "Can unsupervised pre-training on text transfer effectively to all NLP tasks?",
+      "body": "Traditional NLP required task-specific architectures and labeled data for\neach problem. Could a single model pre-trained on unlabeled text learn\ngeneral language understanding transferable to any downstream task?\n",
+      "tags": "pre-training, transfer-learning, language-models, bert, gpt",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/unsupervised-pretraining-transfer/"
+    },
+    {
+      "id": "q-020",
+      "type": "question",
+      "title": "Can AI learn accurate internal world models from observation alone?",
+      "body": "Do large models trained on text and images develop genuine internal\nrepresentations of the world, or are they sophisticated pattern matchers?\nBuilding accurate world models is considered essential for robust\nplanning and reasoning.\n",
+      "tags": "world-models, representation, understanding, grounding",
+      "status": "OPEN",
+      "url": "/ai-breakthroughs/questions/world-models/"
+    },
+    {
+      "id": "q-011",
+      "type": "question",
+      "title": "Do neural language model capabilities scale predictably with compute, data, and parameters?",
+      "body": "As models grew larger, it was unclear whether improvements would continue\nor hit diminishing returns. Understanding the relationship between scale\nand performance was critical for resource allocation.\n",
+      "tags": "scaling-laws, power-laws, compute-efficiency",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/scaling-predictability/"
+    },
+    {
+      "id": "q-019",
+      "type": "question",
+      "title": "Is there a unified framework for continuous (intuitive) and discrete (symbolic) reasoning?",
+      "body": "Neural networks excel at pattern recognition (System 1) but struggle with\nmulti-step logical reasoning (System 2). Symbolic systems have the opposite\nprofile. Can we unify both in a single architecture?\n",
+      "tags": "neurosymbolic, reasoning, system1-system2",
+      "status": "OPEN",
+      "url": "/ai-breakthroughs/questions/unified-reasoning/"
+    },
+    {
+      "id": "q-012",
+      "type": "question",
+      "title": "What are the optimal compute-data trade-offs for training large language models?",
+      "body": "Given a fixed compute budget, should you train a larger model on less data\nor a smaller model on more data? Getting this wrong wastes millions in\ncompute. Kaplan et al. suggested larger models, but was that right?\n",
+      "tags": "compute-optimal, chinchilla, training-efficiency",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/compute-data-tradeoffs/"
+    },
+    {
+      "id": "q-013",
+      "type": "question",
+      "title": "Can large language models be aligned to reliably follow human intent?",
+      "body": "Raw language models generate text that is probabilistically likely but not\nnecessarily helpful, harmless, or honest. Could human feedback be used\nto steer model behavior toward human preferences?\n",
+      "tags": "rlhf, alignment, instruction-following, human-feedback",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/llm-human-intent/"
+    },
+    {
+      "id": "q-018",
+      "type": "question",
+      "title": "Can foundation models achieve robust out-of-distribution generalization?",
+      "body": "Current models perform well on data similar to their training distribution\nbut can fail unpredictably on novel situations. Can we build models that\ngeneralize robustly to truly new domains and edge cases?\n",
+      "tags": "robustness, distribution-shift, generalization",
+      "status": "OPEN",
+      "url": "/ai-breakthroughs/questions/ood-generalization/"
+    },
+    {
+      "id": "q-015",
+      "type": "question",
+      "title": "Can AI generate high-quality, diverse images from text descriptions?",
+      "body": "Going beyond unconditional image generation \u2014 could models understand\nnatural language descriptions and produce corresponding images with\nhigh fidelity and creative diversity?\n",
+      "tags": "diffusion-models, text-to-image, multimodal, dall-e",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/text-to-image/"
+    },
+    {
+      "id": "q-014",
+      "type": "question",
+      "title": "Can language models learn to use external tools to overcome their inherent limitations?",
+      "body": "LLMs are limited by their training data cutoff, inability to do precise\nmath, and lack of real-time information. Could they learn to call APIs,\nsearch engines, and calculators to augment their capabilities?\n",
+      "tags": "tool-use, augmented-lm, function-calling, agents",
+      "status": "ANSWERED",
+      "url": "/ai-breakthroughs/questions/llm-tool-use/"
+    },
+    {
+      "id": "q-016",
+      "type": "question",
+      "title": "Can alignment techniques scale to superintelligent AI systems?",
+      "body": "RLHF works for current models, but as models become more capable than\ntheir human evaluators, how can we ensure they remain aligned? The\nfundamental challenge is that humans may not be able to evaluate\nsuperhuman outputs.\n",
+      "tags": "superalignment, scalable-oversight, ai-safety",
+      "status": "OPEN",
+      "url": "/ai-breakthroughs/questions/alignment-superintelligence/"
+    },
+    {
+      "id": "q-017",
+      "type": "question",
+      "title": "Can AI systems reliably detect and correct their own reasoning errors?",
+      "body": "LLMs are prone to hallucination and logical errors. Can models develop\nreliable self-evaluation capabilities, recognizing when they are wrong\nand correcting themselves without external feedback?\n",
+      "tags": "hallucination, self-correction, reasoning, chain-of-thought",
+      "status": "OPEN",
+      "url": "/ai-breakthroughs/questions/self-correction/"
+    },
+    {
+      "id": "b-001",
+      "type": "breakthrough",
+      "title": "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain",
+      "body": "The perceptron proved machines could learn pattern classification\nfrom labeled examples, launching the field of neural network research.\n A single-layer neural network can learn to classify linearly separable\npatterns from labeled examples using a simple weight update rule.\n The perceptron convergence theorem guarantees that the algorithm will\nfind a solution if one exists in finite steps.\n",
+      "tags": "paradigm-shift",
+      "authors": "Frank Rosenblatt",
+      "url": "/ai-breakthroughs/breakthroughs/perceptron/"
+    },
+    {
+      "id": "b-002",
+      "type": "breakthrough",
+      "title": "Perceptrons: An Introduction to Computational Geometry",
+      "body": "Proved single-layer perceptrons cannot solve non-linear problems,\ncontributing to the first AI winter but also motivating multi-layer research.\n Single-layer perceptrons cannot compute XOR or any non-linearly\nseparable function. They are limited to linear decision boundaries.\n",
+      "tags": "paradigm-shift",
+      "authors": "Marvin Minsky, Seymour Papert",
+      "url": "/ai-breakthroughs/breakthroughs/perceptron-limitations/"
+    },
+    {
+      "id": "b-003",
+      "type": "breakthrough",
+      "title": "Learning representations by back-propagating errors",
+      "body": "Backpropagation made multi-layer neural networks trainable, solving the\ncredit assignment problem and launching the connectionism revival.\n The backpropagation algorithm can efficiently compute gradients for all\nweights in a multi-layer network using the chain rule, enabling training\nof networks with hidden layers.\n Multi-layer networks trained with backprop can learn distributed\nrepresentations that capture abstract features of the input.\n",
+      "tags": "paradigm-shift",
+      "authors": "David Rumelhart, Geoffrey Hinton, Ronald Williams",
+      "url": "/ai-breakthroughs/breakthroughs/backpropagation/"
+    },
+    {
+      "id": "b-004",
+      "type": "breakthrough",
+      "title": "Long Short-Term Memory",
+      "body": "LSTM solved the vanishing gradient problem in RNNs with gated memory\ncells, enabling learning of long-range dependencies in sequences.\n The LSTM architecture uses gated memory cells to selectively remember\nand forget information, solving the vanishing gradient problem for\nrecurrent neural networks.\n",
+      "tags": "paradigm-shift",
+      "authors": "Sepp Hochreiter, Juergen Schmidhuber",
+      "url": "/ai-breakthroughs/breakthroughs/lstm/"
+    },
+    {
+      "id": "b-005",
+      "type": "breakthrough",
+      "title": "ImageNet Classification with Deep Convolutional Neural Networks",
+      "body": "AlexNet proved deep CNNs learn hierarchical visual representations far\nsuperior to hand-engineered features, launching the deep learning revolution.\n A deep CNN trained end-to-end on ImageNet achieved a top-5 error rate\nof 15.3%, dramatically outperforming the second-place hand-engineered\napproach (26.2%).\n ReLU activations and GPU training enabled practical training of\ndeep convolutional networks on large datasets.\n",
+      "tags": "paradigm-shift",
+      "authors": "Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton",
+      "url": "/ai-breakthroughs/breakthroughs/alexnet/"
+    },
+    {
+      "id": "b-007",
+      "type": "breakthrough",
+      "title": "Generative Adversarial Nets",
+      "body": "GANs proved neural networks can generate realistic novel images through\nadversarial training, creating a new paradigm for generative modeling.\n A generator and discriminator network trained adversarially can learn\nto produce realistic samples from the data distribution without\nexplicit density estimation.\n",
+      "tags": "paradigm-shift",
+      "authors": "Ian Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley",
+      "url": "/ai-breakthroughs/breakthroughs/gan/"
+    },
+    {
+      "id": "b-006",
+      "type": "breakthrough",
+      "title": "Deep Residual Learning for Image Recognition",
+      "body": "ResNet introduced skip connections enabling training of 100+ layer networks,\nsolving the depth degradation problem and becoming a ubiquitous building block.\n Skip connections (residual connections) allow training of networks\nwith 152+ layers by letting gradients flow directly through shortcut\npaths, eliminating the degradation problem.\n",
+      "tags": "paradigm-shift",
+      "authors": "Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun",
+      "url": "/ai-breakthroughs/breakthroughs/resnet/"
+    },
+    {
+      "id": "b-008",
+      "type": "breakthrough",
+      "title": "Mastering the game of Go with deep neural networks and tree search",
+      "body": "AlphaGo defeated the world Go champion by combining deep neural networks\nwith tree search, proving AI can master complex strategic reasoning.\n AlphaGo combined deep neural networks (policy and value networks) with\nMonte Carlo tree search to defeat the world champion at Go, a game\npreviously considered decades away from AI mastery.\n",
+      "tags": "paradigm-shift",
+      "authors": "David Silver, Aja Huang, Chris Maddison, Arthur Guez, Laurent Sifre",
+      "url": "/ai-breakthroughs/breakthroughs/alphago/"
+    },
+    {
+      "id": "b-009",
+      "type": "breakthrough",
+      "title": "Attention Is All You Need",
+      "body": "The Transformer replaced RNNs with self-attention for fully parallel\nsequence processing, becoming the foundation for all modern large language models.\n The Transformer architecture uses self-attention to process all positions\nin parallel, replacing recurrence entirely while achieving state-of-the-art\ntranslation quality.\n Multi-head attention allows the model to jointly attend to information\nfrom different representation subspaces at different positions.\n",
+      "tags": "paradigm-shift",
+      "authors": "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones",
+      "url": "/ai-breakthroughs/breakthroughs/transformer/"
+    },
+    {
+      "id": "b-010",
+      "type": "breakthrough",
+      "title": "Improving Language Understanding by Generative Pre-Training",
+      "body": "GPT demonstrated that generative pre-training on unlabeled text produces\ntransferable language representations, launching the foundation model era.\n A Transformer trained with autoregressive language modeling on a large\nunlabeled corpus learns representations that transfer to diverse NLP\ntasks with minimal fine-tuning.\n",
+      "tags": "paradigm-shift",
+      "authors": "Alec Radford, Karthik Narasimhan, Tim Salimans, Ilya Sutskever",
+      "url": "/ai-breakthroughs/breakthroughs/gpt/"
+    },
+    {
+      "id": "b-011",
+      "type": "breakthrough",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "body": "BERT showed bidirectional pre-training produces superior language\nunderstanding, making a single model competitive across all NLP benchmarks.\n Bidirectional pre-training with masked language modeling achieves\nstate-of-the-art on 11 NLP benchmarks simultaneously, surpassing\ntask-specific architectures.\n",
+      "tags": "paradigm-shift",
+      "authors": "Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova",
+      "url": "/ai-breakthroughs/breakthroughs/bert/"
+    },
+    {
+      "id": "b-012",
+      "type": "breakthrough",
+      "title": "Scaling Laws for Neural Language Models",
+      "body": "Established that language model performance follows predictable power laws\nwith scale, making the case for dramatically larger models.\n Language model performance follows smooth power-law relationships with\nmodel size, dataset size, and compute budget, spanning many orders of\nmagnitude with remarkable predictability.\n Performance depends most strongly on scale (compute, data, parameters)\nand is surprisingly insensitive to architectural details within the\nTransformer family.\n",
+      "tags": "major",
+      "authors": "Jared Kaplan, Sam McCandlish, Tom Henighan, Tom Brown, Benjamin Chess",
+      "url": "/ai-breakthroughs/breakthroughs/scaling-laws/"
+    },
+    {
+      "id": "b-014",
+      "type": "breakthrough",
+      "title": "Training language models to follow instructions with human feedback",
+      "body": "InstructGPT showed RLHF can align LLMs to human intent, making a small\naligned model preferred over a much larger unaligned one.\n RLHF (Reinforcement Learning from Human Feedback) using a reward model\ntrained on human preference comparisons dramatically improves instruction\nfollowing. A 1.3B InstructGPT model was preferred over a 175B GPT-3.\n",
+      "tags": "paradigm-shift",
+      "authors": "Long Ouyang, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright",
+      "url": "/ai-breakthroughs/breakthroughs/instructgpt/"
+    },
+    {
+      "id": "b-013",
+      "type": "breakthrough",
+      "title": "Training Compute-Optimal Large Language Models",
+      "body": "Chinchilla established that models should be trained on far more data than\npreviously assumed, rebalancing the compute-optimal frontier for LLMs.\n Current large language models are significantly over-parameterized and\nunder-trained. For compute-optimal training, model size and training\ndata should be scaled equally.\n",
+      "tags": "major",
+      "authors": "Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor Cai",
+      "url": "/ai-breakthroughs/breakthroughs/chinchilla/"
+    },
+    {
+      "id": "b-016",
+      "type": "breakthrough",
+      "title": "Hierarchical Text-Conditional Image Generation with CLIP Latents",
+      "body": "DALL-E 2 demonstrated that diffusion models conditioned on CLIP embeddings\ncan generate high-quality images from text, making AI art commercially viable.\n Combining CLIP text-image embeddings with diffusion models enables\ngeneration of highly realistic and diverse images from natural language\ndescriptions, with fine-grained control over composition and style.\n",
+      "tags": "major",
+      "authors": "Aditya Ramesh, Prafulla Dhariwal, Alex Nichol, Casey Chu, Mark Chen",
+      "url": "/ai-breakthroughs/breakthroughs/dalle2/"
+    },
+    {
+      "id": "b-015",
+      "type": "breakthrough",
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+      "body": "Toolformer proved LLMs can self-teach tool use, enabling them to overcome\ninherent limitations by calling external APIs when needed.\n Language models can learn to use external tools (calculator, search\nengine, translation API) in a self-supervised way, deciding when and\nhow to call tools by generating special API call tokens.\n",
+      "tags": "major",
+      "authors": "Timo Schick, Jane Dwivedi-Yu, Roberto Dessi, Roberta Raileanu, Maria Lomeli",
+      "url": "/ai-breakthroughs/breakthroughs/toolformer/"
+    },
+    {
+      "id": "p-001",
+      "type": "progress",
+      "title": "Learning to Reason with LLMs (OpenAI o1)",
+      "body": "Chain-of-thought reasoning at test time, trained via reinforcement learning,\nenables models to catch and correct errors during extended reasoning chains.\no1 significantly outperforms GPT-4 on math, coding, and science benchmarks.\n",
+      "url": "/ai-breakthroughs/questions/self-correction/"
+    },
+    {
+      "id": "p-002",
+      "type": "progress",
+      "title": "Constitutional AI: Harmlessness from AI Feedback",
+      "body": "Models can critique and revise their own outputs according to a set of\nconstitutional principles, reducing dependence on human labelers for\nalignment while maintaining helpfulness.\n",
+      "url": "/ai-breakthroughs/questions/alignment-superintelligence/"
+    }
+  ]
+}

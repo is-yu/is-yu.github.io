@@ -1,0 +1,20 @@
+id: "q-014"
+slug: "llm-tool-use"
+text: "Can language models learn to use external tools to overcome their inherent limitations?"
+description: |
+  LLMs are limited by their training data cutoff, inability to do precise
+  math, and lack of real-time information. Could they learn to call APIs,
+  search engines, and calculators to augment their capabilities?
+status: "ANSWERED"
+category: "nlp"
+era: "foundation-models"
+date_first_posed: "2022-01-01"
+date_answered: "2023-02-09"
+answered_by:
+  - "b-015"
+related_questions: []
+tags:
+  - "tool-use"
+  - "augmented-lm"
+  - "function-calling"
+  - "agents"

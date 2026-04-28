@@ -1,0 +1,35 @@
+id: "b-015"
+slug: "toolformer"
+title: "Toolformer: Language Models Can Teach Themselves to Use Tools"
+paper_refs:
+  - "2302.04761"
+authors:
+  - "Timo Schick"
+  - "Jane Dwivedi-Yu"
+  - "Roberto Dessi"
+  - "Roberta Raileanu"
+  - "Maria Lomeli"
+  - "Luke Zettlemoyer"
+  - "Nicola Cancedda"
+  - "Thomas Scialom"
+date: "2023-02-09"
+venue: "NeurIPS 2023"
+question_ids:
+  - "q-014"
+key_findings:
+  - finding: |
+      Language models can learn to use external tools (calculator, search
+      engine, translation API) in a self-supervised way, deciding when and
+      how to call tools by generating special API call tokens.
+    significance: |
+      Demonstrated that LLMs can autonomously decide when to augment
+      themselves with tools, paving the way for agentic AI systems.
+significance_level: "major"
+new_questions_raised: []
+context: |
+  Toolformer showed self-supervised tool learning was possible. Combined
+  with function calling in GPT-4 and Claude, this enabled the explosion
+  of AI agent frameworks in 2023-2024.
+summary: |
+  Toolformer proved LLMs can self-teach tool use, enabling them to overcome
+  inherent limitations by calling external APIs when needed.

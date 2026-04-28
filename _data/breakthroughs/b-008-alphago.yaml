@@ -1,0 +1,46 @@
+id: "b-008"
+slug: "alphago"
+title: "Mastering the game of Go with deep neural networks and tree search"
+paper_refs: []
+authors:
+  - "David Silver"
+  - "Aja Huang"
+  - "Chris Maddison"
+  - "Arthur Guez"
+  - "Laurent Sifre"
+  - "George van den Driessche"
+  - "Julian Schrittwieser"
+  - "Ioannis Antonoglou"
+  - "Veda Panneershelvam"
+  - "Marc Lanctot"
+  - "Sander Dieleman"
+  - "Dominik Grewe"
+  - "John Nham"
+  - "Nal Kalchbrenner"
+  - "Ilya Sutskever"
+  - "Timothy Lillicrap"
+  - "Madeleine Leach"
+  - "Koray Kavukcuoglu"
+  - "Thore Graepel"
+  - "Demis Hassabis"
+date: "2016-01-27"
+venue: "Nature"
+question_ids:
+  - "q-008"
+key_findings:
+  - finding: |
+      AlphaGo combined deep neural networks (policy and value networks) with
+      Monte Carlo tree search to defeat the world champion at Go, a game
+      previously considered decades away from AI mastery.
+    significance: |
+      Demonstrated that deep RL can achieve superhuman performance in domains
+      with vast search spaces, expanding AI's reach beyond narrow pattern recognition.
+significance_level: "paradigm-shift"
+new_questions_raised: []
+context: |
+  Go's branching factor of ~250 made brute-force search impossible. AlphaGo
+  used neural networks to evaluate positions and guide search, combining
+  supervised learning from human games with reinforcement learning self-play.
+summary: |
+  AlphaGo defeated the world Go champion by combining deep neural networks
+  with tree search, proving AI can master complex strategic reasoning.

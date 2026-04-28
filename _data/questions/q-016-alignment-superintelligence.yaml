@@ -1,0 +1,19 @@
+id: "q-016"
+slug: "alignment-superintelligence"
+text: "Can alignment techniques scale to superintelligent AI systems?"
+description: |
+  RLHF works for current models, but as models become more capable than
+  their human evaluators, how can we ensure they remain aligned? The
+  fundamental challenge is that humans may not be able to evaluate
+  superhuman outputs.
+status: "OPEN"
+category: "safety-alignment"
+era: "foundation-models"
+date_first_posed: "2022-06-01"
+answered_by: []
+related_questions:
+  - "q-013"
+tags:
+  - "superalignment"
+  - "scalable-oversight"
+  - "ai-safety"

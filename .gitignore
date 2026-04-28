@@ -1,0 +1,14 @@
+# AI Breakthroughs pipeline artifacts
+_staging/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+*.pkl
+*.pickle
+
+# OS
+.DS_Store
+Thumbs.db

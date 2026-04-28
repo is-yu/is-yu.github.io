@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scaling Laws for Neural Language Models — AI Breakthroughs</title>
+    <link rel="stylesheet" href="/ai-breakthroughs/static/css/main.css">
+    
+    <script>
+    MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+        svg: { fontCache: 'global' }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="/ai-breakthroughs/" class="nav-logo">AI Breakthroughs</a>
+            <div class="nav-links">
+                <a href="/ai-breakthroughs/questions/">Questions</a>
+                <a href="/ai-breakthroughs/open-questions/">Open Questions</a>
+                <a href="/ai-breakthroughs/search/">Search</a>
+                <a href="/ai-breakthroughs/about/">About</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        
+<div class="detail-header">
+    <div class="detail-meta">
+        <span class="badge badge-major">major</span>
+        <span>2020</span>
+        <span>arXiv</span>
+    </div>
+    <h1>Scaling Laws for Neural Language Models</h1>
+    <div class="detail-meta">
+        Jared Kaplan, Sam McCandlish, Tom Henighan, Tom Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, Dario Amodei
+    </div>
+</div>
+
+<div class="detail-body">
+    <div class="detail-section">
+        <h2>Summary</h2>
+        <div class="detail-text">
+            <p>Established that language model performance follows predictable power laws
+with scale, making the case for dramatically larger models.
+</p>
+        </div>
+    </div>
+
+    <div class="detail-section">
+        <h2>Key Findings</h2>
+        
+        <div class="finding">
+            <div class="finding-label">Finding 1</div>
+            <div class="finding-text">Language model performance follows smooth power-law relationships with
+model size, dataset size, and compute budget, spanning many orders of
+magnitude with remarkable predictability.
+</div>
+            <div class="finding-significance">Made scaling a principled engineering decision rather than guesswork,
+enabling rational allocation of billions in compute investment.
+</div>
+        </div>
+        
+        <div class="finding">
+            <div class="finding-label">Finding 2</div>
+            <div class="finding-text">Performance depends most strongly on scale (compute, data, parameters)
+and is surprisingly insensitive to architectural details within the
+Transformer family.
+</div>
+            <div class="finding-significance">Shifted research focus from architecture search to scaling methodology.
+</div>
+        </div>
+        
+    </div>
+
+    <div class="detail-section">
+        <h2>Context</h2>
+        <div class="detail-text">
+            <p>These laws were empirically observed at OpenAI and gave quantitative
+predictions for how much larger models would improve. This directly
+motivated the GPT-3 training run.
+</p>
+        </div>
+    </div>
+
+    
+    <div class="detail-section">
+        <h2>Questions Answered</h2>
+        <ul class="related-list">
+            
+            <li>
+                <span class="badge badge-answered">Answered</span>
+                <a href="/ai-breakthroughs/questions/scaling-predictability/">Do neural language model capabilities scale predictably with compute, data, and parameters?</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+
+    
+    <div class="detail-section">
+        <h2>New Questions Raised</h2>
+        <ul class="related-list">
+            
+            <li>
+                
+                <span class="badge badge-answered">Answered</span>
+                
+                <a href="/ai-breakthroughs/questions/compute-data-tradeoffs/">What are the optimal compute-data trade-offs for training large language models?</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+
+    
+    <div class="detail-section">
+        <h2>Papers</h2>
+        <ul class="related-list">
+            
+            <li>
+                <a href="https://arxiv.org/abs/2001.08361" target="_blank" rel="noopener">arXiv:2001.08361</a>
+                &middot;
+                <a href="https://arxiv.org/pdf/2001.08361" target="_blank" rel="noopener">PDF</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+</div>
+
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>A living research survey of AI breakthroughs, organized by the questions they answered.</p>
+            <p class="footer-meta">Data version: 0e648293 | Last updated: 2026-04-28</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

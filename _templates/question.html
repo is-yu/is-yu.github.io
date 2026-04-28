@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block title %}{{ question.text }} — AI Breakthroughs{% endblock %}
+
+{% block content %}
+<div class="detail-header">
+    <div class="detail-meta">
+        {% if question.status == "ANSWERED" %}
+        <span class="badge badge-answered">Answered</span>
+        {% elif question.status == "OPEN" %}
+        <span class="badge badge-open">Open</span>
+        {% else %}
+        <span class="badge badge-partial">Partially Answered</span>
+        {% endif %}
+        <span>First posed: {{ question.date_first_posed.year }}</span>
+        {% if question.date_answered %}
+        <span>Answered: {{ question.date_answered.year }}</span>
+        {% endif %}
+        <span>{{ question.category }}</span>
+    </div>
+    <h1>{{ question.text }}</h1>
+</div>
+
+<div class="detail-body">
+    <div class="detail-section">
+        <h2>Context</h2>
+        <div class="detail-text">
+            <p>{{ question.description }}</p>
+        </div>
+    </div>
+
+    {% if question.breakthroughs %}
+    <div class="detail-section">
+        <h2>Breakthroughs</h2>
+        {% for b in question.breakthroughs %}
+        <div class="card" style="margin-bottom: 12px;">
+            <div class="card-title">
+                <a href="{{ base_url }}/breakthroughs/{{ b.slug }}/">{{ b.title }}</a>
+            </div>
+            <div class="card-meta">
+                <span class="badge badge-{{ b.significance_level }}">{{ b.significance_level }}</span>
+                {{ b.date.year }} &middot; {{ b.authors[0] }}{% if b.authors|length > 1 %} et al.{% endif %}
+                &middot; {{ b.venue }}
+            </div>
+            <div class="card-description">{{ b.summary }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if question.progress_updates %}
+    <div class="detail-section">
+        <h2>Latest Progress</h2>
+        {% for p in question.progress_updates %}
+        <div class="progress-entry">
+            <div class="progress-header">
+                <div class="progress-title">
+                    <span class="badge badge-{{ p.advancement_level }}">{{ p.advancement_level }}</span>
+                    {{ p.title }}
+                </div>
+                <div class="progress-date">{{ p.date }}</div>
+            </div>
+            <div class="progress-finding">{{ p.finding }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if question.related_question_objects %}
+    <div class="detail-section">
+        <h2>Related Questions</h2>
+        <ul class="related-list">
+            {% for rq in question.related_question_objects %}
+            <li>
+                {% if rq.status == "ANSWERED" %}
+                <span class="badge badge-answered">Answered</span>
+                {% elif rq.status == "OPEN" %}
+                <span class="badge badge-open">Open</span>
+                {% else %}
+                <span class="badge badge-partial">Partial</span>
+                {% endif %}
+                <a href="{{ base_url }}/questions/{{ rq.slug }}/">{{ rq.text }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <div class="tag-list" style="margin-top: 32px;">
+        {% for tag in question.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

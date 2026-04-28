@@ -1,0 +1,20 @@
+id: "q-012"
+slug: "compute-data-tradeoffs"
+text: "What are the optimal compute-data trade-offs for training large language models?"
+description: |
+  Given a fixed compute budget, should you train a larger model on less data
+  or a smaller model on more data? Getting this wrong wastes millions in
+  compute. Kaplan et al. suggested larger models, but was that right?
+status: "ANSWERED"
+category: "optimization"
+era: "foundation-models"
+date_first_posed: "2020-01-01"
+date_answered: "2022-03-29"
+answered_by:
+  - "b-013"
+related_questions:
+  - "q-011"
+tags:
+  - "compute-optimal"
+  - "chinchilla"
+  - "training-efficiency"

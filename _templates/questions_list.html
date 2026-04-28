@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}All Questions — AI Breakthroughs{% endblock %}
+
+{% block content %}
+<div class="section-header">
+    <h2>All Questions</h2>
+    <p>The core questions that have driven AI research, from 1957 to today.</p>
+</div>
+
+<div class="filter-bar" id="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="ANSWERED">Answered</button>
+    <button class="filter-btn" data-filter="OPEN">Open</button>
+    <button class="filter-btn" data-filter="PARTIALLY_ANSWERED">Partial</button>
+</div>
+
+<div class="card-grid" id="questions-grid">
+    {% for q in questions %}
+    <div class="card" data-status="{{ q.status }}" data-category="{{ q.category }}" data-era="{{ q.era }}">
+        <div class="card-title"><a href="{{ base_url }}/questions/{{ q.slug }}/">{{ q.text }}</a></div>
+        <div class="card-meta">
+            {% if q.status == "ANSWERED" %}
+            <span class="badge badge-answered">Answered</span>
+            {% elif q.status == "OPEN" %}
+            <span class="badge badge-open">Open</span>
+            {% else %}
+            <span class="badge badge-partial">Partial</span>
+            {% endif %}
+            {{ q.date_first_posed.year }}
+            &middot; {{ q.category }}
+        </div>
+        <div class="card-description">{{ q.description[:200] }}...</div>
+        <div class="tag-list">
+            {% for tag in q.tags[:4] %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ base_url }}/static/js/filters.js"></script>
+{% endblock %}

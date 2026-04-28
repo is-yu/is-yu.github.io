@@ -1,0 +1,22 @@
+id: "q-005"
+slug: "hierarchical-representations"
+text: "Can neural networks learn hierarchical feature representations directly from raw data?"
+description: |
+  The fundamental question of whether deep architectures could automatically
+  discover increasingly abstract features without hand-engineered feature
+  extractors. This challenged the prevailing approach of manual feature
+  engineering that dominated computer vision and NLP through the 2000s.
+status: "ANSWERED"
+category: "computer-vision"
+era: "deep-learning-revolution"
+date_first_posed: "2006-01-01"
+date_answered: "2012-10-01"
+answered_by:
+  - "b-005"
+related_questions:
+  - "q-003"
+  - "q-006"
+tags:
+  - "representation-learning"
+  - "feature-extraction"
+  - "convolutional-networks"

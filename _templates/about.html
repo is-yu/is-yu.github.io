@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}About — AI Breakthroughs{% endblock %}
+
+{% block content %}
+<div class="detail-header">
+    <h1>About This Project</h1>
+</div>
+
+<div class="detail-body">
+    <div class="detail-section">
+        <h2>What Is This?</h2>
+        <div class="detail-text">
+            <p>AI Breakthroughs is a living research survey that organizes the history of artificial intelligence around the <strong>core questions</strong> that breakthrough findings answered or validated.</p>
+            <p>Rather than listing papers chronologically, we structure AI history as a series of questions that researchers asked — and the breakthroughs that answered them. Open questions track the latest research progress with pointers to the original papers.</p>
+        </div>
+    </div>
+
+    <div class="detail-section">
+        <h2>How It Works</h2>
+        <div class="detail-text">
+            <p><strong>Data curation:</strong> New papers are ingested from arXiv, analyzed by the Claude API to extract key claims and map them to existing questions, then reviewed by a human curator before being published.</p>
+            <p><strong>Content structure:</strong> Each question has a status (Answered, Open, or Partially Answered), linked breakthroughs, and progress updates. Breakthroughs link back to the questions they address and forward to new questions they raise.</p>
+            <p><strong>Technology:</strong> This is a static site generated from YAML data files. The curation pipeline reuses components from <a href="https://github.com/karpathy/arxiv-sanity-preserver" target="_blank" rel="noopener">arxiv-sanity-preserver</a> for arXiv paper ingestion.</p>
+        </div>
+    </div>
+
+    <div class="detail-section">
+        <h2>Scope</h2>
+        <div class="detail-text">
+            <p>This survey covers the broad history of AI from the 1950s Dartmouth Conference through present-day foundation models and agents. It spans:</p>
+            <ul style="margin: 12px 0; padding-left: 24px;">
+                {% for era in data.eras %}
+                <li style="margin: 4px 0;"><strong>{{ era.name }}</strong> ({{ era.start_year }}&ndash;{{ era.end_year or "present" }})</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

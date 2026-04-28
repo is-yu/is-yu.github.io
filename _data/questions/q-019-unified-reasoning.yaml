@@ -1,0 +1,17 @@
+id: "q-019"
+slug: "unified-reasoning"
+text: "Is there a unified framework for continuous (intuitive) and discrete (symbolic) reasoning?"
+description: |
+  Neural networks excel at pattern recognition (System 1) but struggle with
+  multi-step logical reasoning (System 2). Symbolic systems have the opposite
+  profile. Can we unify both in a single architecture?
+status: "OPEN"
+category: "theory"
+era: "foundation-models"
+date_first_posed: "2019-01-01"
+answered_by: []
+related_questions: []
+tags:
+  - "neurosymbolic"
+  - "reasoning"
+  - "system1-system2"

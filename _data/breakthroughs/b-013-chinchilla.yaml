@@ -1,0 +1,49 @@
+id: "b-013"
+slug: "chinchilla"
+title: "Training Compute-Optimal Large Language Models"
+paper_refs:
+  - "2203.15556"
+authors:
+  - "Jordan Hoffmann"
+  - "Sebastian Borgeaud"
+  - "Arthur Mensch"
+  - "Elena Buchatskaya"
+  - "Trevor Cai"
+  - "Eliza Rutherford"
+  - "Diego de Las Casas"
+  - "Lisa Anne Hendricks"
+  - "Johannes Welbl"
+  - "Aidan Clark"
+  - "Tom Hennigan"
+  - "Eric Noland"
+  - "Katie Millican"
+  - "George van den Driessche"
+  - "Bogdan Damoc"
+  - "Aurelia Guy"
+  - "Simon Osindero"
+  - "Karen Simonyan"
+  - "Erich Elsen"
+  - "Jack Rae"
+  - "Oriol Vinyals"
+  - "Laurent Sifre"
+date: "2022-03-29"
+venue: "NeurIPS 2022"
+question_ids:
+  - "q-012"
+key_findings:
+  - finding: |
+      Current large language models are significantly over-parameterized and
+      under-trained. For compute-optimal training, model size and training
+      data should be scaled equally.
+    significance: |
+      Showed that a 70B model trained on 4x more data outperforms a 280B
+      model, fundamentally changing how compute budgets are allocated.
+significance_level: "major"
+new_questions_raised: []
+context: |
+  The Chinchilla scaling laws corrected Kaplan et al.'s recommendation to
+  prioritize model size. This had immediate practical impact — subsequent
+  models (LLaMA, etc.) adopted compute-optimal ratios.
+summary: |
+  Chinchilla established that models should be trained on far more data than
+  previously assumed, rebalancing the compute-optimal frontier for LLMs.

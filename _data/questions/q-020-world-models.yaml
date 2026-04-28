@@ -1,0 +1,20 @@
+id: "q-020"
+slug: "world-models"
+text: "Can AI learn accurate internal world models from observation alone?"
+description: |
+  Do large models trained on text and images develop genuine internal
+  representations of the world, or are they sophisticated pattern matchers?
+  Building accurate world models is considered essential for robust
+  planning and reasoning.
+status: "OPEN"
+category: "theory"
+era: "foundation-models"
+date_first_posed: "2018-01-01"
+answered_by: []
+related_questions:
+  - "q-019"
+tags:
+  - "world-models"
+  - "representation"
+  - "understanding"
+  - "grounding"

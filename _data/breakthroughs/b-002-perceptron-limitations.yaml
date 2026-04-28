@@ -1,0 +1,28 @@
+id: "b-002"
+slug: "perceptron-limitations"
+title: "Perceptrons: An Introduction to Computational Geometry"
+paper_refs: []
+authors:
+  - "Marvin Minsky"
+  - "Seymour Papert"
+date: "1969-01-01"
+venue: "MIT Press"
+question_ids:
+  - "q-002"
+key_findings:
+  - finding: |
+      Single-layer perceptrons cannot compute XOR or any non-linearly
+      separable function. They are limited to linear decision boundaries.
+    significance: |
+      Formally established the computational limits of single-layer networks,
+      triggering the first AI winter for neural network research.
+significance_level: "paradigm-shift"
+new_questions_raised:
+  - "q-003"
+context: |
+  The enthusiasm around perceptrons led to inflated expectations. Minsky and
+  Papert's rigorous analysis showed fundamental limitations, which many
+  interpreted (incorrectly) as applying to all neural networks.
+summary: |
+  Proved single-layer perceptrons cannot solve non-linear problems,
+  contributing to the first AI winter but also motivating multi-layer research.

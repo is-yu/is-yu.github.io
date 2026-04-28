@@ -1,0 +1,32 @@
+id: "b-001"
+slug: "perceptron"
+title: "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain"
+paper_refs: []
+authors:
+  - "Frank Rosenblatt"
+date: "1958-01-01"
+venue: "Psychological Review"
+question_ids:
+  - "q-001"
+key_findings:
+  - finding: |
+      A single-layer neural network can learn to classify linearly separable
+      patterns from labeled examples using a simple weight update rule.
+    significance: |
+      First demonstration that a machine could learn from data, establishing
+      the foundational concept of trainable artificial neural networks.
+  - finding: |
+      The perceptron convergence theorem guarantees that the algorithm will
+      find a solution if one exists in finite steps.
+    significance: |
+      Provided the first mathematical guarantee for a learning algorithm.
+significance_level: "paradigm-shift"
+new_questions_raised:
+  - "q-002"
+context: |
+  In the late 1950s, AI research was dominated by symbolic approaches.
+  Rosenblatt's perceptron offered a radically different paradigm:
+  learning from examples rather than explicit programming.
+summary: |
+  The perceptron proved machines could learn pattern classification
+  from labeled examples, launching the field of neural network research.

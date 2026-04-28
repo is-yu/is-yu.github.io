@@ -1,0 +1,36 @@
+id: "b-005"
+slug: "alexnet"
+title: "ImageNet Classification with Deep Convolutional Neural Networks"
+paper_refs:
+  - "1206.5533"
+authors:
+  - "Alex Krizhevsky"
+  - "Ilya Sutskever"
+  - "Geoffrey Hinton"
+date: "2012-09-30"
+venue: "NeurIPS 2012"
+question_ids:
+  - "q-005"
+key_findings:
+  - finding: |
+      A deep CNN trained end-to-end on ImageNet achieved a top-5 error rate
+      of 15.3%, dramatically outperforming the second-place hand-engineered
+      approach (26.2%).
+    significance: |
+      Demonstrated that learned hierarchical representations vastly
+      outperform hand-crafted features at scale.
+  - finding: |
+      ReLU activations and GPU training enabled practical training of
+      deep convolutional networks on large datasets.
+    significance: |
+      Introduced key engineering practices that enabled the deep learning revolution.
+significance_level: "paradigm-shift"
+new_questions_raised:
+  - "q-006"
+context: |
+  Prior to AlexNet, computer vision relied on hand-designed features like
+  SIFT and HOG. The ImageNet Large Scale Visual Recognition Challenge
+  provided the benchmark that made this comparison definitive.
+summary: |
+  AlexNet proved deep CNNs learn hierarchical visual representations far
+  superior to hand-engineered features, launching the deep learning revolution.

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}{{ era.name }} — AI Breakthroughs{% endblock %}
+
+{% block content %}
+<div class="detail-header">
+    <div class="detail-meta">
+        <span class="badge" style="background: {{ era.color }}22; color: {{ era.color }};">
+            {{ era.start_year }} &ndash; {{ era.end_year or "present" }}
+        </span>
+    </div>
+    <h1>{{ era.name }}</h1>
+    <div class="detail-text">
+        <p>{{ era.description }}</p>
+    </div>
+</div>
+
+<div class="detail-body">
+    {% if questions %}
+    <div class="detail-section">
+        <h2>Questions ({{ questions|length }})</h2>
+        <div class="card-grid">
+            {% for q in questions %}
+            <div class="card">
+                <div class="card-title"><a href="{{ base_url }}/questions/{{ q.slug }}/">{{ q.text }}</a></div>
+                <div class="card-meta">
+                    {% if q.status == "ANSWERED" %}
+                    <span class="badge badge-answered">Answered</span>
+                    {% elif q.status == "OPEN" %}
+                    <span class="badge badge-open">Open</span>
+                    {% else %}
+                    <span class="badge badge-partial">Partial</span>
+                    {% endif %}
+                    {{ q.date_first_posed.year }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    {% if breakthroughs %}
+    <div class="detail-section">
+        <h2>Breakthroughs ({{ breakthroughs|length }})</h2>
+        <div class="card-grid">
+            {% for b in breakthroughs %}
+            <div class="card">
+                <div class="card-title"><a href="{{ base_url }}/breakthroughs/{{ b.slug }}/">{{ b.title }}</a></div>
+                <div class="card-meta">
+                    <span class="badge badge-{{ b.significance_level }}">{{ b.significance_level }}</span>
+                    {{ b.date.year }}
+                </div>
+                <div class="card-description">{{ b.summary[:150] }}...</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

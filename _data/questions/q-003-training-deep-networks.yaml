@@ -1,0 +1,22 @@
+id: "q-003"
+slug: "training-deep-networks"
+text: "Can multi-layer neural networks be trained effectively with gradient descent?"
+description: |
+  After Minsky and Papert showed single-layer limits, the key question became
+  whether deeper networks (which theoretically could solve non-linear problems)
+  could actually be trained. The credit assignment problem — how to update
+  weights in hidden layers — was the core challenge.
+status: "ANSWERED"
+category: "optimization"
+era: "connectionism-revival"
+date_first_posed: "1974-01-01"
+date_answered: "1986-01-01"
+answered_by:
+  - "b-003"
+related_questions:
+  - "q-002"
+  - "q-005"
+tags:
+  - "backpropagation"
+  - "gradient-descent"
+  - "credit-assignment"

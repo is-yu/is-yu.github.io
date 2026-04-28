@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Questions — AI Breakthroughs</title>
+    <link rel="stylesheet" href="/ai-breakthroughs/static/css/main.css">
+    
+    <script>
+    MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+        svg: { fontCache: 'global' }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="/ai-breakthroughs/" class="nav-logo">AI Breakthroughs</a>
+            <div class="nav-links">
+                <a href="/ai-breakthroughs/questions/">Questions</a>
+                <a href="/ai-breakthroughs/open-questions/">Open Questions</a>
+                <a href="/ai-breakthroughs/search/">Search</a>
+                <a href="/ai-breakthroughs/about/">About</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        
+<div class="section-header">
+    <h2>All Questions</h2>
+    <p>The core questions that have driven AI research, from 1957 to today.</p>
+</div>
+
+<div class="filter-bar" id="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="ANSWERED">Answered</button>
+    <button class="filter-btn" data-filter="OPEN">Open</button>
+    <button class="filter-btn" data-filter="PARTIALLY_ANSWERED">Partial</button>
+</div>
+
+<div class="card-grid" id="questions-grid">
+    
+    <div class="card" data-status="ANSWERED" data-category="theory" data-era="symbolic-ai">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/machine-learning-from-examples/">Can machines learn to classify patterns from labeled examples?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            1957
+            &middot; theory
+        </div>
+        <div class="card-description">The foundational question of whether a mechanical system could learn
+input-output mappings from examples, rather than being explicitly
+programmed with rules. This was the core premise of the perceptro...</div>
+        <div class="tag-list">
+            
+            <span class="tag">perceptron</span>
+            
+            <span class="tag">supervised-learning</span>
+            
+            <span class="tag">classification</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="theory" data-era="symbolic-ai">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/nonlinear-problems/">Can perceptrons solve non-linearly separable problems like XOR?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            1969
+            &middot; theory
+        </div>
+        <div class="card-description">Minsky and Papert showed that single-layer perceptrons cannot represent
+XOR or other non-linearly separable functions. This raised the question
+of whether neural networks were fundamentally limited.
+...</div>
+        <div class="tag-list">
+            
+            <span class="tag">perceptron-limitations</span>
+            
+            <span class="tag">xor-problem</span>
+            
+            <span class="tag">nonlinearity</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="optimization" data-era="connectionism-revival">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/training-deep-networks/">Can multi-layer neural networks be trained effectively with gradient descent?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            1974
+            &middot; optimization
+        </div>
+        <div class="card-description">After Minsky and Papert showed single-layer limits, the key question became
+whether deeper networks (which theoretically could solve non-linear problems)
+could actually be trained. The credit assignme...</div>
+        <div class="tag-list">
+            
+            <span class="tag">backpropagation</span>
+            
+            <span class="tag">gradient-descent</span>
+            
+            <span class="tag">credit-assignment</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="deep-learning" data-era="connectionism-revival">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/long-range-dependencies/">Can neural networks learn long-range temporal dependencies in sequences?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            1991
+            &middot; deep-learning
+        </div>
+        <div class="card-description">Standard recurrent neural networks suffer from vanishing and exploding
+gradients, making it impossible to learn dependencies across many time
+steps. This was a fundamental barrier for sequence modelin...</div>
+        <div class="tag-list">
+            
+            <span class="tag">vanishing-gradients</span>
+            
+            <span class="tag">sequence-modeling</span>
+            
+            <span class="tag">recurrent-networks</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="computer-vision" data-era="deep-learning-revolution">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/hierarchical-representations/">Can neural networks learn hierarchical feature representations directly from raw data?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            2006
+            &middot; computer-vision
+        </div>
+        <div class="card-description">The fundamental question of whether deep architectures could automatically
+discover increasingly abstract features without hand-engineered feature
+extractors. This challenged the prevailing approach o...</div>
+        <div class="tag-list">
+            
+            <span class="tag">representation-learning</span>
+            
+            <span class="tag">feature-extraction</span>
+            
+            <span class="tag">convolutional-networks</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="generative-models" data-era="deep-learning-revolution">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/realistic-image-generation/">Can neural networks generate realistic, novel images?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            2013
+            &middot; generative-models
+        </div>
+        <div class="card-description">Whether neural networks could move beyond classification to actually
+generate new data — images that look real but don&#39;t exist in the
+training set. This required learning the underlying data distribut...</div>
+        <div class="tag-list">
+            
+            <span class="tag">generative-models</span>
+            
+            <span class="tag">image-generation</span>
+            
+            <span class="tag">adversarial-training</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="deep-learning" data-era="deep-learning-revolution">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/depth-degradation/">Can very deep networks be trained without performance degradation?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            2014
+            &middot; deep-learning
+        </div>
+        <div class="card-description">As networks got deeper beyond ~20 layers, training accuracy actually
+decreased — not from overfitting but from optimization difficulty.
+Simply stacking more layers did not improve performance.
+...</div>
+        <div class="tag-list">
+            
+            <span class="tag">residual-learning</span>
+            
+            <span class="tag">depth</span>
+            
+            <span class="tag">optimization</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="reinforcement-learning" data-era="deep-learning-revolution">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/superhuman-game-play/">Can AI achieve superhuman performance in complex strategic games through self-play?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            2014
+            &middot; reinforcement-learning
+        </div>
+        <div class="card-description">Go was considered a grand challenge for AI due to its enormous search
+space (10^170 positions). Traditional game tree search was insufficient.
+Could neural networks combined with reinforcement learnin...</div>
+        <div class="tag-list">
+            
+            <span class="tag">reinforcement-learning</span>
+            
+            <span class="tag">self-play</span>
+            
+            <span class="tag">game-ai</span>
+            
+            <span class="tag">monte-carlo-tree-search</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="nlp" data-era="deep-learning-revolution">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/parallelizable-sequence-modeling/">Is there a more parallelizable alternative to RNNs for sequence modeling?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            2016
+            &middot; nlp
+        </div>
+        <div class="card-description">RNNs (including LSTMs) process sequences step-by-step, making them
+inherently sequential and slow to train. Could an architecture process
+all positions simultaneously while still capturing long-range ...</div>
+        <div class="tag-list">
+            
+            <span class="tag">attention</span>
+            
+            <span class="tag">transformer</span>
+            
+            <span class="tag">parallelism</span>
+            
+            <span class="tag">self-attention</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="nlp" data-era="foundation-models">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/unsupervised-pretraining-transfer/">Can unsupervised pre-training on text transfer effectively to all NLP tasks?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            2017
+            &middot; nlp
+        </div>
+        <div class="card-description">Traditional NLP required task-specific architectures and labeled data for
+each problem. Could a single model pre-trained on unlabeled text learn
+general language understanding transferable to any down...</div>
+        <div class="tag-list">
+            
+            <span class="tag">pre-training</span>
+            
+            <span class="tag">transfer-learning</span>
+            
+            <span class="tag">language-models</span>
+            
+            <span class="tag">bert</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="OPEN" data-category="theory" data-era="foundation-models">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/world-models/">Can AI learn accurate internal world models from observation alone?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-open">Open</span>
+            
+            2018
+            &middot; theory
+        </div>
+        <div class="card-description">Do large models trained on text and images develop genuine internal
+representations of the world, or are they sophisticated pattern matchers?
+Building accurate world models is considered essential for...</div>
+        <div class="tag-list">
+            
+            <span class="tag">world-models</span>
+            
+            <span class="tag">representation</span>
+            
+            <span class="tag">understanding</span>
+            
+            <span class="tag">grounding</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="theory" data-era="foundation-models">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/scaling-predictability/">Do neural language model capabilities scale predictably with compute, data, and parameters?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            2019
+            &middot; theory
+        </div>
+        <div class="card-description">As models grew larger, it was unclear whether improvements would continue
+or hit diminishing returns. Understanding the relationship between scale
+and performance was critical for resource allocation....</div>
+        <div class="tag-list">
+            
+            <span class="tag">scaling-laws</span>
+            
+            <span class="tag">power-laws</span>
+            
+            <span class="tag">compute-efficiency</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="OPEN" data-category="theory" data-era="foundation-models">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/unified-reasoning/">Is there a unified framework for continuous (intuitive) and discrete (symbolic) reasoning?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-open">Open</span>
+            
+            2019
+            &middot; theory
+        </div>
+        <div class="card-description">Neural networks excel at pattern recognition (System 1) but struggle with
+multi-step logical reasoning (System 2). Symbolic systems have the opposite
+profile. Can we unify both in a single architectur...</div>
+        <div class="tag-list">
+            
+            <span class="tag">neurosymbolic</span>
+            
+            <span class="tag">reasoning</span>
+            
+            <span class="tag">system1-system2</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="optimization" data-era="foundation-models">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/compute-data-tradeoffs/">What are the optimal compute-data trade-offs for training large language models?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            2020
+            &middot; optimization
+        </div>
+        <div class="card-description">Given a fixed compute budget, should you train a larger model on less data
+or a smaller model on more data? Getting this wrong wastes millions in
+compute. Kaplan et al. suggested larger models, but wa...</div>
+        <div class="tag-list">
+            
+            <span class="tag">compute-optimal</span>
+            
+            <span class="tag">chinchilla</span>
+            
+            <span class="tag">training-efficiency</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="safety-alignment" data-era="foundation-models">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/llm-human-intent/">Can large language models be aligned to reliably follow human intent?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            2020
+            &middot; safety-alignment
+        </div>
+        <div class="card-description">Raw language models generate text that is probabilistically likely but not
+necessarily helpful, harmless, or honest. Could human feedback be used
+to steer model behavior toward human preferences?
+...</div>
+        <div class="tag-list">
+            
+            <span class="tag">rlhf</span>
+            
+            <span class="tag">alignment</span>
+            
+            <span class="tag">instruction-following</span>
+            
+            <span class="tag">human-feedback</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="OPEN" data-category="theory" data-era="foundation-models">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/ood-generalization/">Can foundation models achieve robust out-of-distribution generalization?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-open">Open</span>
+            
+            2020
+            &middot; theory
+        </div>
+        <div class="card-description">Current models perform well on data similar to their training distribution
+but can fail unpredictably on novel situations. Can we build models that
+generalize robustly to truly new domains and edge ca...</div>
+        <div class="tag-list">
+            
+            <span class="tag">robustness</span>
+            
+            <span class="tag">distribution-shift</span>
+            
+            <span class="tag">generalization</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="generative-models" data-era="foundation-models">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/text-to-image/">Can AI generate high-quality, diverse images from text descriptions?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            2021
+            &middot; generative-models
+        </div>
+        <div class="card-description">Going beyond unconditional image generation — could models understand
+natural language descriptions and produce corresponding images with
+high fidelity and creative diversity?
+...</div>
+        <div class="tag-list">
+            
+            <span class="tag">diffusion-models</span>
+            
+            <span class="tag">text-to-image</span>
+            
+            <span class="tag">multimodal</span>
+            
+            <span class="tag">dall-e</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="ANSWERED" data-category="nlp" data-era="foundation-models">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/llm-tool-use/">Can language models learn to use external tools to overcome their inherent limitations?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-answered">Answered</span>
+            
+            2022
+            &middot; nlp
+        </div>
+        <div class="card-description">LLMs are limited by their training data cutoff, inability to do precise
+math, and lack of real-time information. Could they learn to call APIs,
+search engines, and calculators to augment their capabil...</div>
+        <div class="tag-list">
+            
+            <span class="tag">tool-use</span>
+            
+            <span class="tag">augmented-lm</span>
+            
+            <span class="tag">function-calling</span>
+            
+            <span class="tag">agents</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="OPEN" data-category="safety-alignment" data-era="foundation-models">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/alignment-superintelligence/">Can alignment techniques scale to superintelligent AI systems?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-open">Open</span>
+            
+            2022
+            &middot; safety-alignment
+        </div>
+        <div class="card-description">RLHF works for current models, but as models become more capable than
+their human evaluators, how can we ensure they remain aligned? The
+fundamental challenge is that humans may not be able to evaluat...</div>
+        <div class="tag-list">
+            
+            <span class="tag">superalignment</span>
+            
+            <span class="tag">scalable-oversight</span>
+            
+            <span class="tag">ai-safety</span>
+            
+        </div>
+    </div>
+    
+    <div class="card" data-status="OPEN" data-category="nlp" data-era="foundation-models">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/self-correction/">Can AI systems reliably detect and correct their own reasoning errors?</a></div>
+        <div class="card-meta">
+            
+            <span class="badge badge-open">Open</span>
+            
+            2023
+            &middot; nlp
+        </div>
+        <div class="card-description">LLMs are prone to hallucination and logical errors. Can models develop
+reliable self-evaluation capabilities, recognizing when they are wrong
+and correcting themselves without external feedback?
+...</div>
+        <div class="tag-list">
+            
+            <span class="tag">hallucination</span>
+            
+            <span class="tag">self-correction</span>
+            
+            <span class="tag">reasoning</span>
+            
+            <span class="tag">chain-of-thought</span>
+            
+        </div>
+    </div>
+    
+</div>
+
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>A living research survey of AI breakthroughs, organized by the questions they answered.</p>
+            <p class="footer-meta">Data version: 0e648293 | Last updated: 2026-04-28</p>
+        </div>
+    </footer>
+    
+<script src="/ai-breakthroughs/static/js/filters.js"></script>
+
+</body>
+</html>

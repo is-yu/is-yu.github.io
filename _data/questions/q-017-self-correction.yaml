@@ -1,0 +1,18 @@
+id: "q-017"
+slug: "self-correction"
+text: "Can AI systems reliably detect and correct their own reasoning errors?"
+description: |
+  LLMs are prone to hallucination and logical errors. Can models develop
+  reliable self-evaluation capabilities, recognizing when they are wrong
+  and correcting themselves without external feedback?
+status: "OPEN"
+category: "nlp"
+era: "foundation-models"
+date_first_posed: "2023-01-01"
+answered_by: []
+related_questions: []
+tags:
+  - "hallucination"
+  - "self-correction"
+  - "reasoning"
+  - "chain-of-thought"

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Open Questions — AI Breakthroughs{% endblock %}
+
+{% block content %}
+<div class="section-header">
+    <h2>Open Questions</h2>
+    <p>Active research frontiers — questions that remain unanswered, with pointers to the latest progress.</p>
+</div>
+
+<div class="card-grid">
+    {% for q in questions %}
+    <div class="card">
+        <div class="card-title">
+            <a href="{{ base_url }}/questions/{{ q.slug }}/">{{ q.text }}</a>
+        </div>
+        <div class="card-meta">
+            {% if q.status == "OPEN" %}
+            <span class="badge badge-open">Open</span>
+            {% else %}
+            <span class="badge badge-partial">Partially Answered</span>
+            {% endif %}
+            Since {{ q.date_first_posed.year }}
+            &middot; {{ q.category }}
+        </div>
+        <div class="card-description">{{ q.description[:200] }}...</div>
+
+        {% if q.progress_updates %}
+        <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--color-border);">
+            <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-accent); margin-bottom: 6px;">
+                Latest Progress
+            </div>
+            {% set p = q.progress_updates[0] %}
+            <div style="font-size: 13px; color: var(--color-text-muted);">
+                <strong>{{ p.title }}</strong> ({{ p.date.year }})
+                — {{ p.finding[:150] }}...
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="tag-list" style="margin-top: 8px;">
+            {% for tag in q.tags[:3] %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

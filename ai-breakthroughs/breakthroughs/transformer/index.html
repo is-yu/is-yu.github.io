@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attention Is All You Need — AI Breakthroughs</title>
+    <link rel="stylesheet" href="/ai-breakthroughs/static/css/main.css">
+    
+    <script>
+    MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+        svg: { fontCache: 'global' }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="/ai-breakthroughs/" class="nav-logo">AI Breakthroughs</a>
+            <div class="nav-links">
+                <a href="/ai-breakthroughs/questions/">Questions</a>
+                <a href="/ai-breakthroughs/open-questions/">Open Questions</a>
+                <a href="/ai-breakthroughs/search/">Search</a>
+                <a href="/ai-breakthroughs/about/">About</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        
+<div class="detail-header">
+    <div class="detail-meta">
+        <span class="badge badge-paradigm-shift">paradigm-shift</span>
+        <span>2017</span>
+        <span>NeurIPS 2017</span>
+    </div>
+    <h1>Attention Is All You Need</h1>
+    <div class="detail-meta">
+        Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan Gomez, Lukasz Kaiser, Illia Polosukhin
+    </div>
+</div>
+
+<div class="detail-body">
+    <div class="detail-section">
+        <h2>Summary</h2>
+        <div class="detail-text">
+            <p>The Transformer replaced RNNs with self-attention for fully parallel
+sequence processing, becoming the foundation for all modern large language models.
+</p>
+        </div>
+    </div>
+
+    <div class="detail-section">
+        <h2>Key Findings</h2>
+        
+        <div class="finding">
+            <div class="finding-label">Finding 1</div>
+            <div class="finding-text">The Transformer architecture uses self-attention to process all positions
+in parallel, replacing recurrence entirely while achieving state-of-the-art
+translation quality.
+</div>
+            <div class="finding-significance">Enabled massively parallel training on sequences, removing the sequential
+bottleneck that limited RNN scaling.
+</div>
+        </div>
+        
+        <div class="finding">
+            <div class="finding-label">Finding 2</div>
+            <div class="finding-text">Multi-head attention allows the model to jointly attend to information
+from different representation subspaces at different positions.
+</div>
+            <div class="finding-significance">Created a flexible mechanism for modeling diverse relationships in data
+that proved universal across domains.
+</div>
+        </div>
+        
+    </div>
+
+    <div class="detail-section">
+        <h2>Context</h2>
+        <div class="detail-text">
+            <p>Attention mechanisms existed before (Bahdanau 2014), but always alongside
+RNNs. The Transformer showed attention alone was sufficient, enabling
+the scaling that would lead to GPT, BERT, and all foundation models.
+</p>
+        </div>
+    </div>
+
+    
+    <div class="detail-section">
+        <h2>Questions Answered</h2>
+        <ul class="related-list">
+            
+            <li>
+                <span class="badge badge-answered">Answered</span>
+                <a href="/ai-breakthroughs/questions/parallelizable-sequence-modeling/">Is there a more parallelizable alternative to RNNs for sequence modeling?</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+
+    
+    <div class="detail-section">
+        <h2>New Questions Raised</h2>
+        <ul class="related-list">
+            
+            <li>
+                
+                <span class="badge badge-answered">Answered</span>
+                
+                <a href="/ai-breakthroughs/questions/unsupervised-pretraining-transfer/">Can unsupervised pre-training on text transfer effectively to all NLP tasks?</a>
+            </li>
+            
+            <li>
+                
+                <span class="badge badge-answered">Answered</span>
+                
+                <a href="/ai-breakthroughs/questions/scaling-predictability/">Do neural language model capabilities scale predictably with compute, data, and parameters?</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+
+    
+    <div class="detail-section">
+        <h2>Papers</h2>
+        <ul class="related-list">
+            
+            <li>
+                <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">arXiv:1706.03762</a>
+                &middot;
+                <a href="https://arxiv.org/pdf/1706.03762" target="_blank" rel="noopener">PDF</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+</div>
+
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>A living research survey of AI breakthroughs, organized by the questions they answered.</p>
+            <p class="footer-meta">Data version: 0e648293 | Last updated: 2026-04-28</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

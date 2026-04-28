@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Breakthroughs — A Living Research Timeline</title>
+    <link rel="stylesheet" href="/ai-breakthroughs/static/css/main.css">
+    
+    <script>
+    MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+        svg: { fontCache: 'global' }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="/ai-breakthroughs/" class="nav-logo">AI Breakthroughs</a>
+            <div class="nav-links">
+                <a href="/ai-breakthroughs/questions/">Questions</a>
+                <a href="/ai-breakthroughs/open-questions/">Open Questions</a>
+                <a href="/ai-breakthroughs/search/">Search</a>
+                <a href="/ai-breakthroughs/about/">About</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        
+<div class="hero">
+    <h1>AI Breakthroughs</h1>
+    <p>The history of artificial intelligence, organized by the core questions that breakthroughs answered — and the questions that remain open.</p>
+</div>
+
+<div class="stats-bar">
+    <div class="stat">
+        <div class="stat-number">20</div>
+        <div class="stat-label">Questions</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">16</div>
+        <div class="stat-label">Breakthroughs</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">15</div>
+        <div class="stat-label">Answered</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">5</div>
+        <div class="stat-label">Open</div>
+    </div>
+</div>
+
+<div class="timeline-container">
+    <h2>Timeline</h2>
+    <div id="timeline-viz"></div>
+</div>
+
+<div class="section-header">
+    <h2>Recent Breakthroughs</h2>
+</div>
+<div class="card-grid">
+    
+    <div class="card">
+        <div class="card-title"><a href="/ai-breakthroughs/breakthroughs/toolformer/">Toolformer: Language Models Can Teach Themselves to Use Tools</a></div>
+        <div class="card-meta">
+            <span class="badge badge-major">major</span>
+            2023 &middot; Timo Schick et al.
+        </div>
+        <div class="card-description">Toolformer proved LLMs can self-teach tool use, enabling them to overcome
+inherent limitations by calling external APIs when needed.
+</div>
+    </div>
+    
+    <div class="card">
+        <div class="card-title"><a href="/ai-breakthroughs/breakthroughs/dalle2/">Hierarchical Text-Conditional Image Generation with CLIP Latents</a></div>
+        <div class="card-meta">
+            <span class="badge badge-major">major</span>
+            2022 &middot; Aditya Ramesh et al.
+        </div>
+        <div class="card-description">DALL-E 2 demonstrated that diffusion models conditioned on CLIP embeddings
+can generate high-quality images from text, making AI art commercially viable.
+</div>
+    </div>
+    
+    <div class="card">
+        <div class="card-title"><a href="/ai-breakthroughs/breakthroughs/chinchilla/">Training Compute-Optimal Large Language Models</a></div>
+        <div class="card-meta">
+            <span class="badge badge-major">major</span>
+            2022 &middot; Jordan Hoffmann et al.
+        </div>
+        <div class="card-description">Chinchilla established that models should be trained on far more data than
+previously assumed, rebalancing the compute-optimal frontier for LLMs.
+</div>
+    </div>
+    
+    <div class="card">
+        <div class="card-title"><a href="/ai-breakthroughs/breakthroughs/instructgpt/">Training language models to follow instructions with human feedback</a></div>
+        <div class="card-meta">
+            <span class="badge badge-paradigm-shift">paradigm-shift</span>
+            2022 &middot; Long Ouyang et al.
+        </div>
+        <div class="card-description">InstructGPT showed RLHF can align LLMs to human intent, making a small
+aligned model preferred over a much larger unaligned one.
+</div>
+    </div>
+    
+    <div class="card">
+        <div class="card-title"><a href="/ai-breakthroughs/breakthroughs/scaling-laws/">Scaling Laws for Neural Language Models</a></div>
+        <div class="card-meta">
+            <span class="badge badge-major">major</span>
+            2020 &middot; Jared Kaplan et al.
+        </div>
+        <div class="card-description">Established that language model performance follows predictable power laws
+with scale, making the case for dramatically larger models.
+</div>
+    </div>
+    
+</div>
+
+<div class="section-header">
+    <h2>Open Questions</h2>
+    <p>Active research frontiers with pointers to the latest progress.</p>
+</div>
+<div class="card-grid">
+    
+    <div class="card">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/world-models/">Can AI learn accurate internal world models from observation alone?</a></div>
+        <div class="card-meta">
+            <span class="badge badge-open">OPEN</span>
+            Since 2018
+        </div>
+        <div class="card-description">Do large models trained on text and images develop genuine internal
+representations of the world, or are they sophisticated pattern matchers?
+Building accurate world models is considered essential for...</div>
+    </div>
+    
+    <div class="card">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/unified-reasoning/">Is there a unified framework for continuous (intuitive) and discrete (symbolic) reasoning?</a></div>
+        <div class="card-meta">
+            <span class="badge badge-open">OPEN</span>
+            Since 2019
+        </div>
+        <div class="card-description">Neural networks excel at pattern recognition (System 1) but struggle with
+multi-step logical reasoning (System 2). Symbolic systems have the opposite
+profile. Can we unify both in a single architectur...</div>
+    </div>
+    
+    <div class="card">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/ood-generalization/">Can foundation models achieve robust out-of-distribution generalization?</a></div>
+        <div class="card-meta">
+            <span class="badge badge-open">OPEN</span>
+            Since 2020
+        </div>
+        <div class="card-description">Current models perform well on data similar to their training distribution
+but can fail unpredictably on novel situations. Can we build models that
+generalize robustly to truly new domains and edge ca...</div>
+    </div>
+    
+    <div class="card">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/alignment-superintelligence/">Can alignment techniques scale to superintelligent AI systems?</a></div>
+        <div class="card-meta">
+            <span class="badge badge-open">OPEN</span>
+            Since 2022
+        </div>
+        <div class="card-description">RLHF works for current models, but as models become more capable than
+their human evaluators, how can we ensure they remain aligned? The
+fundamental challenge is that humans may not be able to evaluat...</div>
+    </div>
+    
+    <div class="card">
+        <div class="card-title"><a href="/ai-breakthroughs/questions/self-correction/">Can AI systems reliably detect and correct their own reasoning errors?</a></div>
+        <div class="card-meta">
+            <span class="badge badge-open">OPEN</span>
+            Since 2023
+        </div>
+        <div class="card-description">LLMs are prone to hallucination and logical errors. Can models develop
+reliable self-evaluation capabilities, recognizing when they are wrong
+and correcting themselves without external feedback?
+...</div>
+    </div>
+    
+</div>
+
+<div class="section-header">
+    <h2>Eras</h2>
+</div>
+<div class="card-grid">
+    
+    <div class="card" style="border-left: 3px solid #8B4513;">
+        <div class="card-title"><a href="/ai-breakthroughs/eras/symbolic-ai/">Symbolic AI &amp; Early Neural Networks</a></div>
+        <div class="card-meta">1956 &ndash; 1974</div>
+        <div class="card-description">From the Dartmouth Conference through early perceptrons</div>
+    </div>
+    
+    <div class="card" style="border-left: 3px solid #4682B4;">
+        <div class="card-title"><a href="/ai-breakthroughs/eras/ai-winter-1/">First AI Winter &amp; Revival</a></div>
+        <div class="card-meta">1974 &ndash; 1980</div>
+        <div class="card-description">Post-Lighthill report funding collapse</div>
+    </div>
+    
+    <div class="card" style="border-left: 3px solid #2E8B57;">
+        <div class="card-title"><a href="/ai-breakthroughs/eras/connectionism-revival/">Connectionism Revival</a></div>
+        <div class="card-meta">1980 &ndash; 1995</div>
+        <div class="card-description">Backpropagation, Hopfield networks, Boltzmann machines</div>
+    </div>
+    
+    <div class="card" style="border-left: 3px solid #9932CC;">
+        <div class="card-title"><a href="/ai-breakthroughs/eras/statistical-ml/">Statistical Machine Learning</a></div>
+        <div class="card-meta">1995 &ndash; 2011</div>
+        <div class="card-description">SVMs, kernel methods, Bayesian approaches, ensemble methods</div>
+    </div>
+    
+    <div class="card" style="border-left: 3px solid #DC143C;">
+        <div class="card-title"><a href="/ai-breakthroughs/eras/deep-learning-revolution/">Deep Learning Revolution</a></div>
+        <div class="card-meta">2012 &ndash; 2017</div>
+        <div class="card-description">AlexNet through Transformer architecture</div>
+    </div>
+    
+    <div class="card" style="border-left: 3px solid #FF8C00;">
+        <div class="card-title"><a href="/ai-breakthroughs/eras/foundation-models/">Foundation Models &amp; Scaling</a></div>
+        <div class="card-meta">2018 &ndash; present</div>
+        <div class="card-description">GPT, BERT, scaling laws, multimodal models, agents</div>
+    </div>
+    
+</div>
+
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>A living research survey of AI breakthroughs, organized by the questions they answered.</p>
+            <p class="footer-meta">Data version: 0e648293 | Last updated: 2026-04-28</p>
+        </div>
+    </footer>
+    
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="/ai-breakthroughs/static/js/timeline.js"></script>
+
+</body>
+</html>

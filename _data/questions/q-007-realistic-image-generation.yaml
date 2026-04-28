@@ -1,0 +1,19 @@
+id: "q-007"
+slug: "realistic-image-generation"
+text: "Can neural networks generate realistic, novel images?"
+description: |
+  Whether neural networks could move beyond classification to actually
+  generate new data — images that look real but don't exist in the
+  training set. This required learning the underlying data distribution.
+status: "ANSWERED"
+category: "generative-models"
+era: "deep-learning-revolution"
+date_first_posed: "2013-01-01"
+date_answered: "2014-06-01"
+answered_by:
+  - "b-007"
+related_questions: []
+tags:
+  - "generative-models"
+  - "image-generation"
+  - "adversarial-training"

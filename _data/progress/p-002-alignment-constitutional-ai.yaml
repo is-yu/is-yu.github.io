@@ -1,0 +1,37 @@
+id: "p-002"
+question_id: "q-016"
+paper_ref: "2212.08073"
+title: "Constitutional AI: Harmlessness from AI Feedback"
+authors:
+  - "Yuntao Bai"
+  - "Saurav Kadavath"
+  - "Sandipan Kundu"
+  - "Amanda Askell"
+  - "Jackson Kernion"
+  - "Andy Jones"
+  - "Anna Chen"
+  - "Anna Goldie"
+  - "Azalia Mirhoseini"
+  - "Cameron McKinnon"
+  - "Carol Chen"
+  - "Catherine Olsson"
+  - "Christopher Olah"
+  - "Danny Hernandez"
+  - "Dawn Drain"
+  - "Deep Ganguli"
+  - "Dustin Li"
+  - "Eli Tyre"
+  - "Ethan Perez"
+  - "Jamie Kerr"
+  - "Jared Kaplan"
+  - "Sam McCandlish"
+date: "2022-12-15"
+finding: |
+  Models can critique and revise their own outputs according to a set of
+  constitutional principles, reducing dependence on human labelers for
+  alignment while maintaining helpfulness.
+impact_on_question: |
+  Introduces a scalable alignment approach that reduces reliance on human
+  evaluators, a step toward aligning superhuman systems. However, the
+  constitutional principles are still human-authored.
+advancement_level: "major"

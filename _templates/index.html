@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}AI Breakthroughs — A Living Research Timeline{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>AI Breakthroughs</h1>
+    <p>The history of artificial intelligence, organized by the core questions that breakthroughs answered — and the questions that remain open.</p>
+</div>
+
+<div class="stats-bar">
+    <div class="stat">
+        <div class="stat-number">{{ data.questions|length }}</div>
+        <div class="stat-label">Questions</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">{{ data.breakthroughs|length }}</div>
+        <div class="stat-label">Breakthroughs</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">{{ answered_questions|length }}</div>
+        <div class="stat-label">Answered</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">{{ open_questions|length }}</div>
+        <div class="stat-label">Open</div>
+    </div>
+</div>
+
+<div class="timeline-container">
+    <h2>Timeline</h2>
+    <div id="timeline-viz"></div>
+</div>
+
+<div class="section-header">
+    <h2>Recent Breakthroughs</h2>
+</div>
+<div class="card-grid">
+    {% for b in recent_breakthroughs|reverse %}
+    <div class="card">
+        <div class="card-title"><a href="{{ base_url }}/breakthroughs/{{ b.slug }}/">{{ b.title }}</a></div>
+        <div class="card-meta">
+            <span class="badge badge-{{ b.significance_level }}">{{ b.significance_level }}</span>
+            {{ b.date.year }} &middot; {{ b.authors[0] }} et al.
+        </div>
+        <div class="card-description">{{ b.summary }}</div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="section-header">
+    <h2>Open Questions</h2>
+    <p>Active research frontiers with pointers to the latest progress.</p>
+</div>
+<div class="card-grid">
+    {% for q in open_questions %}
+    <div class="card">
+        <div class="card-title"><a href="{{ base_url }}/questions/{{ q.slug }}/">{{ q.text }}</a></div>
+        <div class="card-meta">
+            <span class="badge badge-open">{{ q.status }}</span>
+            Since {{ q.date_first_posed.year }}
+        </div>
+        <div class="card-description">{{ q.description[:200] }}...</div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="section-header">
+    <h2>Eras</h2>
+</div>
+<div class="card-grid">
+    {% for era in data.eras %}
+    <div class="card" style="border-left: 3px solid {{ era.color }};">
+        <div class="card-title"><a href="{{ base_url }}/eras/{{ era.id }}/">{{ era.name }}</a></div>
+        <div class="card-meta">{{ era.start_year }} &ndash; {{ era.end_year or "present" }}</div>
+        <div class="card-description">{{ era.description }}</div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="{{ base_url }}/static/js/timeline.js"></script>
+{% endblock %}

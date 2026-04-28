@@ -1,0 +1,44 @@
+id: "b-012"
+slug: "scaling-laws"
+title: "Scaling Laws for Neural Language Models"
+paper_refs:
+  - "2001.08361"
+authors:
+  - "Jared Kaplan"
+  - "Sam McCandlish"
+  - "Tom Henighan"
+  - "Tom Brown"
+  - "Benjamin Chess"
+  - "Rewon Child"
+  - "Scott Gray"
+  - "Alec Radford"
+  - "Jeffrey Wu"
+  - "Dario Amodei"
+date: "2020-01-23"
+venue: "arXiv"
+question_ids:
+  - "q-011"
+key_findings:
+  - finding: |
+      Language model performance follows smooth power-law relationships with
+      model size, dataset size, and compute budget, spanning many orders of
+      magnitude with remarkable predictability.
+    significance: |
+      Made scaling a principled engineering decision rather than guesswork,
+      enabling rational allocation of billions in compute investment.
+  - finding: |
+      Performance depends most strongly on scale (compute, data, parameters)
+      and is surprisingly insensitive to architectural details within the
+      Transformer family.
+    significance: |
+      Shifted research focus from architecture search to scaling methodology.
+significance_level: "major"
+new_questions_raised:
+  - "q-012"
+context: |
+  These laws were empirically observed at OpenAI and gave quantitative
+  predictions for how much larger models would improve. This directly
+  motivated the GPT-3 training run.
+summary: |
+  Established that language model performance follows predictable power laws
+  with scale, making the case for dramatically larger models.

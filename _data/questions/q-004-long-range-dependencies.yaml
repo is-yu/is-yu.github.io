@@ -1,0 +1,21 @@
+id: "q-004"
+slug: "long-range-dependencies"
+text: "Can neural networks learn long-range temporal dependencies in sequences?"
+description: |
+  Standard recurrent neural networks suffer from vanishing and exploding
+  gradients, making it impossible to learn dependencies across many time
+  steps. This was a fundamental barrier for sequence modeling.
+status: "ANSWERED"
+category: "deep-learning"
+era: "connectionism-revival"
+date_first_posed: "1991-01-01"
+date_answered: "1997-01-01"
+answered_by:
+  - "b-004"
+related_questions:
+  - "q-003"
+  - "q-009"
+tags:
+  - "vanishing-gradients"
+  - "sequence-modeling"
+  - "recurrent-networks"

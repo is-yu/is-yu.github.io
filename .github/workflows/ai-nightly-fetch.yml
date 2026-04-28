@@ -1,0 +1,52 @@
+name: AI Breakthroughs — Nightly Fetch & Analysis
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # 6 AM UTC daily
+  workflow_dispatch:
+
+jobs:
+  fetch-and-analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install PyYAML pydantic feedparser anthropic
+          sudo apt-get install -y poppler-utils
+
+      - name: Fetch new papers
+        run: python -m _pipeline.fetch_papers --max-results 100
+
+      - name: Download PDFs
+        run: python -m _pipeline.download_pdfs --limit 50
+
+      - name: Extract text
+        run: python -m _pipeline.parse_pdf_to_text
+
+      - name: Analyze with Claude
+        run: python -m _pipeline.claude_analyzer --batch-new --limit 20
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Create suggestion PR
+        run: |
+          BRANCH="auto/suggestions-$(date +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add _data/papers/ _staging/pending/
+          git diff --staged --quiet && echo "No new suggestions" && exit 0
+          git commit -m "Auto: arXiv fetch + Claude analysis $(date +%Y-%m-%d)"
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "AI Suggestions $(date +%Y-%m-%d)" \
+            --body "Automated arXiv fetch and Claude analysis. Review pending suggestions in _staging/pending/." \
+            --label "auto-suggestions"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

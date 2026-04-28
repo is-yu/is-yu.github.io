@@ -1,0 +1,21 @@
+id: "q-015"
+slug: "text-to-image"
+text: "Can AI generate high-quality, diverse images from text descriptions?"
+description: |
+  Going beyond unconditional image generation — could models understand
+  natural language descriptions and produce corresponding images with
+  high fidelity and creative diversity?
+status: "ANSWERED"
+category: "generative-models"
+era: "foundation-models"
+date_first_posed: "2021-01-01"
+date_answered: "2022-04-13"
+answered_by:
+  - "b-016"
+related_questions:
+  - "q-007"
+tags:
+  - "diffusion-models"
+  - "text-to-image"
+  - "multimodal"
+  - "dall-e"

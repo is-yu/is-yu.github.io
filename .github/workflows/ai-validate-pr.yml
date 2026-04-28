@@ -1,0 +1,24 @@
+name: AI Breakthroughs — Validate PR
+
+on:
+  pull_request:
+    paths: ['_data/**']
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install PyYAML pydantic Jinja2
+
+      - name: Validate data
+        run: python -m _pipeline.validate_data
+
+      - name: Test build
+        run: python -m _generator.build

@@ -1,0 +1,20 @@
+id: "q-006"
+slug: "depth-degradation"
+text: "Can very deep networks be trained without performance degradation?"
+description: |
+  As networks got deeper beyond ~20 layers, training accuracy actually
+  decreased — not from overfitting but from optimization difficulty.
+  Simply stacking more layers did not improve performance.
+status: "ANSWERED"
+category: "deep-learning"
+era: "deep-learning-revolution"
+date_first_posed: "2014-01-01"
+date_answered: "2015-12-01"
+answered_by:
+  - "b-006"
+related_questions:
+  - "q-005"
+tags:
+  - "residual-learning"
+  - "depth"
+  - "optimization"

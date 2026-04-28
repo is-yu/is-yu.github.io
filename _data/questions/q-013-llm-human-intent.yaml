@@ -1,0 +1,21 @@
+id: "q-013"
+slug: "llm-human-intent"
+text: "Can large language models be aligned to reliably follow human intent?"
+description: |
+  Raw language models generate text that is probabilistically likely but not
+  necessarily helpful, harmless, or honest. Could human feedback be used
+  to steer model behavior toward human preferences?
+status: "ANSWERED"
+category: "safety-alignment"
+era: "foundation-models"
+date_first_posed: "2020-01-01"
+date_answered: "2022-03-04"
+answered_by:
+  - "b-014"
+related_questions:
+  - "q-016"
+tags:
+  - "rlhf"
+  - "alignment"
+  - "instruction-following"
+  - "human-feedback"

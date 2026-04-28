@@ -1,0 +1,21 @@
+id: "q-011"
+slug: "scaling-predictability"
+text: "Do neural language model capabilities scale predictably with compute, data, and parameters?"
+description: |
+  As models grew larger, it was unclear whether improvements would continue
+  or hit diminishing returns. Understanding the relationship between scale
+  and performance was critical for resource allocation.
+status: "ANSWERED"
+category: "theory"
+era: "foundation-models"
+date_first_posed: "2019-01-01"
+date_answered: "2020-01-23"
+answered_by:
+  - "b-012"
+related_questions:
+  - "q-010"
+  - "q-012"
+tags:
+  - "scaling-laws"
+  - "power-laws"
+  - "compute-efficiency"

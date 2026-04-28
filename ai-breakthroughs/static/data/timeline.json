@@ -1,0 +1,564 @@
+{
+  "eras": [
+    {
+      "id": "symbolic-ai",
+      "name": "Symbolic AI & Early Neural Networks",
+      "start": 1956,
+      "end": 1974,
+      "color": "#8B4513"
+    },
+    {
+      "id": "ai-winter-1",
+      "name": "First AI Winter & Revival",
+      "start": 1974,
+      "end": 1980,
+      "color": "#4682B4"
+    },
+    {
+      "id": "connectionism-revival",
+      "name": "Connectionism Revival",
+      "start": 1980,
+      "end": 1995,
+      "color": "#2E8B57"
+    },
+    {
+      "id": "statistical-ml",
+      "name": "Statistical Machine Learning",
+      "start": 1995,
+      "end": 2011,
+      "color": "#9932CC"
+    },
+    {
+      "id": "deep-learning-revolution",
+      "name": "Deep Learning Revolution",
+      "start": 2012,
+      "end": 2017,
+      "color": "#DC143C"
+    },
+    {
+      "id": "foundation-models",
+      "name": "Foundation Models & Scaling",
+      "start": 2018,
+      "end": 2027,
+      "color": "#FF8C00"
+    }
+  ],
+  "events": [
+    {
+      "id": "q-001",
+      "type": "question-answered",
+      "title": "Can machines learn to classify patterns from labeled example",
+      "slug": "machine-learning-from-examples",
+      "date": "1957-01-01",
+      "year": 1957,
+      "status": "ANSWERED",
+      "category": "theory",
+      "url": "/ai-breakthroughs/questions/machine-learning-from-examples/"
+    },
+    {
+      "id": "b-001",
+      "type": "breakthrough",
+      "title": "The Perceptron: A Probabilistic Model for Information Storag",
+      "slug": "perceptron",
+      "date": "1958-01-01",
+      "year": 1958,
+      "significance": "paradigm-shift",
+      "questions_answered": [
+        "q-001"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/perceptron/"
+    },
+    {
+      "id": "b-002",
+      "type": "breakthrough",
+      "title": "Perceptrons: An Introduction to Computational Geometry",
+      "slug": "perceptron-limitations",
+      "date": "1969-01-01",
+      "year": 1969,
+      "significance": "paradigm-shift",
+      "questions_answered": [
+        "q-002"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/perceptron-limitations/"
+    },
+    {
+      "id": "q-002",
+      "type": "question-answered",
+      "title": "Can perceptrons solve non-linearly separable problems like X",
+      "slug": "nonlinear-problems",
+      "date": "1969-01-01",
+      "year": 1969,
+      "status": "ANSWERED",
+      "category": "theory",
+      "url": "/ai-breakthroughs/questions/nonlinear-problems/"
+    },
+    {
+      "id": "q-003",
+      "type": "question-answered",
+      "title": "Can multi-layer neural networks be trained effectively with ",
+      "slug": "training-deep-networks",
+      "date": "1974-01-01",
+      "year": 1974,
+      "status": "ANSWERED",
+      "category": "optimization",
+      "url": "/ai-breakthroughs/questions/training-deep-networks/"
+    },
+    {
+      "id": "b-003",
+      "type": "breakthrough",
+      "title": "Learning representations by back-propagating errors",
+      "slug": "backpropagation",
+      "date": "1986-10-09",
+      "year": 1986,
+      "significance": "paradigm-shift",
+      "questions_answered": [
+        "q-002",
+        "q-003"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/backpropagation/"
+    },
+    {
+      "id": "q-004",
+      "type": "question-answered",
+      "title": "Can neural networks learn long-range temporal dependencies i",
+      "slug": "long-range-dependencies",
+      "date": "1991-01-01",
+      "year": 1991,
+      "status": "ANSWERED",
+      "category": "deep-learning",
+      "url": "/ai-breakthroughs/questions/long-range-dependencies/"
+    },
+    {
+      "id": "b-004",
+      "type": "breakthrough",
+      "title": "Long Short-Term Memory",
+      "slug": "lstm",
+      "date": "1997-11-01",
+      "year": 1997,
+      "significance": "paradigm-shift",
+      "questions_answered": [
+        "q-004"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/lstm/"
+    },
+    {
+      "id": "q-005",
+      "type": "question-answered",
+      "title": "Can neural networks learn hierarchical feature representatio",
+      "slug": "hierarchical-representations",
+      "date": "2006-01-01",
+      "year": 2006,
+      "status": "ANSWERED",
+      "category": "computer-vision",
+      "url": "/ai-breakthroughs/questions/hierarchical-representations/"
+    },
+    {
+      "id": "b-005",
+      "type": "breakthrough",
+      "title": "ImageNet Classification with Deep Convolutional Neural Netwo",
+      "slug": "alexnet",
+      "date": "2012-09-30",
+      "year": 2012,
+      "significance": "paradigm-shift",
+      "questions_answered": [
+        "q-005"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/alexnet/"
+    },
+    {
+      "id": "q-007",
+      "type": "question-answered",
+      "title": "Can neural networks generate realistic, novel images?",
+      "slug": "realistic-image-generation",
+      "date": "2013-01-01",
+      "year": 2013,
+      "status": "ANSWERED",
+      "category": "generative-models",
+      "url": "/ai-breakthroughs/questions/realistic-image-generation/"
+    },
+    {
+      "id": "q-006",
+      "type": "question-answered",
+      "title": "Can very deep networks be trained without performance degrad",
+      "slug": "depth-degradation",
+      "date": "2014-01-01",
+      "year": 2014,
+      "status": "ANSWERED",
+      "category": "deep-learning",
+      "url": "/ai-breakthroughs/questions/depth-degradation/"
+    },
+    {
+      "id": "q-008",
+      "type": "question-answered",
+      "title": "Can AI achieve superhuman performance in complex strategic g",
+      "slug": "superhuman-game-play",
+      "date": "2014-01-01",
+      "year": 2014,
+      "status": "ANSWERED",
+      "category": "reinforcement-learning",
+      "url": "/ai-breakthroughs/questions/superhuman-game-play/"
+    },
+    {
+      "id": "b-007",
+      "type": "breakthrough",
+      "title": "Generative Adversarial Nets",
+      "slug": "gan",
+      "date": "2014-06-10",
+      "year": 2014,
+      "significance": "paradigm-shift",
+      "questions_answered": [
+        "q-007"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/gan/"
+    },
+    {
+      "id": "b-006",
+      "type": "breakthrough",
+      "title": "Deep Residual Learning for Image Recognition",
+      "slug": "resnet",
+      "date": "2015-12-10",
+      "year": 2015,
+      "significance": "paradigm-shift",
+      "questions_answered": [
+        "q-006"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/resnet/"
+    },
+    {
+      "id": "q-009",
+      "type": "question-answered",
+      "title": "Is there a more parallelizable alternative to RNNs for seque",
+      "slug": "parallelizable-sequence-modeling",
+      "date": "2016-01-01",
+      "year": 2016,
+      "status": "ANSWERED",
+      "category": "nlp",
+      "url": "/ai-breakthroughs/questions/parallelizable-sequence-modeling/"
+    },
+    {
+      "id": "b-008",
+      "type": "breakthrough",
+      "title": "Mastering the game of Go with deep neural networks and tree ",
+      "slug": "alphago",
+      "date": "2016-01-27",
+      "year": 2016,
+      "significance": "paradigm-shift",
+      "questions_answered": [
+        "q-008"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/alphago/"
+    },
+    {
+      "id": "q-010",
+      "type": "question-answered",
+      "title": "Can unsupervised pre-training on text transfer effectively t",
+      "slug": "unsupervised-pretraining-transfer",
+      "date": "2017-06-01",
+      "year": 2017,
+      "status": "ANSWERED",
+      "category": "nlp",
+      "url": "/ai-breakthroughs/questions/unsupervised-pretraining-transfer/"
+    },
+    {
+      "id": "b-009",
+      "type": "breakthrough",
+      "title": "Attention Is All You Need",
+      "slug": "transformer",
+      "date": "2017-06-12",
+      "year": 2017,
+      "significance": "paradigm-shift",
+      "questions_answered": [
+        "q-009"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/transformer/"
+    },
+    {
+      "id": "q-020",
+      "type": "question-open",
+      "title": "Can AI learn accurate internal world models from observation",
+      "slug": "world-models",
+      "date": "2018-01-01",
+      "year": 2018,
+      "status": "OPEN",
+      "category": "theory",
+      "url": "/ai-breakthroughs/questions/world-models/"
+    },
+    {
+      "id": "b-010",
+      "type": "breakthrough",
+      "title": "Improving Language Understanding by Generative Pre-Training",
+      "slug": "gpt",
+      "date": "2018-06-11",
+      "year": 2018,
+      "significance": "paradigm-shift",
+      "questions_answered": [
+        "q-010"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/gpt/"
+    },
+    {
+      "id": "b-011",
+      "type": "breakthrough",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for La",
+      "slug": "bert",
+      "date": "2018-10-11",
+      "year": 2018,
+      "significance": "paradigm-shift",
+      "questions_answered": [
+        "q-010"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/bert/"
+    },
+    {
+      "id": "q-011",
+      "type": "question-answered",
+      "title": "Do neural language model capabilities scale predictably with",
+      "slug": "scaling-predictability",
+      "date": "2019-01-01",
+      "year": 2019,
+      "status": "ANSWERED",
+      "category": "theory",
+      "url": "/ai-breakthroughs/questions/scaling-predictability/"
+    },
+    {
+      "id": "q-019",
+      "type": "question-open",
+      "title": "Is there a unified framework for continuous (intuitive) and ",
+      "slug": "unified-reasoning",
+      "date": "2019-01-01",
+      "year": 2019,
+      "status": "OPEN",
+      "category": "theory",
+      "url": "/ai-breakthroughs/questions/unified-reasoning/"
+    },
+    {
+      "id": "q-012",
+      "type": "question-answered",
+      "title": "What are the optimal compute-data trade-offs for training la",
+      "slug": "compute-data-tradeoffs",
+      "date": "2020-01-01",
+      "year": 2020,
+      "status": "ANSWERED",
+      "category": "optimization",
+      "url": "/ai-breakthroughs/questions/compute-data-tradeoffs/"
+    },
+    {
+      "id": "q-013",
+      "type": "question-answered",
+      "title": "Can large language models be aligned to reliably follow huma",
+      "slug": "llm-human-intent",
+      "date": "2020-01-01",
+      "year": 2020,
+      "status": "ANSWERED",
+      "category": "safety-alignment",
+      "url": "/ai-breakthroughs/questions/llm-human-intent/"
+    },
+    {
+      "id": "q-018",
+      "type": "question-open",
+      "title": "Can foundation models achieve robust out-of-distribution gen",
+      "slug": "ood-generalization",
+      "date": "2020-01-01",
+      "year": 2020,
+      "status": "OPEN",
+      "category": "theory",
+      "url": "/ai-breakthroughs/questions/ood-generalization/"
+    },
+    {
+      "id": "b-012",
+      "type": "breakthrough",
+      "title": "Scaling Laws for Neural Language Models",
+      "slug": "scaling-laws",
+      "date": "2020-01-23",
+      "year": 2020,
+      "significance": "major",
+      "questions_answered": [
+        "q-011"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/scaling-laws/"
+    },
+    {
+      "id": "q-015",
+      "type": "question-answered",
+      "title": "Can AI generate high-quality, diverse images from text descr",
+      "slug": "text-to-image",
+      "date": "2021-01-01",
+      "year": 2021,
+      "status": "ANSWERED",
+      "category": "generative-models",
+      "url": "/ai-breakthroughs/questions/text-to-image/"
+    },
+    {
+      "id": "q-014",
+      "type": "question-answered",
+      "title": "Can language models learn to use external tools to overcome ",
+      "slug": "llm-tool-use",
+      "date": "2022-01-01",
+      "year": 2022,
+      "status": "ANSWERED",
+      "category": "nlp",
+      "url": "/ai-breakthroughs/questions/llm-tool-use/"
+    },
+    {
+      "id": "b-014",
+      "type": "breakthrough",
+      "title": "Training language models to follow instructions with human f",
+      "slug": "instructgpt",
+      "date": "2022-03-04",
+      "year": 2022,
+      "significance": "paradigm-shift",
+      "questions_answered": [
+        "q-013"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/instructgpt/"
+    },
+    {
+      "id": "b-013",
+      "type": "breakthrough",
+      "title": "Training Compute-Optimal Large Language Models",
+      "slug": "chinchilla",
+      "date": "2022-03-29",
+      "year": 2022,
+      "significance": "major",
+      "questions_answered": [
+        "q-012"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/chinchilla/"
+    },
+    {
+      "id": "b-016",
+      "type": "breakthrough",
+      "title": "Hierarchical Text-Conditional Image Generation with CLIP Lat",
+      "slug": "dalle2",
+      "date": "2022-04-13",
+      "year": 2022,
+      "significance": "major",
+      "questions_answered": [
+        "q-015"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/dalle2/"
+    },
+    {
+      "id": "q-016",
+      "type": "question-open",
+      "title": "Can alignment techniques scale to superintelligent AI system",
+      "slug": "alignment-superintelligence",
+      "date": "2022-06-01",
+      "year": 2022,
+      "status": "OPEN",
+      "category": "safety-alignment",
+      "url": "/ai-breakthroughs/questions/alignment-superintelligence/"
+    },
+    {
+      "id": "q-017",
+      "type": "question-open",
+      "title": "Can AI systems reliably detect and correct their own reasoni",
+      "slug": "self-correction",
+      "date": "2023-01-01",
+      "year": 2023,
+      "status": "OPEN",
+      "category": "nlp",
+      "url": "/ai-breakthroughs/questions/self-correction/"
+    },
+    {
+      "id": "b-015",
+      "type": "breakthrough",
+      "title": "Toolformer: Language Models Can Teach Themselves to Use Tool",
+      "slug": "toolformer",
+      "date": "2023-02-09",
+      "year": 2023,
+      "significance": "major",
+      "questions_answered": [
+        "q-014"
+      ],
+      "url": "/ai-breakthroughs/breakthroughs/toolformer/"
+    }
+  ],
+  "connections": [
+    {
+      "from": "b-001",
+      "to": "q-001",
+      "type": "answers"
+    },
+    {
+      "from": "b-002",
+      "to": "q-002",
+      "type": "answers"
+    },
+    {
+      "from": "b-003",
+      "to": "q-002",
+      "type": "answers"
+    },
+    {
+      "from": "b-003",
+      "to": "q-003",
+      "type": "answers"
+    },
+    {
+      "from": "b-004",
+      "to": "q-004",
+      "type": "answers"
+    },
+    {
+      "from": "b-005",
+      "to": "q-005",
+      "type": "answers"
+    },
+    {
+      "from": "b-007",
+      "to": "q-007",
+      "type": "answers"
+    },
+    {
+      "from": "b-006",
+      "to": "q-006",
+      "type": "answers"
+    },
+    {
+      "from": "b-008",
+      "to": "q-008",
+      "type": "answers"
+    },
+    {
+      "from": "b-009",
+      "to": "q-009",
+      "type": "answers"
+    },
+    {
+      "from": "b-010",
+      "to": "q-010",
+      "type": "answers"
+    },
+    {
+      "from": "b-011",
+      "to": "q-010",
+      "type": "answers"
+    },
+    {
+      "from": "b-012",
+      "to": "q-011",
+      "type": "answers"
+    },
+    {
+      "from": "b-014",
+      "to": "q-013",
+      "type": "answers"
+    },
+    {
+      "from": "b-013",
+      "to": "q-012",
+      "type": "answers"
+    },
+    {
+      "from": "b-016",
+      "to": "q-015",
+      "type": "answers"
+    },
+    {
+      "from": "b-015",
+      "to": "q-014",
+      "type": "answers"
+    }
+  ]
+}

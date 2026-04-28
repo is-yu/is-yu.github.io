@@ -1,0 +1,25 @@
+# Data pipeline (adapted from arxiv-sanity-preserver)
+feedparser>=6.0
+numpy>=1.26
+scikit-learn>=1.4
+scipy>=1.12
+
+# Claude API
+anthropic>=0.45
+
+# Data handling
+PyYAML>=6.0
+pydantic>=2.6
+
+# Site generator
+Jinja2>=3.1
+markdown>=3.5
+lunr>=0.7
+python-slugify>=8.0
+
+# CLI tools
+rich>=13.7
+click>=8.1
+
+# Testing
+pytest>=8.0

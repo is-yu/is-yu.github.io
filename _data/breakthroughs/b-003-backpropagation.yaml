@@ -1,0 +1,37 @@
+id: "b-003"
+slug: "backpropagation"
+title: "Learning representations by back-propagating errors"
+paper_refs: []
+authors:
+  - "David Rumelhart"
+  - "Geoffrey Hinton"
+  - "Ronald Williams"
+date: "1986-10-09"
+venue: "Nature"
+question_ids:
+  - "q-002"
+  - "q-003"
+key_findings:
+  - finding: |
+      The backpropagation algorithm can efficiently compute gradients for all
+      weights in a multi-layer network using the chain rule, enabling training
+      of networks with hidden layers.
+    significance: |
+      Solved the credit assignment problem, making deep networks trainable
+      and reviving neural network research after the first AI winter.
+  - finding: |
+      Multi-layer networks trained with backprop can learn distributed
+      representations that capture abstract features of the input.
+    significance: |
+      Demonstrated that learned internal representations emerge naturally
+      from end-to-end training.
+significance_level: "paradigm-shift"
+new_questions_raised:
+  - "q-004"
+context: |
+  While backpropagation was independently discovered multiple times
+  (Werbos 1974, Parker 1985), Rumelhart, Hinton and Williams's 1986 Nature
+  paper demonstrated it convincingly and catalyzed the connectionism revival.
+summary: |
+  Backpropagation made multi-layer neural networks trainable, solving the
+  credit assignment problem and launching the connectionism revival.

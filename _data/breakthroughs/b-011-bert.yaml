@@ -1,0 +1,31 @@
+id: "b-011"
+slug: "bert"
+title: "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+paper_refs:
+  - "1810.04805"
+authors:
+  - "Jacob Devlin"
+  - "Ming-Wei Chang"
+  - "Kenton Lee"
+  - "Kristina Toutanova"
+date: "2018-10-11"
+venue: "NAACL 2019"
+question_ids:
+  - "q-010"
+key_findings:
+  - finding: |
+      Bidirectional pre-training with masked language modeling achieves
+      state-of-the-art on 11 NLP benchmarks simultaneously, surpassing
+      task-specific architectures.
+    significance: |
+      Proved that a single pre-trained model can be the best approach
+      for virtually all NLP tasks, obsoleting task-specific architectures.
+significance_level: "paradigm-shift"
+new_questions_raised: []
+context: |
+  BERT's key insight was bidirectional context — unlike GPT's left-to-right
+  pre-training, BERT's masked LM objective sees context from both directions.
+  This was particularly effective for understanding tasks.
+summary: |
+  BERT showed bidirectional pre-training produces superior language
+  understanding, making a single model competitive across all NLP benchmarks.

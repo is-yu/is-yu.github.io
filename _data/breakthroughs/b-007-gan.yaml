@@ -1,0 +1,35 @@
+id: "b-007"
+slug: "gan"
+title: "Generative Adversarial Nets"
+paper_refs:
+  - "1406.2661"
+authors:
+  - "Ian Goodfellow"
+  - "Jean Pouget-Abadie"
+  - "Mehdi Mirza"
+  - "Bing Xu"
+  - "David Warde-Farley"
+  - "Sherjil Ozair"
+  - "Aaron Courville"
+  - "Yoshua Bengio"
+date: "2014-06-10"
+venue: "NeurIPS 2014"
+question_ids:
+  - "q-007"
+key_findings:
+  - finding: |
+      A generator and discriminator network trained adversarially can learn
+      to produce realistic samples from the data distribution without
+      explicit density estimation.
+    significance: |
+      Introduced a fundamentally new training paradigm for generative models
+      that spawned an entire subfield of research.
+significance_level: "paradigm-shift"
+new_questions_raised: []
+context: |
+  Prior generative approaches (VAEs, Boltzmann machines) required explicit
+  likelihood computation. GANs bypassed this with game-theoretic training,
+  achieving sharper outputs at the cost of training instability.
+summary: |
+  GANs proved neural networks can generate realistic novel images through
+  adversarial training, creating a new paradigm for generative modeling.

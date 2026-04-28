@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training language models to follow instructions with human feedback — AI Breakthroughs</title>
+    <link rel="stylesheet" href="/ai-breakthroughs/static/css/main.css">
+    
+    <script>
+    MathJax = {
+        tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+        svg: { fontCache: 'global' }
+    };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="/ai-breakthroughs/" class="nav-logo">AI Breakthroughs</a>
+            <div class="nav-links">
+                <a href="/ai-breakthroughs/questions/">Questions</a>
+                <a href="/ai-breakthroughs/open-questions/">Open Questions</a>
+                <a href="/ai-breakthroughs/search/">Search</a>
+                <a href="/ai-breakthroughs/about/">About</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        
+<div class="detail-header">
+    <div class="detail-meta">
+        <span class="badge badge-paradigm-shift">paradigm-shift</span>
+        <span>2022</span>
+        <span>NeurIPS 2022</span>
+    </div>
+    <h1>Training language models to follow instructions with human feedback</h1>
+    <div class="detail-meta">
+        Long Ouyang, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, John Schulman, Jacob Hilton, Fraser Kelton, Luke Miller, Maddie Simens, Amanda Askell, Peter Welinder, Paul Christiano, Jan Leike, Ryan Lowe
+    </div>
+</div>
+
+<div class="detail-body">
+    <div class="detail-section">
+        <h2>Summary</h2>
+        <div class="detail-text">
+            <p>InstructGPT showed RLHF can align LLMs to human intent, making a small
+aligned model preferred over a much larger unaligned one.
+</p>
+        </div>
+    </div>
+
+    <div class="detail-section">
+        <h2>Key Findings</h2>
+        
+        <div class="finding">
+            <div class="finding-label">Finding 1</div>
+            <div class="finding-text">RLHF (Reinforcement Learning from Human Feedback) using a reward model
+trained on human preference comparisons dramatically improves instruction
+following. A 1.3B InstructGPT model was preferred over a 175B GPT-3.
+</div>
+            <div class="finding-significance">Proved that alignment techniques can make smaller models more useful
+than larger unaligned ones, establishing RLHF as the standard
+post-training method.
+</div>
+        </div>
+        
+    </div>
+
+    <div class="detail-section">
+        <h2>Context</h2>
+        <div class="detail-text">
+            <p>InstructGPT built on earlier RLHF work (Christiano et al. 2017) and
+directly enabled ChatGPT, which brought LLMs to mainstream adoption.
+</p>
+        </div>
+    </div>
+
+    
+    <div class="detail-section">
+        <h2>Questions Answered</h2>
+        <ul class="related-list">
+            
+            <li>
+                <span class="badge badge-answered">Answered</span>
+                <a href="/ai-breakthroughs/questions/llm-human-intent/">Can large language models be aligned to reliably follow human intent?</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+
+    
+    <div class="detail-section">
+        <h2>New Questions Raised</h2>
+        <ul class="related-list">
+            
+            <li>
+                
+                <span class="badge badge-open">Open</span>
+                
+                <a href="/ai-breakthroughs/questions/alignment-superintelligence/">Can alignment techniques scale to superintelligent AI systems?</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+
+    
+    <div class="detail-section">
+        <h2>Papers</h2>
+        <ul class="related-list">
+            
+            <li>
+                <a href="https://arxiv.org/abs/2203.02155" target="_blank" rel="noopener">arXiv:2203.02155</a>
+                &middot;
+                <a href="https://arxiv.org/pdf/2203.02155" target="_blank" rel="noopener">PDF</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+</div>
+
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>A living research survey of AI breakthroughs, organized by the questions they answered.</p>
+            <p class="footer-meta">Data version: 0e648293 | Last updated: 2026-04-28</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

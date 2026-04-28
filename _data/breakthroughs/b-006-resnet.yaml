@@ -1,0 +1,31 @@
+id: "b-006"
+slug: "resnet"
+title: "Deep Residual Learning for Image Recognition"
+paper_refs:
+  - "1512.03385"
+authors:
+  - "Kaiming He"
+  - "Xiangyu Zhang"
+  - "Shaoqing Ren"
+  - "Jian Sun"
+date: "2015-12-10"
+venue: "CVPR 2016"
+question_ids:
+  - "q-006"
+key_findings:
+  - finding: |
+      Skip connections (residual connections) allow training of networks
+      with 152+ layers by letting gradients flow directly through shortcut
+      paths, eliminating the degradation problem.
+    significance: |
+      Enabled a new regime of network depth, with immediate improvements
+      across all vision benchmarks and influence across all of deep learning.
+significance_level: "paradigm-shift"
+new_questions_raised: []
+context: |
+  The degradation problem was distinct from vanishing gradients — even with
+  batch normalization, deeper networks performed worse. ResNet's insight was
+  that learning residual functions is easier than learning unreferenced mappings.
+summary: |
+  ResNet introduced skip connections enabling training of 100+ layer networks,
+  solving the depth degradation problem and becoming a ubiquitous building block.

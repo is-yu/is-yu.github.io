@@ -1,0 +1,21 @@
+id: "q-001"
+slug: "machine-learning-from-examples"
+text: "Can machines learn to classify patterns from labeled examples?"
+description: |
+  The foundational question of whether a mechanical system could learn
+  input-output mappings from examples, rather than being explicitly
+  programmed with rules. This was the core premise of the perceptron
+  and the starting point for all supervised learning.
+status: "ANSWERED"
+category: "theory"
+era: "symbolic-ai"
+date_first_posed: "1957-01-01"
+date_answered: "1958-01-01"
+answered_by:
+  - "b-001"
+related_questions:
+  - "q-002"
+tags:
+  - "perceptron"
+  - "supervised-learning"
+  - "classification"

@@ -1,0 +1,17 @@
+id: "q-018"
+slug: "ood-generalization"
+text: "Can foundation models achieve robust out-of-distribution generalization?"
+description: |
+  Current models perform well on data similar to their training distribution
+  but can fail unpredictably on novel situations. Can we build models that
+  generalize robustly to truly new domains and edge cases?
+status: "OPEN"
+category: "theory"
+era: "foundation-models"
+date_first_posed: "2020-01-01"
+answered_by: []
+related_questions: []
+tags:
+  - "robustness"
+  - "distribution-shift"
+  - "generalization"

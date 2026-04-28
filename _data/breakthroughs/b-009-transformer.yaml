@@ -1,0 +1,43 @@
+id: "b-009"
+slug: "transformer"
+title: "Attention Is All You Need"
+paper_refs:
+  - "1706.03762"
+authors:
+  - "Ashish Vaswani"
+  - "Noam Shazeer"
+  - "Niki Parmar"
+  - "Jakob Uszkoreit"
+  - "Llion Jones"
+  - "Aidan Gomez"
+  - "Lukasz Kaiser"
+  - "Illia Polosukhin"
+date: "2017-06-12"
+venue: "NeurIPS 2017"
+question_ids:
+  - "q-009"
+key_findings:
+  - finding: |
+      The Transformer architecture uses self-attention to process all positions
+      in parallel, replacing recurrence entirely while achieving state-of-the-art
+      translation quality.
+    significance: |
+      Enabled massively parallel training on sequences, removing the sequential
+      bottleneck that limited RNN scaling.
+  - finding: |
+      Multi-head attention allows the model to jointly attend to information
+      from different representation subspaces at different positions.
+    significance: |
+      Created a flexible mechanism for modeling diverse relationships in data
+      that proved universal across domains.
+significance_level: "paradigm-shift"
+new_questions_raised:
+  - "q-010"
+  - "q-011"
+context: |
+  Attention mechanisms existed before (Bahdanau 2014), but always alongside
+  RNNs. The Transformer showed attention alone was sufficient, enabling
+  the scaling that would lead to GPT, BERT, and all foundation models.
+summary: |
+  The Transformer replaced RNNs with self-attention for fully parallel
+  sequence processing, becoming the foundation for all modern large language models.

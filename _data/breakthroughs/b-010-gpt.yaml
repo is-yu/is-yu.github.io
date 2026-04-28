@@ -1,0 +1,31 @@
+id: "b-010"
+slug: "gpt"
+title: "Improving Language Understanding by Generative Pre-Training"
+paper_refs: []
+authors:
+  - "Alec Radford"
+  - "Karthik Narasimhan"
+  - "Tim Salimans"
+  - "Ilya Sutskever"
+date: "2018-06-11"
+venue: "OpenAI"
+question_ids:
+  - "q-010"
+key_findings:
+  - finding: |
+      A Transformer trained with autoregressive language modeling on a large
+      unlabeled corpus learns representations that transfer to diverse NLP
+      tasks with minimal fine-tuning.
+    significance: |
+      Established the pre-train then fine-tune paradigm that unified NLP
+      under a single framework.
+significance_level: "paradigm-shift"
+new_questions_raised:
+  - "q-011"
+context: |
+  GPT showed that generative pre-training on next-token prediction creates
+  powerful general-purpose representations, complementing BERT's bidirectional
+  approach released months later.
+summary: |
+  GPT demonstrated that generative pre-training on unlabeled text produces
+  transferable language representations, launching the foundation model era.

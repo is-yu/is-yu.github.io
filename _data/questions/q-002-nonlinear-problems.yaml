@@ -1,0 +1,21 @@
+id: "q-002"
+slug: "nonlinear-problems"
+text: "Can perceptrons solve non-linearly separable problems like XOR?"
+description: |
+  Minsky and Papert showed that single-layer perceptrons cannot represent
+  XOR or other non-linearly separable functions. This raised the question
+  of whether neural networks were fundamentally limited.
+status: "ANSWERED"
+category: "theory"
+era: "symbolic-ai"
+date_first_posed: "1969-01-01"
+date_answered: "1986-01-01"
+answered_by:
+  - "b-003"
+related_questions:
+  - "q-001"
+  - "q-003"
+tags:
+  - "perceptron-limitations"
+  - "xor-problem"
+  - "nonlinearity"

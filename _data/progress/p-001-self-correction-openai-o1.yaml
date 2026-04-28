@@ -1,0 +1,16 @@
+id: "p-001"
+question_id: "q-017"
+paper_ref: "2409.12917"
+title: "Learning to Reason with LLMs (OpenAI o1)"
+authors:
+  - "OpenAI"
+date: "2024-09-12"
+finding: |
+  Chain-of-thought reasoning at test time, trained via reinforcement learning,
+  enables models to catch and correct errors during extended reasoning chains.
+  o1 significantly outperforms GPT-4 on math, coding, and science benchmarks.
+impact_on_question: |
+  Shows that test-time compute scaling with learned verification improves
+  self-correction, but the model still cannot reliably detect all errors.
+  Hallucination in factual domains remains unsolved.
+advancement_level: "major"

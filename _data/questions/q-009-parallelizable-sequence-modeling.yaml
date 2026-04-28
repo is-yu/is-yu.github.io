@@ -1,0 +1,22 @@
+id: "q-009"
+slug: "parallelizable-sequence-modeling"
+text: "Is there a more parallelizable alternative to RNNs for sequence modeling?"
+description: |
+  RNNs (including LSTMs) process sequences step-by-step, making them
+  inherently sequential and slow to train. Could an architecture process
+  all positions simultaneously while still capturing long-range dependencies?
+status: "ANSWERED"
+category: "nlp"
+era: "deep-learning-revolution"
+date_first_posed: "2016-01-01"
+date_answered: "2017-06-12"
+answered_by:
+  - "b-009"
+related_questions:
+  - "q-004"
+  - "q-010"
+tags:
+  - "attention"
+  - "transformer"
+  - "parallelism"
+  - "self-attention"

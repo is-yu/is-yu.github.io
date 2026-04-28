@@ -1,0 +1,28 @@
+id: "b-004"
+slug: "lstm"
+title: "Long Short-Term Memory"
+paper_refs: []
+authors:
+  - "Sepp Hochreiter"
+  - "Juergen Schmidhuber"
+date: "1997-11-01"
+venue: "Neural Computation"
+question_ids:
+  - "q-004"
+key_findings:
+  - finding: |
+      The LSTM architecture uses gated memory cells to selectively remember
+      and forget information, solving the vanishing gradient problem for
+      recurrent neural networks.
+    significance: |
+      Enabled learning of dependencies spanning hundreds of time steps,
+      making sequence modeling practical for real-world tasks.
+significance_level: "paradigm-shift"
+new_questions_raised: []
+context: |
+  Hochreiter's 1991 diploma thesis identified the vanishing gradient problem.
+  LSTM was designed specifically to address it, becoming the dominant
+  architecture for sequence tasks for nearly two decades.
+summary: |
+  LSTM solved the vanishing gradient problem in RNNs with gated memory
+  cells, enabling learning of long-range dependencies in sequences.

@@ -1,0 +1,32 @@
+id: "b-016"
+slug: "dalle2"
+title: "Hierarchical Text-Conditional Image Generation with CLIP Latents"
+paper_refs:
+  - "2204.06125"
+authors:
+  - "Aditya Ramesh"
+  - "Prafulla Dhariwal"
+  - "Alex Nichol"
+  - "Casey Chu"
+  - "Mark Chen"
+date: "2022-04-13"
+venue: "arXiv"
+question_ids:
+  - "q-015"
+key_findings:
+  - finding: |
+      Combining CLIP text-image embeddings with diffusion models enables
+      generation of highly realistic and diverse images from natural language
+      descriptions, with fine-grained control over composition and style.
+    significance: |
+      Proved that text-to-image generation could reach commercially viable
+      quality, launching a revolution in AI-generated visual content.
+significance_level: "major"
+new_questions_raised: []
+context: |
+  DALL-E 2 built on diffusion models (Ho et al. 2020), CLIP (Radford et al.
+  2021), and classifier-free guidance. It was quickly followed by Stable
+  Diffusion and Midjourney, making AI image generation mainstream.
+summary: |
+  DALL-E 2 demonstrated that diffusion models conditioned on CLIP embeddings
+  can generate high-quality images from text, making AI art commercially viable.

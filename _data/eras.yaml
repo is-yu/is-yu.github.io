@@ -1,0 +1,64 @@
+eras:
+  - id: "symbolic-ai"
+    name: "Symbolic AI & Early Neural Networks"
+    start_year: 1956
+    end_year: 1974
+    color: "#8B4513"
+    description: "From the Dartmouth Conference through early perceptrons"
+
+  - id: "ai-winter-1"
+    name: "First AI Winter & Revival"
+    start_year: 1974
+    end_year: 1980
+    color: "#4682B4"
+    description: "Post-Lighthill report funding collapse"
+
+  - id: "connectionism-revival"
+    name: "Connectionism Revival"
+    start_year: 1980
+    end_year: 1995
+    color: "#2E8B57"
+    description: "Backpropagation, Hopfield networks, Boltzmann machines"
+
+  - id: "statistical-ml"
+    name: "Statistical Machine Learning"
+    start_year: 1995
+    end_year: 2011
+    color: "#9932CC"
+    description: "SVMs, kernel methods, Bayesian approaches, ensemble methods"
+
+  - id: "deep-learning-revolution"
+    name: "Deep Learning Revolution"
+    start_year: 2012
+    end_year: 2017
+    color: "#DC143C"
+    description: "AlexNet through Transformer architecture"
+
+  - id: "foundation-models"
+    name: "Foundation Models & Scaling"
+    start_year: 2018
+    end_year: null
+    color: "#FF8C00"
+    description: "GPT, BERT, scaling laws, multimodal models, agents"
+
+categories:
+  - id: "deep-learning"
+    name: "Deep Learning"
+  - id: "nlp"
+    name: "Natural Language Processing"
+  - id: "computer-vision"
+    name: "Computer Vision"
+  - id: "reinforcement-learning"
+    name: "Reinforcement Learning"
+  - id: "generative-models"
+    name: "Generative Models"
+  - id: "optimization"
+    name: "Optimization & Training"
+  - id: "theory"
+    name: "Theoretical Foundations"
+  - id: "symbolic-ai"
+    name: "Symbolic & Hybrid AI"
+  - id: "robotics"
+    name: "Robotics & Embodied AI"
+  - id: "safety-alignment"
+    name: "AI Safety & Alignment"

@@ -1,0 +1,20 @@
+id: "q-008"
+slug: "superhuman-game-play"
+text: "Can AI achieve superhuman performance in complex strategic games through self-play?"
+description: |
+  Go was considered a grand challenge for AI due to its enormous search
+  space (10^170 positions). Traditional game tree search was insufficient.
+  Could neural networks combined with reinforcement learning master it?
+status: "ANSWERED"
+category: "reinforcement-learning"
+era: "deep-learning-revolution"
+date_first_posed: "2014-01-01"
+date_answered: "2016-01-27"
+answered_by:
+  - "b-008"
+related_questions: []
+tags:
+  - "reinforcement-learning"
+  - "self-play"
+  - "game-ai"
+  - "monte-carlo-tree-search"
