@@ -99,16 +99,18 @@
             const tooltip = d3.select(container)
                 .append('div')
                 .style('position', 'absolute')
-                .style('background', '#1a1a25')
-                .style('border', '1px solid #2a2a3a')
-                .style('border-radius', '6px')
-                .style('padding', '8px 12px')
+                .style('background', '#06060e')
+                .style('border', '1px solid #e6e1d7')
+                .style('padding', '12px 16px')
+                .style('font-family', "'Proza Libre', sans-serif")
                 .style('font-size', '12px')
-                .style('color', '#e0e0e8')
+                .style('color', '#e6e1d7')
                 .style('pointer-events', 'none')
                 .style('opacity', 0)
                 .style('z-index', 10)
-                .style('max-width', '250px');
+                .style('max-width', '280px')
+                .style('transition', 'opacity 0.2s linear')
+                .style('box-shadow', '4px 4px 0 rgba(46, 255, 0, 0.15)');
 
             // Draw breakthroughs (circles)
             g.selectAll('.bt-dot')
@@ -131,8 +133,15 @@
                 .attr('cursor', 'pointer')
                 .on('mouseover', function(event, d) {
                     d3.select(this).attr('opacity', 1).attr('r', (sizeScale[d.significance] || 5) + 3);
+                    const sigColors = {
+                        'paradigm-shift': 'rgb(196, 150, 190)',
+                        'major': '#e25500',
+                        'significant': '#2c8ff7',
+                        'incremental': '#8d8d8d',
+                    };
+                    const sigColor = sigColors[d.significance] || '#8d8d8d';
                     tooltip.style('opacity', 1)
-                        .html(`<strong>${d.title}</strong><br>${d.date}<br><span style="color:#8888a0">${d.significance}</span>`);
+                        .html(`<div style="margin-bottom:6px"><strong>${d.title}</strong></div><span style="color:#8d8d8d;font-size:11px">${d.date}</span><br><span style="display:inline-block;margin-top:4px;border:1px solid ${sigColor};color:${sigColor};padding:1px 6px;font-size:9px;text-transform:uppercase;letter-spacing:0.08em;font-weight:700">${d.significance}</span>`);
                 })
                 .on('mousemove', function(event) {
                     const rect = container.getBoundingClientRect();
@@ -159,8 +168,20 @@
                 .attr('cursor', 'pointer')
                 .on('mouseover', function(event, d) {
                     d3.select(this).attr('opacity', 1);
+                    const statusColors = {
+                        'OPEN': '#e74c3c',
+                        'PARTIALLY_ANSWERED': '#f39c12',
+                        'ANSWERED': 'rgba(46, 255, 0, 0.9)',
+                    };
+                    const statusLabels = {
+                        'OPEN': 'Open',
+                        'PARTIALLY_ANSWERED': 'Partial',
+                        'ANSWERED': 'Answered',
+                    };
+                    const sColor = statusColors[d.status] || '#8d8d8d';
+                    const sLabel = statusLabels[d.status] || d.status;
                     tooltip.style('opacity', 1)
-                        .html(`<strong>${d.title}</strong><br>${d.date}<br><span style="color:#8888a0">${d.status}</span>`);
+                        .html(`<div style="margin-bottom:6px"><strong>${d.title}</strong></div><span style="color:#8d8d8d;font-size:11px">${d.date}</span><br><span style="display:inline-block;margin-top:4px;border:1px solid ${sColor};color:${sColor};padding:1px 6px;font-size:9px;text-transform:uppercase;letter-spacing:0.08em;font-weight:700">${sLabel}</span>`);
                 })
                 .on('mousemove', function(event) {
                     const rect = container.getBoundingClientRect();
