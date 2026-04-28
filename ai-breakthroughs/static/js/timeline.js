@@ -96,6 +96,7 @@
             const qY = innerH * 0.7;
 
             // Tooltip
+            d3.select(container).style('position', 'relative');
             const tooltip = d3.select(container)
                 .append('div')
                 .style('position', 'absolute')
@@ -108,7 +109,7 @@
                 .style('pointer-events', 'none')
                 .style('opacity', 0)
                 .style('z-index', 10)
-                .style('max-width', '280px')
+                .style('max-width', '220px')
                 .style('transition', 'opacity 0.2s linear')
                 .style('box-shadow', '4px 4px 0 rgba(46, 255, 0, 0.15)');
 
@@ -142,13 +143,13 @@
                     const sigColor = sigColors[d.significance] || '#8d8d8d';
                     tooltip.style('opacity', 1)
                         .html(`<div style="margin-bottom:6px"><strong>${d.title}</strong></div><span style="color:#8d8d8d;font-size:11px">${d.date}</span><br><span style="display:inline-block;margin-top:4px;border:1px solid ${sigColor};color:${sigColor};padding:1px 6px;font-size:9px;text-transform:uppercase;letter-spacing:0.08em;font-weight:700">${d.significance}</span>`);
-                    // Position beside the dot
-                    const dotX = x(d.year) + margin.left;
-                    const dotY = bY + (breakthroughs.indexOf(d) % 3 - 1) * 25 + margin.top;
+                    // Position directly beside the dot
+                    const cx = +d3.select(this).attr('cx');
+                    const cy = +d3.select(this).attr('cy');
                     const r = (sizeScale[d.significance] || 5) + 3;
-                    let left = dotX + r + 10;
-                    if (left + 280 > width) left = dotX - 290;
-                    tooltip.style('left', left + 'px').style('top', (dotY - 10) + 'px');
+                    let left = cx + margin.left + r + 8;
+                    if (left + 220 > width) left = cx + margin.left - 228;
+                    tooltip.style('left', left + 'px').style('top', (cy + margin.top - 20) + 'px');
                 })
                 .on('mouseout', function(event, d) {
                     d3.select(this).attr('opacity', 0.85).attr('r', sizeScale[d.significance] || 5);
@@ -184,12 +185,14 @@
                     const sLabel = statusLabels[d.status] || d.status;
                     tooltip.style('opacity', 1)
                         .html(`<div style="margin-bottom:6px"><strong>${d.title}</strong></div><span style="color:#8d8d8d;font-size:11px">${d.date}</span><br><span style="display:inline-block;margin-top:4px;border:1px solid ${sColor};color:${sColor};padding:1px 6px;font-size:9px;text-transform:uppercase;letter-spacing:0.08em;font-weight:700">${sLabel}</span>`);
-                    // Position beside the dot
-                    const dotX = x(d.year) + margin.left;
-                    const dotY = qY + (questions.indexOf(d) % 3 - 1) * 20 + margin.top;
-                    let left = dotX + 16;
-                    if (left + 280 > width) left = dotX - 290;
-                    tooltip.style('left', left + 'px').style('top', (dotY - 10) + 'px');
+                    // Position directly beside the dot
+                    const transform = d3.select(this).attr('transform');
+                    const match = transform.match(/translate\(([\d.]+),([\d.]+)\)/);
+                    const cx = match ? +match[1] : x(d.year);
+                    const cy = match ? +match[2] : qY;
+                    let left = cx + margin.left + 14;
+                    if (left + 220 > width) left = cx + margin.left - 228;
+                    tooltip.style('left', left + 'px').style('top', (cy + margin.top - 20) + 'px');
                 })
                 .on('mouseout', function() {
                     d3.select(this).attr('opacity', 0.85);
