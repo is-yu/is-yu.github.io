@@ -142,11 +142,13 @@
                     const sigColor = sigColors[d.significance] || '#8d8d8d';
                     tooltip.style('opacity', 1)
                         .html(`<div style="margin-bottom:6px"><strong>${d.title}</strong></div><span style="color:#8d8d8d;font-size:11px">${d.date}</span><br><span style="display:inline-block;margin-top:4px;border:1px solid ${sigColor};color:${sigColor};padding:1px 6px;font-size:9px;text-transform:uppercase;letter-spacing:0.08em;font-weight:700">${d.significance}</span>`);
-                })
-                .on('mousemove', function(event) {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.style('left', (event.clientX - rect.left + 12) + 'px')
-                           .style('top', (event.clientY - rect.top - 10) + 'px');
+                    // Position beside the dot
+                    const dotX = x(d.year) + margin.left;
+                    const dotY = bY + (breakthroughs.indexOf(d) % 3 - 1) * 25 + margin.top;
+                    const r = (sizeScale[d.significance] || 5) + 3;
+                    let left = dotX + r + 10;
+                    if (left + 280 > width) left = dotX - 290;
+                    tooltip.style('left', left + 'px').style('top', (dotY - 10) + 'px');
                 })
                 .on('mouseout', function(event, d) {
                     d3.select(this).attr('opacity', 0.85).attr('r', sizeScale[d.significance] || 5);
@@ -182,11 +184,12 @@
                     const sLabel = statusLabels[d.status] || d.status;
                     tooltip.style('opacity', 1)
                         .html(`<div style="margin-bottom:6px"><strong>${d.title}</strong></div><span style="color:#8d8d8d;font-size:11px">${d.date}</span><br><span style="display:inline-block;margin-top:4px;border:1px solid ${sColor};color:${sColor};padding:1px 6px;font-size:9px;text-transform:uppercase;letter-spacing:0.08em;font-weight:700">${sLabel}</span>`);
-                })
-                .on('mousemove', function(event) {
-                    const rect = container.getBoundingClientRect();
-                    tooltip.style('left', (event.clientX - rect.left + 12) + 'px')
-                           .style('top', (event.clientY - rect.top - 10) + 'px');
+                    // Position beside the dot
+                    const dotX = x(d.year) + margin.left;
+                    const dotY = qY + (questions.indexOf(d) % 3 - 1) * 20 + margin.top;
+                    let left = dotX + 16;
+                    if (left + 280 > width) left = dotX - 290;
+                    tooltip.style('left', left + 'px').style('top', (dotY - 10) + 'px');
                 })
                 .on('mouseout', function() {
                     d3.select(this).attr('opacity', 0.85);
@@ -201,14 +204,18 @@
                 .attr('transform', `translate(${margin.left + 10}, 12)`);
 
             const legendItems = [
-                { label: 'Breakthrough', shape: 'circle', color: '#6c8cff' },
+                { label: 'Paradigm Shift', shape: 'circle', color: '#9b59b6' },
+                { label: 'Major', shape: 'circle', color: '#e74c3c' },
+                { label: 'Significant', shape: 'circle', color: '#3498db' },
+                { label: 'Incremental', shape: 'circle', color: '#7f8c8d' },
                 { label: 'Answered', shape: 'diamond', color: '#2ecc71' },
                 { label: 'Open', shape: 'diamond', color: '#e74c3c' },
             ];
 
-            legendItems.forEach(function(item, i) {
+            let xOffset = 0;
+            legendItems.forEach(function(item) {
                 const lg = legend.append('g')
-                    .attr('transform', `translate(${i * 110}, 0)`);
+                    .attr('transform', `translate(${xOffset}, 0)`);
 
                 if (item.shape === 'circle') {
                     lg.append('circle').attr('cx', 6).attr('cy', 0).attr('r', 5).attr('fill', item.color);
@@ -223,6 +230,8 @@
                     .attr('fill', '#8888a0')
                     .attr('font-size', '11px')
                     .text(item.label);
+
+                xOffset += item.label.length * 7 + 26;
             });
         });
     }
