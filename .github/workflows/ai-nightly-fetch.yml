@@ -1,9 +1,11 @@
-name: AI Breakthroughs — Nightly Fetch & Analysis
+name: AI Breakthroughs — Fetch & Analysis
 
 on:
-  schedule:
-    - cron: '0 6 * * *'  # 6 AM UTC daily
   workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   fetch-and-analyze:
@@ -30,6 +32,7 @@ jobs:
         run: python -m _pipeline.parse_pdf_to_text
 
       - name: Analyze with Claude
+        if: ${{ secrets.ANTHROPIC_API_KEY != '' }}
         run: python -m _pipeline.claude_analyzer --batch-new --limit 20
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -40,13 +43,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout -b "$BRANCH"
-          git add _data/papers/ _staging/pending/
+          git add _data/papers/ _data/suggestions/
           git diff --staged --quiet && echo "No new suggestions" && exit 0
           git commit -m "Auto: arXiv fetch + Claude analysis $(date +%Y-%m-%d)"
           git push origin "$BRANCH"
           gh pr create \
             --title "AI Suggestions $(date +%Y-%m-%d)" \
-            --body "Automated arXiv fetch and Claude analysis. Review pending suggestions in _staging/pending/." \
+            --body "Automated arXiv fetch and Claude analysis. Review suggestions in _data/suggestions/." \
             --label "auto-suggestions"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

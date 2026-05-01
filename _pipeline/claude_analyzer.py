@@ -21,7 +21,7 @@ from .config import (
     CLAUDE_MODEL,
     DATA_DIR,
     MAX_TOKENS,
-    PENDING_DIR,
+    SUGGESTIONS_DIR,
     TEXT_DIR,
 )
 from .prompts import (
@@ -179,7 +179,7 @@ def analyze_paper(paper_yaml_path: str, full_text_path: str | None = None) -> di
 
 def analyze_batch(limit: int = 20):
     """Analyze new papers that haven't been analyzed yet."""
-    PENDING_DIR.mkdir(parents=True, exist_ok=True)
+    SUGGESTIONS_DIR.mkdir(parents=True, exist_ok=True)
     papers_dir = DATA_DIR / "papers"
 
     if not papers_dir.exists():
@@ -188,7 +188,7 @@ def analyze_batch(limit: int = 20):
 
     # Find papers not yet analyzed
     already_analyzed = set()
-    for path in PENDING_DIR.glob("*.yaml"):
+    for path in SUGGESTIONS_DIR.glob("*.yaml"):
         data = yaml.safe_load(path.read_text())
         if data and "paper_ref" in data:
             already_analyzed.add(data["paper_ref"])
@@ -216,7 +216,7 @@ def analyze_batch(limit: int = 20):
                 str(paper_path),
                 str(text_path) if text_path.exists() else None,
             )
-            out_path = PENDING_DIR / f"{_now_date()}-{arxiv_id}.yaml"
+            out_path = SUGGESTIONS_DIR / f"{_now_date()}-{arxiv_id}.yaml"
             with open(out_path, "w") as f:
                 yaml.dump(suggestion, f, default_flow_style=False, allow_unicode=True)
             print(f"    -> {suggestion['significance_assessment']} (confidence: {suggestion['confidence']})")
@@ -225,7 +225,7 @@ def analyze_batch(limit: int = 20):
 
         time.sleep(1)  # Rate limiting between API calls
 
-    print(f"Done. Check {PENDING_DIR} for suggestions.")
+    print(f"Done. Check {SUGGESTIONS_DIR} for suggestions.")
 
 
 def main():

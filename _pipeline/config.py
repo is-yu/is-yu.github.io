@@ -5,8 +5,8 @@ from pathlib import Path
 ROOT_DIR = Path(__file__).parent.parent
 
 # Claude API
-CLAUDE_MODEL = "claude-sonnet-4-5-20250929"
-CLAUDE_MODEL_DEEP = "claude-opus-4-6-20250918"
+CLAUDE_MODEL = "claude-sonnet-4-5-20250514"
+CLAUDE_MODEL_DEEP = "claude-opus-4-5-20250514"
 MAX_TOKENS = 4096
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 
@@ -26,6 +26,7 @@ PDF_DIR = STAGING_DIR / "pdfs"
 TEXT_DIR = STAGING_DIR / "texts"
 PENDING_DIR = STAGING_DIR / "pending"
 APPROVED_DIR = STAGING_DIR / "approved"
+SUGGESTIONS_DIR = DATA_DIR / "suggestions"
 
 # TF-IDF (adapted from arxiv-sanity analyze.py)
 TFIDF_MAX_FEATURES = 5000
